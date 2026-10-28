@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "aoe3-decomp",
+    "title": "Age of Empires III decompilation",
+    "platform": "PC",
+    "outcome": "Research",
+    "model": "unknown",
+    "repos": ["https://github.com/briannastatic/aoe3-decomp"]
+  },
+  {
+    "slug": "control-fmt",
+    "title": "Control: fmt (a C++ library that is expected to build cleanly with CMake)",
+    "platform": "Linux",
+    "outcome": "Control",
+    "model": "none",
+    "repos": ["https://github.com/fmtlib/fmt"]
+  },
+  {
+    "slug": "control-sm64",
+    "title": "Control: sm64 decompilation (expected to need the original ROM, which is never supplied)",
+    "platform": "Nintendo 64",
+    "outcome": "Control",
+    "model": "none",
+    "repos": ["https://github.com/n64decomp/sm64"]
+  }
+]

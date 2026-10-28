@@ -1,0 +1,18 @@
+[
+  {
+    "id": "c001",
+    "repo": "https://github.com/fmtlib/fmt",
+    "title": "Control: fmt (a C++ library that is expected to build cleanly with CMake)",
+    "platform": "Linux",
+    "outcome": "Control",
+    "slug": "control-fmt"
+  },
+  {
+    "id": "c002",
+    "repo": "https://github.com/n64decomp/sm64",
+    "title": "Control: sm64 decompilation (expected to need the original ROM, which is never supplied)",
+    "platform": "Nintendo 64",
+    "outcome": "Control",
+    "slug": "control-sm64"
+  }
+]

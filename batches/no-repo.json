@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "/p/688-attack-sub-9a1d49f9",
+    "title": "688 Attack Sub: 688 Attack Sub Reborn Reverse Engineering",
+    "outcome": "Research",
+    "repos_listed": []
+  },
+  {
+    "slug": "/p/ai-map-mission-binary-hook-poc",
+    "title": "Unspecified game map/mission data reverse engineered",
+    "outcome": "Partial",
+    "repos_listed": []
+  },
+  {
+    "slug": "/p/boba-fett-red-dead-redemption-2-mod-claude",
+    "title": "Red Dead Redemption 2 and Star Wars Battlefront II",
+    "outcome": "Works",
+    "repos_listed": []
+  },
+  {
+    "slug": "/p/chromatron-recompiled",
+    "title": "Chromatron recompiled with Claude Opus 4.6",
+    "outcome": "Works",
+    "repos_listed": []
+  },
+  {
+    "slug": "/p/fps-decomp-agent-swarm",
+    "title": "Unnamed first-person shooter decompilation",
+    "outcome": "Works",
+    "repos_listed": []
+  },
+  {
+    "slug": "/p/kingdom-hearts-358-2-days-pc-port-5cb8a982",
+    "title": "Kingdom Hearts: 358/2 Days PC Port decompilation",
+    "outcome": "Research",
+    "repos_listed": []
+  },
+  {
+    "slug": "/p/mega-man-x6-afd4f9af",
+    "title": "Mega Man X6 decompilation \u00b7 Reversed with AI",
+    "outcome": "Partial",
+    "repos_listed": []
+  },
+  {
+    "slug": "/p/river-raid-unlimited-lives",
+    "title": "River Raid (Atari 8-bit): reverse engineered with Claude",
+    "outcome": "Works",
+    "repos_listed": []
+  },
+  {
+    "slug": "/p/snowboard-kids-c0f9ab01",
+    "title": "Snowboard Kids matching decompilation \u00b7 Reversed with AI",
+    "outcome": "Research",
+    "repos_listed": []
+  },
+  {
+    "slug": "/p/sonic-3d-blast-saturn-decomp-pc-port-claude",
+    "title": "Sonic 3D Blast (Sega Saturn) decompilation with Claude Opus",
+    "outcome": "Partial",
+    "repos_listed": []
+  },
+  {
+    "slug": "/p/unnamed-2001-game-boy-advance-game-80cc9a70",
+    "title": "Unnamed 2001 Game Boy Advance game decompilation with Claude",
+    "outcome": "Research",
+    "repos_listed": []
+  },
+  {
+    "slug": "/p/urban-terror-web-port-fable",
+    "title": "Urban Terror: reverse engineered with Claude Fable 5.1",
+    "outcome": "Works",
+    "repos_listed": []
+  },
+  {
+    "slug": "/p/virtueel-zoetermeer-1b062b2f",
+    "title": "Virtueel Zoetermeer decompilation with Claude",
+    "outcome": "Works",
+    "repos_listed": []
+  }
+]

@@ -1,0 +1,194 @@
+[
+  {
+    "id": "r001",
+    "repo": "https://github.com/briannastatic/aoe3-decomp",
+    "title": "Age of Empires III: The Asian Dynasties (age3y.exe)",
+    "platform": "Linux, macOS",
+    "outcome": "Research",
+    "slug": "/p/age-of-empires-iii-the-asian-dynasties-age3y-exe-2135b536"
+  },
+  {
+    "id": "r002",
+    "repo": "https://github.com/ekwoka/Battlefield-2142-Decomp",
+    "title": "Battlefield 2142 decompilation with Claude",
+    "platform": "macOS",
+    "outcome": "Research",
+    "slug": "/p/battlefield-2142-8f5bda22"
+  },
+  {
+    "id": "r003",
+    "repo": "https://github.com/Yharnam-Hunters/Paleblood",
+    "title": "Bloodborne (CUSA03173) decompilation with Claude",
+    "platform": "Linux",
+    "outcome": "Research",
+    "slug": "/p/bloodborne-cusa03173-7fd36aed"
+  },
+  {
+    "id": "r004",
+    "repo": "https://github.com/MaChInEgUn3/God-of-War-Ascension-Recompiled",
+    "title": "God of War: Ascension recompiled with Claude",
+    "platform": "Windows",
+    "outcome": "Research",
+    "slug": "/p/god-of-war-ascension-77379d5f"
+  },
+  {
+    "id": "r005",
+    "repo": "https://github.com/Mozarella-png/Goldeneye-007-Android-Port",
+    "title": "GoldenEye 007 Android Port port with Claude",
+    "platform": "Android",
+    "outcome": "Research",
+    "slug": "/p/goldeneye-007-android-port-6a42c58b"
+  },
+  {
+    "id": "r006",
+    "repo": "https://github.com/gustavocanepa/gt4-native",
+    "title": "Gran Turismo 4 (PC port experiment) matching decompilation",
+    "platform": "PC (from PlayStation 2)",
+    "outcome": "Research",
+    "slug": "/p/gran-turismo-4-native-pc-port-experiment"
+  },
+  {
+    "id": "r007",
+    "repo": "https://github.com/benji-paname/regta-chinatown-wars-pc-port",
+    "title": "Grand Theft Auto: Chinatown Wars reverse engineered with AI",
+    "platform": "Windows x64",
+    "outcome": "Research",
+    "slug": "/p/grand-theft-auto-chinatown-wars-ules-01347-v1-01-924f3f4b"
+  },
+  {
+    "id": "r008",
+    "repo": "https://github.com/Tzeentchnet/KillzoneMercenary-Recomp",
+    "title": "Killzone Mercenary (PCSA00107): reverse engineered with AI",
+    "platform": "Windows x64",
+    "outcome": "Research",
+    "slug": "/p/killzone-mercenary-pcsa00107-598ec110"
+  },
+  {
+    "id": "r009",
+    "repo": "https://github.com/Cimentacion/kf4-kingsfield-tools",
+    "title": "King's Field IV (SLES-50920): reverse engineered with Claude",
+    "platform": "Windows",
+    "outcome": "Research",
+    "slug": "/p/king-s-field-iv-sles-50920-c62877b3"
+  },
+  {
+    "id": "r010",
+    "repo": "https://github.com/gabrielbskk/mcla-recomp-android-g",
+    "title": "Midnight Club: Los Angeles Complete Edition",
+    "platform": "Android ARM64",
+    "outcome": "Research",
+    "slug": "/p/midnight-club-los-angeles-complete-edition-ba6dfbb9"
+  },
+  {
+    "id": "r011",
+    "repo": "https://github.com/bitplane/nokia-dct3-re",
+    "title": "Nokia DCT3: reverse engineered with AI \u00b7 Reversed with AI",
+    "platform": "Linux",
+    "outcome": "Research",
+    "slug": "/p/nokia-dct3-49b1a04f"
+  },
+  {
+    "id": "r012",
+    "repo": "https://github.com/Qanpi/optiver-delta-dash",
+    "title": "Optiver Delta Dash: Qanpi/optiver-delta-dash",
+    "platform": "Web",
+    "outcome": "Research",
+    "slug": "/p/optiver-delta-dash-f9c10d8e"
+  },
+  {
+    "id": "r013",
+    "repo": "https://github.com/sigods/otogi1",
+    "title": "Otogi: Myth of Demons reverse engineered with AI",
+    "platform": "Linux x86-64, Windows x86-64",
+    "outcome": "Research",
+    "slug": "/p/otogi-myth-of-demons-c5f1d6b8"
+  },
+  {
+    "id": "r014",
+    "repo": "https://github.com/rages4calm/pcenginerecomp",
+    "title": "PC Engine / TurboGrafx-16: rages4calm/pcenginerecomp",
+    "platform": "Cross-platform",
+    "outcome": "Research",
+    "slug": "/p/pc-engine-turbografx-16-01ded046"
+  },
+  {
+    "id": "r015",
+    "repo": "https://github.com/gunnaraas/rallytrophy",
+    "title": "Rally Trophy 1.01 decompilation with AI coding agents",
+    "platform": "Windows",
+    "outcome": "Research",
+    "slug": "/p/rally-trophy-1-01-7af8d6cf"
+  },
+  {
+    "id": "r016",
+    "repo": "https://github.com/PedroCavalcanti-coder/RE5-SteamVersion-RecompAndroid",
+    "title": "Resident Evil 5: Gold Edition (re5dx9.exe) recompiled",
+    "platform": "Windows, Linux, Android ARM64",
+    "outcome": "Research",
+    "slug": "/p/resident-evil-5-gold-edition-re5dx9-exe-9b6b9d1f"
+  },
+  {
+    "id": "r017",
+    "repo": "https://github.com/YunataSavior/RTWDecomp",
+    "title": "RomeTW.exe: YunataSavior/RTWDecomp \u00b7 Reversed with AI",
+    "platform": "Windows",
+    "outcome": "Research",
+    "slug": "/p/rometw-exe-9eb3279d"
+  },
+  {
+    "id": "r018",
+    "repo": "https://github.com/Yusuff1406/Project-Far-Far-Away",
+    "title": "Shrek 2 (Game Boy Advance): Project Far Far Away",
+    "platform": "Android",
+    "outcome": "Research",
+    "slug": "/p/shrek-2-game-boy-advance-6a404d9b"
+  },
+  {
+    "id": "r019",
+    "repo": "https://github.com/ZacheerKour/oceanic-stars-decomp",
+    "title": "Star Ocean: The Second Story (USA, PS1) decompilation",
+    "platform": "Windows 10/11",
+    "outcome": "Research",
+    "slug": "/p/star-ocean-the-second-story-usa-ps1-1edb986b"
+  },
+  {
+    "id": "r020",
+    "repo": "https://github.com/cstout816/steel-battalion-static-decomp",
+    "title": "Steel Battalion (Xbox, 2002) recompiled with ChatGPT Codex",
+    "platform": "Xbox (x86) to Windows (Direct3D 11)",
+    "outcome": "Research",
+    "slug": "/p/steel-battalion-xbox-static-recomp-codex"
+  },
+  {
+    "id": "r021",
+    "repo": "https://github.com/EstebanPdN/sm64ds-3ds",
+    "title": "Super Mario 64 DS: EstebanPdN/sm64ds-3ds \u00b7 Reversed with AI",
+    "platform": "Nintendo 3DS",
+    "outcome": "Research",
+    "slug": "/p/super-mario-64-ds-08efd918"
+  },
+  {
+    "id": "r022",
+    "repo": "https://github.com/longurara/SSBU-port-web",
+    "title": "Super Smash Bros. Ultimate port \u00b7 Reversed with AI",
+    "platform": "Web (Browser)",
+    "outcome": "Research",
+    "slug": "/p/super-smash-bros-ultimate-31d972f2"
+  },
+  {
+    "id": "r023",
+    "repo": "https://github.com/zeldaret/tww",
+    "title": "The Legend of Zelda: The Wind Waker decompilation",
+    "platform": "GameCube",
+    "outcome": "Research",
+    "slug": "/p/the-legend-of-zelda-the-wind-waker-c9bd32fb"
+  },
+  {
+    "id": "r024",
+    "repo": "https://github.com/andrewnakas/thps64",
+    "title": "Tony Hawk's Pro Skater (N64) matching decompilation",
+    "platform": "Windows (reference), Linux, macOS",
+    "outcome": "Research",
+    "slug": "/p/tony-hawk-s-pro-skater-n64-e53fc002"
+  }
+]

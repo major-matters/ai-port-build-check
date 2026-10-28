@@ -1,0 +1,276 @@
+name: build-check
+
+# Clean-room build check for the repositories in a batch file.
+# Every target repository is third-party code. It only ever runs on a
+# GitHub-hosted runner, never on a developer machine, and the workflow
+# holds no secrets and only read permission on this repository.
+
+on:
+  workflow_dispatch:
+    inputs:
+      batch:
+        description: "JSON file under batches/ (for example works.json)"
+        required: true
+        type: string
+        default: "all.json"
+      timeout_minutes:
+        description: "Build budget per repository, in minutes"
+        required: false
+        type: string
+        default: "20"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-check-${{ github.run_id }}
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-24.04
+    outputs:
+      matrix: ${{ steps.read.outputs.matrix }}
+      count: ${{ steps.read.outputs.count }}
+      timeout: ${{ steps.read.outputs.timeout }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read batch file
+        id: read
+        env:
+          BATCH: ${{ inputs.batch }}
+          TIMEOUT: ${{ inputs.timeout_minutes }}
+        run: |
+          set -euo pipefail
+          # Only a bare file name is accepted, nothing with a path in it.
+          case "$BATCH" in
+            */*|..*|"") echo "::error::batch must be a bare file name under batches/"; exit 1 ;;
+          esac
+          f="batches/$BATCH"
+          if [ ! -f "$f" ]; then
+            echo "::error::$f does not exist"; exit 1
+          fi
+          if ! [[ "$TIMEOUT" =~ ^[0-9]+$ ]] || [ "$TIMEOUT" -lt 1 ] || [ "$TIMEOUT" -gt 100 ]; then
+            echo "::error::timeout_minutes must be an integer between 1 and 100"; exit 1
+          fi
+          count=$(jq 'length' "$f")
+          if [ "$count" -eq 0 ]; then
+            echo "::error::$f is empty"; exit 1
+          fi
+          if [ "$count" -gt 256 ]; then
+            echo "::error::$f has $count entries; GitHub matrices allow at most 256. Split the batch."; exit 1
+          fi
+          # Validate the shape and the repository host before anything is cloned.
+          jq -e 'all(.[]; (.id|type=="string") and (.repo|type=="string") and (.repo|test("^https://(github\\.com|gitlab\\.com|codeberg\\.org)/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+/?$")))' "$f" > /dev/null \
+            || { echo "::error::every entry needs a string id and an https repo URL on github.com, gitlab.com or codeberg.org"; exit 1; }
+          jq -e '[.[].id] | length == (unique | length)' "$f" > /dev/null \
+            || { echo "::error::duplicate ids in $f"; exit 1; }
+          echo "matrix=$(jq -c '.' "$f")" >> "$GITHUB_OUTPUT"
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+          echo "timeout=$TIMEOUT" >> "$GITHUB_OUTPUT"
+          echo "Planned $count repositories from $f with a ${TIMEOUT}-minute budget each"
+
+  build:
+    needs: plan
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        include: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    env:
+      TARGET_ID: ${{ matrix.id }}
+      TARGET_REPO: ${{ matrix.repo }}
+      TARGET_TITLE: ${{ matrix.title }}
+      TARGET_PLATFORM: ${{ matrix.platform }}
+      TARGET_OUTCOME: ${{ matrix.outcome }}
+      BUILD_TIMEOUT_MINUTES: ${{ needs.plan.outputs.timeout }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Clone target (shallow, 5-minute limit)
+        id: clone
+        run: |
+          set +e
+          rm -rf /tmp/target
+          echo "Cloning $TARGET_REPO"
+          timeout --kill-after=20s 5m git clone --depth 1 --recurse-submodules --shallow-submodules -- "$TARGET_REPO" /tmp/target > /tmp/clone.log 2>&1
+          status=$?
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          tail -n 40 /tmp/clone.log || true
+          exit 0
+
+      - name: Detect and build
+        id: build
+        if: steps.clone.outputs.status == '0'
+        run: |
+          set +e
+          chmod +x "$GITHUB_WORKSPACE/scripts/detect-and-build.sh"
+          timeout --kill-after=30s "${BUILD_TIMEOUT_MINUTES}m" \
+            bash "$GITHUB_WORKSPACE/scripts/detect-and-build.sh" /tmp/target > /tmp/inner.json 2> /tmp/inner.stderr
+          status=$?
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          echo "detect-and-build exit: $status"
+          tail -n 40 /tmp/inner.stderr || true
+          exit 0
+
+      - name: Write result
+        env:
+          CLONE_STATUS: ${{ steps.clone.outputs.status }}
+          BUILD_STATUS: ${{ steps.build.outputs.status }}
+          RUNNER_LABEL: ${{ runner.os }}-${{ runner.arch }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          mkdir -p result
+          python3 - <<'PY'
+          import json, os, subprocess, datetime, shutil
+
+          env = os.environ
+          clone_status = env.get("CLONE_STATUS", "")
+          build_status = env.get("BUILD_STATUS", "")
+          inner = {}
+          if os.path.exists("/tmp/inner.json"):
+              try:
+                  with open("/tmp/inner.json") as fh:
+                      inner = json.load(fh)
+              except Exception:
+                  inner = {}
+
+          result = inner.get("result")
+          reason = inner.get("reason")
+          if clone_status != "0":
+              result = "clone_failed"
+              reason = "clone_timeout" if clone_status == "124" else f"git_exit_{clone_status}"
+          elif not inner:
+              if build_status == "124" or build_status == "137":
+                  result, reason = "timeout", "harness_timeout"
+              else:
+                  result, reason = "harness_error", f"script_exit_{build_status}_no_json"
+
+          def git(*args):
+              try:
+                  return subprocess.check_output(["git", "-C", "/tmp/target", *args], text=True, stderr=subprocess.DEVNULL).strip()
+              except Exception:
+                  return None
+
+          out = {
+              "id": env["TARGET_ID"],
+              "repo": env["TARGET_REPO"],
+              "title": env.get("TARGET_TITLE", ""),
+              "platform": env.get("TARGET_PLATFORM", ""),
+              "outcome_reported": env.get("TARGET_OUTCOME", ""),
+              "commit": inner.get("commit") or git("rev-parse", "HEAD"),
+              "last_commit_date": inner.get("last_commit_date") or git("log", "-1", "--format=%cI"),
+              "build_system": inner.get("build_system"),
+              "needs_assets": bool(inner.get("needs_assets", False)),
+              "asset_signals": inner.get("asset_signals", []),
+              "result": result,
+              "reason": reason,
+              "duration_seconds": inner.get("duration_seconds"),
+              "runner_image": " ".join(x for x in [env.get("RUNNER_LABEL", ""), env.get("ImageOS", ""), env.get("ImageVersion", "")] if x).strip(),
+              "run_id": env.get("RUN_ID"),
+              "checked_at": datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat(),
+          }
+          tid = env["TARGET_ID"]
+          with open(f"result/{tid}.json", "w") as fh:
+              json.dump(out, fh, indent=2)
+
+          log_src = "/tmp/build.log" if os.path.exists("/tmp/build.log") else "/tmp/clone.log"
+          lines = []
+          if os.path.exists(log_src):
+              with open(log_src, "r", errors="replace") as fh:
+                  lines = fh.readlines()[-200:]
+          with open(f"result/{tid}.log", "w") as fh:
+              fh.writelines(lines)
+          print(json.dumps(out, indent=2))
+          PY
+
+      - name: Upload result
+        uses: actions/upload-artifact@v4
+        with:
+          name: result-${{ matrix.id }}
+          path: result/
+          retention-days: 90
+          if-no-files-found: error
+
+  collect:
+    needs: [plan, build]
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download every result artifact
+        uses: actions/download-artifact@v4
+        with:
+          pattern: result-*
+          path: collected
+          merge-multiple: true
+
+      - name: Merge into results.json and summary.md
+        env:
+          BATCH: ${{ inputs.batch }}
+          RUN_ID: ${{ github.run_id }}
+          PLANNED: ${{ needs.plan.outputs.count }}
+        run: |
+          set -euo pipefail
+          mkdir -p results
+          python3 - <<'PY'
+          import json, glob, os, collections, datetime
+
+          rows = []
+          for path in sorted(glob.glob("collected/*.json")):
+              try:
+                  with open(path) as fh:
+                      rows.append(json.load(fh))
+              except Exception as exc:
+                  print(f"skipping {path}: {exc}")
+          rows.sort(key=lambda r: r.get("id", ""))
+
+          with open("results/results.json", "w") as fh:
+              json.dump(rows, fh, indent=2)
+
+          planned = os.environ.get("PLANNED", "?")
+          counts = collections.Counter(r.get("result") for r in rows)
+          now = datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat()
+          md = []
+          md.append(f"# Build check: batch `{os.environ.get('BATCH')}`\n")
+          md.append(f"Run {os.environ.get('RUN_ID')} at {now}. Planned {planned}, collected {len(rows)}.\n")
+          md.append("## Totals\n")
+          md.append("| result | count |\n|---|---|")
+          for k, v in sorted(counts.items(), key=lambda kv: (-kv[1], str(kv[0]))):
+              md.append(f"| {k} | {v} |")
+          md.append("\n## Per repository\n")
+          md.append("| id | repo | reported | build system | assets | result | reason | seconds |")
+          md.append("|---|---|---|---|---|---|---|---|")
+          for r in rows:
+              md.append("| {id} | {repo} | {rep} | {bs} | {na} | {res} | {rsn} | {dur} |".format(
+                  id=r.get("id", ""),
+                  repo=r.get("repo", ""),
+                  rep=r.get("outcome_reported", ""),
+                  bs=r.get("build_system") or "",
+                  na="yes" if r.get("needs_assets") else "no",
+                  res=r.get("result", ""),
+                  rsn=r.get("reason") or "",
+                  dur=r.get("duration_seconds") if r.get("duration_seconds") is not None else "",
+              ))
+          text = "\n".join(md) + "\n"
+          with open("results/summary.md", "w") as fh:
+              fh.write(text)
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as fh:
+              fh.write(text)
+          print(text)
+          PY
+          # Keep the per-repository logs next to the merged files.
+          mkdir -p results/logs
+          cp collected/*.log results/logs/ 2>/dev/null || true
+
+      - name: Upload merged results
+        uses: actions/upload-artifact@v4
+        with:
+          name: results
+          path: results/
+          retention-days: 90

@@ -1,0 +1,7 @@
+# Local scratch; results come back as workflow artifacts
+result/
+results/
+collected/
+*.log
+__pycache__/
+.DS_Store
