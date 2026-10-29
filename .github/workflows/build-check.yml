@@ -17,12 +17,12 @@ on:
         description: "Build budget per repository, in minutes"
         required: false
         type: string
+        default: "20"
       smoke:
         description: "After a successful build, launch the program under a virtual display for a bounded time and record what happens (1 = yes)"
         required: false
-        default: "0"
         type: string
-        default: "20"
+        default: "0"
 
 permissions:
   contents: read
