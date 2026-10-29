@@ -92,15 +92,67 @@ jobs:
 
       - name: Clone target (shallow, 5-minute limit)
         id: clone
+        env:
+          GIT_TERMINAL_PROMPT: "0"
         run: |
           set +e
           rm -rf /tmp/target
+          # Submodules pinned to SSH URLs cannot be fetched by a runner; rewrite them to HTTPS.
+          git config --global url."https://github.com/".insteadOf "git@github.com:"
+          git config --global --add url."https://github.com/".insteadOf "ssh://git@github.com/"
           echo "Cloning $TARGET_REPO"
+          submodules="none"
+          # Is the repository still there? ls-remote plus the HTTP status tell a gone repo from a flaky fetch.
+          timeout 60s git ls-remote --exit-code -h -- "$TARGET_REPO" > /tmp/ls-remote.log 2>&1
+          ls_status=$?
+          http=$(curl -sI -L --max-time 30 -o /dev/null -w '%{http_code}' -- "$TARGET_REPO" 2>/dev/null || echo "000")
+          echo "ls-remote exit $ls_status, HTTP $http"
+          if [ "$ls_status" != "0" ] && [ "$ls_status" != "2" ]; then
+            case "$http" in
+              404|410|451) reason="repo_gone" ;;
+              *) reason="ls_remote_exit_${ls_status}_http_${http}" ;;
+            esac
+            cat /tmp/ls-remote.log > /tmp/clone.log
+            echo "status=$ls_status" >> "$GITHUB_OUTPUT"
+            echo "reason=$reason" >> "$GITHUB_OUTPUT"
+            echo "submodules=none" >> "$GITHUB_OUTPUT"
+            tail -n 40 /tmp/clone.log || true
+            exit 0
+          fi
           timeout --kill-after=20s 5m git clone --depth 1 --recurse-submodules --shallow-submodules -- "$TARGET_REPO" /tmp/target > /tmp/clone.log 2>&1
           status=$?
+          reason=""
+          if [ "$status" = "0" ]; then
+            if [ -f /tmp/target/.gitmodules ]; then submodules="ok"; fi
+          elif [ "$status" = "124" ] || [ "$status" = "137" ]; then
+            reason="clone_timeout"
+          else
+            # Recursive clone failed (usually an unreachable submodule). Fall back to the bare repository.
+            echo "--- recursive clone exited $status; retrying without submodules ---" >> /tmp/clone.log
+            rm -rf /tmp/target
+            timeout --kill-after=20s 5m git clone --depth 1 -- "$TARGET_REPO" /tmp/target >> /tmp/clone.log 2>&1
+            status=$?
+            if [ "$status" = "0" ]; then
+              submodules="failed"
+            elif [ "$status" = "124" ] || [ "$status" = "137" ]; then
+              reason="clone_timeout"
+            else
+              reason="git_exit_$status"
+            fi
+          fi
           echo "status=$status" >> "$GITHUB_OUTPUT"
+          echo "reason=$reason" >> "$GITHUB_OUTPUT"
+          echo "submodules=$submodules" >> "$GITHUB_OUTPUT"
           tail -n 40 /tmp/clone.log || true
           exit 0
+
+      - name: Install common packages (best effort, outside the build budget)
+        if: steps.clone.outputs.status == '0'
+        timeout-minutes: 15
+        continue-on-error: true
+        run: |
+          bash "$GITHUB_WORKSPACE/scripts/detect-and-build.sh" --install-packages
+          tail -n 20 /tmp/apt.log || true
 
       - name: Detect and build
         id: build
@@ -108,7 +160,8 @@ jobs:
         run: |
           set +e
           chmod +x "$GITHUB_WORKSPACE/scripts/detect-and-build.sh"
-          timeout --kill-after=30s "${BUILD_TIMEOUT_MINUTES}m" \
+          # Packages were installed in the previous step; the budget here covers detection and the build only.
+          SKIP_APT=1 timeout --kill-after=30s "$(( BUILD_TIMEOUT_MINUTES + 1 ))m" \
             bash "$GITHUB_WORKSPACE/scripts/detect-and-build.sh" /tmp/target > /tmp/inner.json 2> /tmp/inner.stderr
           status=$?
           echo "status=$status" >> "$GITHUB_OUTPUT"
@@ -119,6 +172,8 @@ jobs:
       - name: Write result
         env:
           CLONE_STATUS: ${{ steps.clone.outputs.status }}
+          CLONE_REASON: ${{ steps.clone.outputs.reason }}
+          SUBMODULES: ${{ steps.clone.outputs.submodules }}
           BUILD_STATUS: ${{ steps.build.outputs.status }}
           RUNNER_LABEL: ${{ runner.os }}-${{ runner.arch }}
           RUN_ID: ${{ github.run_id }}
@@ -143,7 +198,7 @@ jobs:
           reason = inner.get("reason")
           if clone_status != "0":
               result = "clone_failed"
-              reason = "clone_timeout" if clone_status == "124" else f"git_exit_{clone_status}"
+              reason = env.get("CLONE_REASON") or ("clone_timeout" if clone_status == "124" else f"git_exit_{clone_status}")
           elif not inner:
               if build_status == "124" or build_status == "137":
                   result, reason = "timeout", "harness_timeout"
@@ -157,6 +212,7 @@ jobs:
                   return None
 
           out = {
+              "schema_version": 2,
               "id": env["TARGET_ID"],
               "repo": env["TARGET_REPO"],
               "title": env.get("TARGET_TITLE", ""),
@@ -164,11 +220,19 @@ jobs:
               "outcome_reported": env.get("TARGET_OUTCOME", ""),
               "commit": inner.get("commit") or git("rev-parse", "HEAD"),
               "last_commit_date": inner.get("last_commit_date") or git("log", "-1", "--format=%cI"),
+              "submodules": env.get("SUBMODULES") or "none",
               "build_system": inner.get("build_system"),
+              "build_dir": inner.get("build_dir"),
+              "build_command": inner.get("build_command"),
+              "root_files": inner.get("root_files", []),
+              "readme_present": bool(inner.get("readme_present", False)),
               "needs_assets": bool(inner.get("needs_assets", False)),
               "asset_signals": inner.get("asset_signals", []),
               "result": result,
               "reason": reason,
+              "reason_detail": inner.get("reason_detail"),
+              "missing_names": inner.get("missing_names", []),
+              "retries": inner.get("retries", []),
               "duration_seconds": inner.get("duration_seconds"),
               "runner_image": " ".join(x for x in [env.get("RUNNER_LABEL", ""), env.get("ImageOS", ""), env.get("ImageVersion", "")] if x).strip(),
               "run_id": env.get("RUN_ID"),
@@ -182,7 +246,7 @@ jobs:
           lines = []
           if os.path.exists(log_src):
               with open(log_src, "r", errors="replace") as fh:
-                  lines = fh.readlines()[-200:]
+                  lines = fh.readlines()[-600:]
           with open(f"result/{tid}.log", "w") as fh:
               fh.writelines(lines)
           print(json.dumps(out, indent=2))
@@ -244,17 +308,20 @@ jobs:
           for k, v in sorted(counts.items(), key=lambda kv: (-kv[1], str(kv[0]))):
               md.append(f"| {k} | {v} |")
           md.append("\n## Per repository\n")
-          md.append("| id | repo | reported | build system | assets | result | reason | seconds |")
-          md.append("|---|---|---|---|---|---|---|---|")
+          md.append("| id | repo | reported | build system | dir | assets | result | reason | detail | retries | seconds |")
+          md.append("|---|---|---|---|---|---|---|---|---|---|---|")
           for r in rows:
-              md.append("| {id} | {repo} | {rep} | {bs} | {na} | {res} | {rsn} | {dur} |".format(
+              md.append("| {id} | {repo} | {rep} | {bs} | {bd} | {na} | {res} | {rsn} | {det} | {ret} | {dur} |".format(
                   id=r.get("id", ""),
                   repo=r.get("repo", ""),
                   rep=r.get("outcome_reported", ""),
                   bs=r.get("build_system") or "",
+                  bd=r.get("build_dir") or "",
                   na="yes" if r.get("needs_assets") else "no",
                   res=r.get("result", ""),
                   rsn=r.get("reason") or "",
+                  det=(r.get("reason_detail") or "").replace("|", "\\|")[:80],
+                  ret=",".join(r.get("retries") or []),
                   dur=r.get("duration_seconds") if r.get("duration_seconds") is not None else "",
               ))
           text = "\n".join(md) + "\n"

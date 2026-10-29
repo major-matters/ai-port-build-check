@@ -1,0 +1,164 @@
+{
+  "schema_version": 2,
+  "notes": [
+    "Single source of the regexes used to classify a build_failed log.",
+    "Every pattern is a Python 're' regex compiled with re.IGNORECASE and applied to the whole log with harness lines ('[harness] ...') removed.",
+    "scripts/classify.py is the only regex engine: detect-and-build.sh calls it on the runner and scripts/reclassify.py imports it locally, so the two can never disagree.",
+    "Reason groups are tried in 'priority' order; inside a group, patterns are tried in list order and the first match becomes reason_detail (max 160 characters).",
+    "missing_names entries may set \"flags\": \"\" to match case-sensitively (used for CMake's exact 'Could NOT find X')."
+  ],
+  "priority": [
+    "missing_assets",
+    "missing_toolchain",
+    "missing_dependency",
+    "compile_error"
+  ],
+  "reasons": {
+    "missing_assets": [
+      "baserom[^\\n]*",
+      "original game[^\\n]*",
+      "copy of the game[^\\n]*",
+      "game files[^\\n]*",
+      "recompiled game code not found[^\\n]*",
+      "no generated code[^\\n]*",
+      "run [^\\n]*?regen[^\\n]*",
+      "needed by [^\\n]*?\\.(bin|rom|iso|img|exe|elf|xex|dol)\\b[^\\n]*",
+      "extract(ed)? (the )?assets[^\\n]*",
+      "requires a legally[^\\n]*",
+      "\\bretail\\b[^\\n]*",
+      "\\brom\\b[^\\n]*(mandatory|required|not found|missing|no such file)[^\\n]*",
+      "no rule to make target [^\\n]*?assets?/[^\\n]*"
+    ],
+    "missing_toolchain": [
+      "rexglue[^\\n]*",
+      "devkitpro[^\\n]*",
+      "devkitarm[^\\n]*",
+      "devkitppc[^\\n]*",
+      "\\bpsyq[^\\n]*",
+      "\\bps2sdk[^\\n]*",
+      "\\bvitasdk[^\\n]*",
+      "\\bwut\\b[^\\n]*",
+      "mips-linux-gnu[^\\n]*",
+      "mips64[^\\n]*",
+      "powerpc-eabi[^\\n]*",
+      "arm-none-eabi[^\\n]*",
+      "\\bvc9\\b[^\\n]*",
+      "visual studio[^\\n]*",
+      "targets windows[^\\n]*",
+      "windows x64 only[^\\n]*",
+      "cmake_rc_compiler[^\\n]*",
+      "\\bdxc\\b[^\\n]*",
+      "\\bzig\\b[^\\n]*",
+      "\\bemcc\\b[^\\n]*",
+      "emscripten[^\\n]*",
+      "\\bwasm\\w*[^\\n]*",
+      "\\bnvcc\\b[^\\n]*",
+      "\\bcuda\\b[^\\n]*",
+      "\\b(?<!find-)msvc\\b[^\\n]*",
+      "\\bd3d\\w*(\\.h|\\.lib|\\.dll)\\b[^\\n]*",
+      "\\bd3d\\w*[^\\n]*(not found|no such file|missing)[^\\n]*",
+      "requires (the )?clang[^\\n]*",
+      "musttail[^\\n]*",
+      "unable to (detect|find)[^\\n]*toolchain[^\\n]*",
+      "\\bmips\\b[^\\n]*toolchain[^\\n]*",
+      "invalid linker name in argument[^\\n]*",
+      "make(\\[\\d+\\])?: [^\\n:]+: no such file or directory[^\\n]*",
+      "[^\\n]*: command not found[^\\n]*",
+      "error 127[^\\n]*"
+    ],
+    "missing_dependency": [
+      "could not find [^\\n]*",
+      "no package [^\\n]*? found[^\\n]*",
+      "couldn't find dependency[^\\n]*",
+      "fatal error: [^\\n]*?\\.h: no such file[^\\n]*",
+      "required packages were not found[^\\n]*",
+      "add_subdirectory given source [^\\n]*? which is not[^\\n]*",
+      "include could not find requested file[^\\n]*",
+      "unknown cmake command[^\\n]*",
+      "cannot find -l[^\\n]*",
+      "no rule to make target [^\\n]*?\\.(h|hpp|a|so)\\b[^\\n]*",
+      "cannot find source file[^\\n]*"
+    ],
+    "compile_error": [
+      "error\\[E\\d+\\][^\\n]*",
+      "error C\\d+[^\\n]*",
+      "undefined reference[^\\n]*",
+      "ld: error[^\\n]*",
+      "[^\\s:]+:\\d+(:\\d+)?: (fatal )?error:[^\\n]*",
+      "\\berror:[^\\n]*"
+    ]
+  },
+  "missing_names": [
+    {
+      "pattern": "Could NOT find ([A-Za-z0-9_.+-]+)",
+      "group": 1,
+      "flags": ""
+    },
+    {
+      "pattern": "provided by \"([^\"]+)\"",
+      "group": 1
+    },
+    {
+      "pattern": "no package '([^']+)' found",
+      "group": 1
+    },
+    {
+      "pattern": "fatal error: ([^\\s:]+): no such file",
+      "group": 1
+    },
+    {
+      "pattern": "cannot find -l([A-Za-z0-9_.+-]+)",
+      "group": 1
+    },
+    {
+      "pattern": "couldn't find dependency package for ([A-Za-z0-9_.+-]+)",
+      "group": 1
+    },
+    {
+      "pattern": "make(?:\\[\\d+\\])?: ([^\\n:]+): no such file or directory",
+      "group": 1
+    },
+    {
+      "pattern": "fuse-ld=([A-Za-z0-9_.+-]+)",
+      "group": 1
+    }
+  ],
+  "toolchain_names": {
+    "rexglue": "ReXGlue",
+    "devkitpro": "devkitPro",
+    "devkitarm": "devkitARM",
+    "devkitppc": "devkitPPC",
+    "\\bpsyq": "Psy-Q",
+    "\\bps2sdk": "ps2sdk",
+    "\\bvitasdk": "vitasdk",
+    "\\bwut\\b": "wut",
+    "mips-linux-gnu": "mips-linux-gnu",
+    "mips64": "mips64",
+    "powerpc-eabi": "powerpc-eabi",
+    "arm-none-eabi": "arm-none-eabi",
+    "cmake_rc_compiler": "windres",
+    "\\bdxc\\b": "dxc",
+    "\\bzig\\b": "zig",
+    "\\bemcc\\b|emscripten|\\bwasm": "emscripten",
+    "\\bnvcc\\b|\\bcuda\\b": "CUDA",
+    "\\bvc9\\b|\\b(?<!find-)msvc\\b|visual studio": "MSVC",
+    "\\bd3d\\w*(\\.h|\\.lib|\\.dll)\\b": "Direct3D",
+    "\\bmips\\b[^\\n]*toolchain": "MIPS toolchain",
+    "requires (the )?clang|musttail": "clang"
+  },
+  "triggers": {
+    "sdl3": [
+      "could not find sdl3",
+      "no package 'sdl3' found",
+      "find_package\\(sdl3",
+      "sdl3/sdl\\.h: no such file",
+      "sdl3config\\.cmake",
+      "sdl3-config\\.cmake"
+    ],
+    "clang": [
+      "requires the clang compiler",
+      "requires clang",
+      "musttail"
+    ]
+  }
+}
