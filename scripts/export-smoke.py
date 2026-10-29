@@ -58,6 +58,9 @@ def main():
             outcome = "ran_self_test"
         elif outcome in ("exited_clean", "exited_with_error") and re.search(usage_re, text):
             outcome = "printed_usage"
+        elif outcome == "exited_asking_for_files" and s.get("exit_code") == 2 and len(re.findall(r"(^|\n)\s*--[a-z]", text)) >= 3:
+            # exit status 2 plus an options list is a usage screen, whatever words the legend uses
+            outcome = "printed_usage"
         if outcome == "no_executable_found" and bs in ("python", "npm", "none"):
             bucket = "no_native_program"
         elif outcome == "no_executable_found" and a.logs:
