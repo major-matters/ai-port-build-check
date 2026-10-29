@@ -1,0 +1,58 @@
+[
+ {
+  "id": "w020",
+  "repo": "https://github.com/z3xox/Tenkaichi3Decomp",
+  "title": "Dragon Ball Z: Budokai Tenkaichi 3 matching decompilation",
+  "platform": "Linux, Windows 10/11, macOS (experimental)",
+  "outcome": "Works",
+  "slug": "/p/dragon-ball-z-budokai-tenkaichi-3-3853e31b"
+ },
+ {
+  "id": "w022",
+  "repo": "https://github.com/r331/driver",
+  "title": "Driver (PC, 1999) decompilation \u00b7 Reversed with AI",
+  "platform": "Linux, macOS",
+  "outcome": "Works",
+  "slug": "/p/driver-pc-1999-6aa08174"
+ },
+ {
+  "id": "p002",
+  "repo": "https://github.com/librematch/genie",
+  "title": "Age of Empires II: Definitive Edition engine and formats",
+  "platform": "Rust library",
+  "outcome": "Partial",
+  "slug": "/p/age-of-empires-ii-genie-engine"
+ },
+ {
+  "id": "p053",
+  "repo": "https://github.com/Cor3Duo/kirikae",
+  "title": "Kirikae recompiled \u00b7 Reversed with AI",
+  "platform": "Windows x64, Linux x64",
+  "outcome": "Partial",
+  "slug": "/p/kirikae-99d8b560"
+ },
+ {
+  "id": "p043",
+  "repo": "https://github.com/abhinavt0681/hitman-contracts_clone",
+  "title": "Hitman: Contracts (PC, 2004) reverse engineered with AI",
+  "platform": "Windows (x86)",
+  "outcome": "Partial",
+  "slug": "/p/hitman-contracts-rust-rebuild-claude"
+ },
+ {
+  "id": "r014",
+  "repo": "https://github.com/rages4calm/pcenginerecomp",
+  "title": "PC Engine / TurboGrafx-16: rages4calm/pcenginerecomp",
+  "platform": "Cross-platform",
+  "outcome": "Research",
+  "slug": "/p/pc-engine-turbografx-16-01ded046"
+ },
+ {
+  "id": "p024",
+  "repo": "https://github.com/Igrise12/DQVIIIPC",
+  "title": "Dragon Quest VIII: Journey of the Cursed King (PS2, NTSC-U)",
+  "platform": "Windows, Linux",
+  "outcome": "Partial",
+  "slug": "/p/dragon-quest-viii-native-recomp"
+ }
+]

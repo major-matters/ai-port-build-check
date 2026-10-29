@@ -16,6 +16,7 @@ OUTCOME_LABEL = {
     "kept_running_no_window": "kept running, no window",
     "exited_clean": "exited cleanly",
     "exited_asking_for_files": "exited asking for files",
+    "missing_runtime_library": "started, then a system library was missing on the runner",
     "printed_usage": "printed a usage screen (a command-line tool, not a game)",
     "vendored_tool_only": "built only a vendored dependency",
     "exited_with_error": "exited with an error",
@@ -67,14 +68,20 @@ def main():
     by_outcome = {}
     for x in out_rows:
         by_outcome.setdefault(x["outcome_reported"] or "unknown", collections.Counter())[x["bucket"]] += 1
-    native = [x for x in out_rows if x["bucket"] != "no_native_program" and x["build_result"] == "built"]
+    built = [x for x in out_rows if x["build_result"] == "built"]
+    no_native = [x for x in built if x["bucket"] == "no_native_program"]
+    nothing = [x for x in built if x["bucket"] in ("no_executable_found", "vendored_tool_only")]
+    # Launchable: the build produced a native program of the project's own.
+    native = [x for x in built if x["bucket"] not in ("no_native_program", "no_executable_found", "vendored_tool_only", "smoke_error", "missing_runtime_library")]
     runs = [x for x in native if x["runs_without_player_files"]]
     asks = [x for x in native if x["bucket"] == "exited_asking_for_files"]
     data = {
         "as_of": a.as_of, "schema_version": 1,
         "method": "Every repository that built in the clean-room pass was built again on a fresh GitHub-hosted runner, then the most likely executable the build produced was launched under a virtual X display with dummy audio and no game files present, for at most 45 seconds. After 20 seconds the harness counted X windows. The exit code, the window list, and the last lines of output decide the outcome. No paid or proprietary file was supplied; the question is what a player sees before adding their own copy of the game.",
         "summary": {
-            "rows": len(out_rows), "built_again": sum(1 for x in out_rows if x["build_result"] == "built"),
+            "rows": len(out_rows), "built_again": len(built),
+            "no_native_program": len(no_native), "nothing_launchable": len(nothing),
+            "missing_runtime_library": sum(1 for x in built if x["bucket"] == "missing_runtime_library"),
             "native_programs": len(native), "runs_without_player_files": len(runs),
             "runs_pct_of_native": round(100 * len(runs) / len(native), 1) if native else None,
             "asked_for_files": len(asks),
@@ -88,7 +95,7 @@ def main():
         json.dump(data, fh, indent=1)
     if a.markdown:
         s = data["summary"]
-        lines = [f"# Smoke run, as of {a.as_of}", "", f"Rows: {s['rows']}; built again: {s['built_again']}; native programs: {s['native_programs']}; run without the player's files: {s['runs_without_player_files']} ({s['runs_pct_of_native']} percent of native); exited asking for files: {s['asked_for_files']}.", "", "| bucket | count |", "|---|---|"]
+        lines = [f"# Smoke run, as of {a.as_of}", "", f"Rows: {s['rows']}; built again: {s['built_again']}; no native program (package or web app): {s['no_native_program']}; built nothing launchable: {s['nothing_launchable']}; launchable programs: {s['native_programs']}; run without the player's files: {s['runs_without_player_files']} ({s['runs_pct_of_native']} percent of launchable); exited asking for files: {s['asked_for_files']}.", "", "| bucket | count |", "|---|---|"]
         for k, v in sorted(by_bucket.items(), key=lambda kv: -kv[1]):
             lines.append(f"| {k} | {v} |")
         lines += ["", "| id | repo | reported | build | bucket | exe | windows | exit | mentioned files |", "|---|---|---|---|---|---|---|---|---|"]
