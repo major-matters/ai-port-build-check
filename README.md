@@ -62,6 +62,26 @@ For `build_failed`, `reason` is mined from the whole build log with the harness'
 
 The classification is heuristic. The log tail is kept next to every result so anyone can check the call, and `scripts/reclassify.py` re-runs the classifier over an existing `results.json` and its logs to show what a pattern change would do.
 
+## Smoke run (optional runtime step)
+
+With the `smoke` input set to `1`, a repository that builds is also launched. The harness finds the executables the build produced (ELF files newer than the clone, not libraries, tests or CMake probes), picks the most likely one (name matches the repository, then size), and runs it from its own directory under a virtual X display with dummy audio and no game files present, for at most 45 seconds. After 20 seconds it lists the X windows. The result is a `smoke` object on the row:
+
+| outcome | meaning |
+|---|---|
+| `window_opened_kept_running` | a window was open at the 20-second check and the program was still running when the budget ended |
+| `window_opened_exited_clean` | a window was seen, then the program exited with code 0 |
+| `kept_running_no_window` | still running at the budget with no X window (a console program, or one waiting on something) |
+| `exited_clean` | exit code 0 before the budget, no window |
+| `exited_asking_for_files` | non-zero exit and the output names a ROM, disc image, asset or data file it could not find |
+| `exited_with_error` | non-zero exit with no such message |
+| `crashed` | killed by a signal (segmentation fault, abort, and the like) |
+| `no_executable_found` | the build produced nothing launchable (a library, a Python package, a web app, or a make target that did nothing) |
+| `not_built` | the build did not succeed on this run, so nothing was launched |
+
+The object also carries the chosen executable (paths shortened to `<repo>` and `<build>`), the candidate count, exit code, whether the budget ran out, seconds alive, the window titles, whether the output asked for files, the file names it mentioned, and the last lines of stdout and stderr. `scripts/export-smoke.py` turns a smoke run into a dataset; it puts Python packages and web apps in a `no_native_program` bucket rather than counting them as failures.
+
+What this proves: whether the program starts and what it does before a player adds their own copy of the game. What it does not prove: that the game is playable, that it runs on a desktop with a GPU, or anything about the files a player would have to supply.
+
 ## Fields in each result
 
 `schema_version`, `id`, `repo`, `title`, `platform`, `outcome_reported`, `commit`, `last_commit_date`, `submodules` (`ok`, `failed` or `none`), `build_system`, `build_dir`, `build_command`, `root_files`, `readme_present`, `needs_assets`, `asset_signals`, `result`, `reason`, `reason_detail`, `missing_names`, `retries`, `duration_seconds`, `runner_image`, `run_id`, `checked_at`.
