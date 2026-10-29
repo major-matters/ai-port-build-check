@@ -118,19 +118,25 @@ asks = re.search(r"\b(rom|iso|bin|baserom|disc|game (data|files?|directory|folde
 missing_lib = re.search(r"error while loading shared libraries|could not be loaded|cannot open shared object file|libxkbcommon|\blib[a-z0-9_.-]+\.so[.0-9]*\b.*(not found|could not|cannot)", low)
 mentioned = sorted(set(m.group(0) for m in re.finditer(r"[\w./-]+\.(z64|n64|v64|sfc|smc|gba|gb|gbc|nds|iso|bin|cue|img|wad|pak|pk3|rom|dat|big|bsa|arc|exe|dll|so|cfg|ini|json|xml|txt)\b", text, re.I)))[:12]
 ec = int(exitcode) if exitcode.isdigit() else None
+usage_re = r"(^|\n)\s*usage:|\busage:\s|--help\b.*(print|show)|print help|(^|\n)\s*\w[\w-]* (?:\w+\|){2,}\w+|(^|\n)\s*--[a-z][\w-]+ .{0,40}\n\s*--[a-z]"
+selftest_re = r"self-?test[^\n]*pass|all (checks|tests) passed|\b\d+ (tests?|checks?) passed|PASS \(0 failures\)"
 if timed_out and windows:
     outcome = "window_opened_kept_running"
 elif timed_out:
     outcome = "kept_running_no_window"
 elif ec == 0 and windows:
     outcome = "window_opened_exited_clean"
+elif ec == 0 and re.search(selftest_re, low):
+    outcome = "ran_self_test"
+elif ec == 0 and re.search(usage_re, low):
+    outcome = "printed_usage"
 elif ec == 0:
     outcome = "exited_clean"
 elif ec in (134, 136, 139, 132, 133, 135, 137, 138, 143) or ec is not None and ec > 128:
     outcome = "crashed"
 elif missing_lib and ec not in (0,):
     outcome = "missing_runtime_library"
-elif (re.search(r"(^|\n)\s*usage:|\busage:\s|--help\b.*(print|show)|print help|(^|\n)\s*\w[\w-]* (?:\w+\|){2,}\w+", low)) and (ec in (1, 2) or ec is None):
+elif re.search(usage_re, low) and (ec in (1, 2) or ec is None):
     outcome = "printed_usage"
 elif asks:
     outcome = "exited_asking_for_files"

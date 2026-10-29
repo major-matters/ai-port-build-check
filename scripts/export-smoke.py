@@ -22,6 +22,9 @@ OUTCOME_LABEL = {
     "exited_with_error": "exited with an error",
     "crashed": "crashed",
     "no_executable_found": "built nothing that can be launched",
+    "nothing_built": "the build command ran and produced no targets at all",
+    "tests_or_libraries_only": "the build produced only test programs and libraries",
+    "ran_self_test": "ran its own self-test and passed (a check program, not a game)",
     "not_built": "did not build this time",
     "smoke_error": "smoke step failed",
 }
@@ -34,6 +37,7 @@ def main():
     ap.add_argument("--as-of", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--markdown")
+    ap.add_argument("--logs", help="directory of per-id build logs from the same run; splits no_executable_found into nothing_built and tests_or_libraries_only")
     a = ap.parse_args()
     rows = []
     for f in a.results:
@@ -45,8 +49,26 @@ def main():
         outcome = s.get("outcome") or ("not_built" if r.get("result") != "built" else "smoke_error")
         bs = r.get("build_system")
         # Builds that cannot produce a native program are their own bucket, not a failure of the program.
+        import os, re
+        text = "\n".join((s.get("stdout_tail") or []) + (s.get("stderr_tail") or [])).lower()
+        usage_re = r"(^|\n)\s*usage:|\busage:\s|--help\b.*(print|show)|print help|(^|\n)\s*\w[\w-]* (?:\w+\|){2,}\w+|(^|\n)\s*--[a-z][\w-]+ .{0,40}\n\s*--[a-z]"
+        selftest_re = r"self-?test[^\n]*pass|all (checks|tests) passed|\b\d+ (tests?|checks?) passed|pass \(0 failures\)"
+        # Post-hoc rules over the recorded output tails, so an older run gets the same vocabulary as a new one.
+        if outcome in ("exited_clean", "exited_with_error") and re.search(selftest_re, text):
+            outcome = "ran_self_test"
+        elif outcome in ("exited_clean", "exited_with_error") and re.search(usage_re, text):
+            outcome = "printed_usage"
         if outcome == "no_executable_found" and bs in ("python", "npm", "none"):
             bucket = "no_native_program"
+        elif outcome == "no_executable_found" and a.logs:
+            logf = os.path.join(a.logs, f"{r['id']}.log")
+            built_lines = 0
+            if os.path.exists(logf):
+                with open(logf, errors="replace") as fh:
+                    for line in fh:
+                        if "Built target" in line or re.search(r"Linking .*(executable|library)", line) or re.search(r"^\s*(CC|CXX|LD|LINK)\s", line):
+                            built_lines += 1
+            bucket = "tests_or_libraries_only" if built_lines else "nothing_built"
         else:
             bucket = outcome
         out_rows.append({
@@ -70,9 +92,9 @@ def main():
         by_outcome.setdefault(x["outcome_reported"] or "unknown", collections.Counter())[x["bucket"]] += 1
     built = [x for x in out_rows if x["build_result"] == "built"]
     no_native = [x for x in built if x["bucket"] == "no_native_program"]
-    nothing = [x for x in built if x["bucket"] in ("no_executable_found", "vendored_tool_only")]
+    nothing = [x for x in built if x["bucket"] in ("no_executable_found", "vendored_tool_only", "nothing_built", "tests_or_libraries_only")]
     # Launchable: the build produced a native program of the project's own.
-    native = [x for x in built if x["bucket"] not in ("no_native_program", "no_executable_found", "vendored_tool_only", "smoke_error", "missing_runtime_library")]
+    native = [x for x in built if x["bucket"] not in ("no_native_program", "no_executable_found", "vendored_tool_only", "nothing_built", "tests_or_libraries_only", "smoke_error", "missing_runtime_library")]
     runs = [x for x in native if x["runs_without_player_files"]]
     asks = [x for x in native if x["bucket"] == "exited_asking_for_files"]
     data = {
