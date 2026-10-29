@@ -16,6 +16,8 @@ OUTCOME_LABEL = {
     "kept_running_no_window": "kept running, no window",
     "exited_clean": "exited cleanly",
     "exited_asking_for_files": "exited asking for files",
+    "printed_usage": "printed a usage screen (a command-line tool, not a game)",
+    "vendored_tool_only": "built only a vendored dependency",
     "exited_with_error": "exited with an error",
     "crashed": "crashed",
     "no_executable_found": "built nothing that can be launched",

@@ -73,6 +73,8 @@ With the `smoke` input set to `1`, a repository that builds is also launched. Th
 | `kept_running_no_window` | still running at the budget with no X window (a console program, or one waiting on something) |
 | `exited_clean` | exit code 0 before the budget, no window |
 | `exited_asking_for_files` | non-zero exit and the output names a ROM, disc image, asset or data file it could not find |
+| `printed_usage` | the program is a command-line tool: it printed a usage screen and exited (a converter or extractor, not a game) |
+| `vendored_tool_only` | the only executables the build produced live in a vendored or third-party directory (for example a bundled zlib), so the build compiled a dependency, not the project |
 | `exited_with_error` | non-zero exit with no such message |
 | `crashed` | killed by a signal (segmentation fault, abort, and the like) |
 | `no_executable_found` | the build produced nothing launchable (a library, a Python package, a web app, or a make target that did nothing) |

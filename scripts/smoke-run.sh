@@ -60,10 +60,17 @@ def score(p):
     try: s += min(os.path.getsize(p) // (256*1024), 20)
     except OSError: pass
     return s
-cands.sort(key=score, reverse=True)
+VENDORED = ("/zlib/", "/third_party/", "/thirdparty/", "/vendor/", "/external/", "/extern/", "/deps/", "/dependencies/", "/libs/", "/lib/", "/tools/", "/contrib/", "/subprojects/")
+def vendored(p): return any(v in p.lower() for v in VENDORED)
+cands.sort(key=lambda p: (vendored(p), -score(p)))
 print(cands[0])
 PY
 )
+case "$(printf '%s' "$pick" | tr '[:upper:]' '[:lower:]')" in
+  */zlib/*|*/third_party/*|*/thirdparty/*|*/vendor/*|*/external/*|*/extern/*|*/deps/*|*/dependencies/*|*/libs/*|*/lib/*|*/tools/*|*/contrib/*|*/subprojects/*) VENDORED_ONLY=1 ;;
+  *) VENDORED_ONLY=0 ;;
+esac
+export VENDORED_ONLY
 log "picked: $pick"
 
 # 3. Run it under Xvfb with dummy audio, from its own directory, for a bounded time.
@@ -119,10 +126,15 @@ elif ec == 0:
     outcome = "exited_clean"
 elif ec in (134, 136, 139, 132, 133, 135, 137, 138, 143) or ec is not None and ec > 128:
     outcome = "crashed"
+elif re.search(r"(^|\n)\s*usage:|\busage:\s|--help\b.*(print|show)|print help", low) and (ec in (1, 2) or ec is None):
+    outcome = "printed_usage"
 elif asks:
     outcome = "exited_asking_for_files"
 else:
     outcome = "exited_with_error"
+vendored_only = os.environ.get("VENDORED_ONLY") == "1"
+if vendored_only and outcome not in ("crashed",):
+    outcome = "vendored_tool_only"
 print(json.dumps({
     "outcome": outcome,
     "executable": pick.replace("/tmp/target", "<repo>").replace("/tmp/build", "<build>"),
@@ -133,6 +145,7 @@ print(json.dumps({
     "alive_at_window_check": alive_at_check,
     "windows": windows,
     "asked_for_files": bool(asks),
+    "vendored_only": vendored_only,
     "mentioned_files": mentioned,
     "stdout_tail": out[-15:],
     "stderr_tail": err[-15:],
