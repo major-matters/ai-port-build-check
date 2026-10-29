@@ -57,6 +57,7 @@ For `build_failed`, `reason` is mined from the whole build log with the harness'
 | `missing_toolchain` | a console SDK (devkitPro, Psy-Q, ps2sdk, vitasdk, wut, ReXGlue), a cross compiler (mips, powerpc-eabi, arm-none-eabi), MSVC or Visual Studio, Direct3D headers, zig, emscripten, CUDA, a linker or command that is not installed, or a message that the project targets Windows or requires Clang |
 | `missing_dependency` | CMake, pkg-config or meson could not find a package, a header is missing, a subdirectory or source file the build files point at does not exist |
 | `compile_error` | a compiler, rustc, MSVC or linker error line |
+| `hardcoded_path` | the build writes to a path from the author's machine (for example a home directory that does not exist on the runner) |
 | `unclassified` | none of the above matched; read the log |
 
 The classification is heuristic. The log tail is kept next to every result so anyone can check the call, and `scripts/reclassify.py` re-runs the classifier over an existing `results.json` and its logs to show what a pattern change would do.
@@ -71,7 +72,7 @@ The classification is heuristic. The log tail is kept next to every result so an
 - The shallowest directory wins. A root `build.sh` is chosen over a `src/CMakeLists.txt`, on the theory that the repository's own script knows how to drive its own tree.
 - Only Ubuntu packages and SDL3 from source are supplied. Anything else a project needs (a console SDK, a Windows toolchain, Metal, the original game) shows up as `needs_toolchain`, `missing_toolchain` or `missing_assets`, which is the expected result for most decompilations.
 - Retries are limited to the two cases above (SDL3, Clang). A project that needs a different compiler version, a nightly Rust, or a specific Python is reported as it failed, not fixed.
-- The reason regexes are word lists. They over-match now and then (a stray "retail" or "wasm" in a log) and under-match when the real error scrolled past the 200-line tail, which lands in `unclassified`.
+- The reason regexes are word lists. They over-match now and then (a stray "retail" or "wasm" in a log) and under-match when the real error scrolled past the 200-line tail, which lands in `unclassified`. After a run, `scripts/apply-reclassify.py` re-applies the current patterns to the kept log tails and writes `results-final.json`; it only ever replaces `unclassified` or `compile_error` with a more specific reason, never the other way, and each changed row carries `reason_source` and `reason_runner` so the change is visible.
 - `needs_assets` comes from a phrase scan of the README and build docs and over-matches short words like "rom" and "iso"; `scripts/analyze.py` counts only the strict phrases.
 - Nothing here says whether the built program runs, renders, or matches the original.
 
