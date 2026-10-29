@@ -17,6 +17,11 @@ on:
         description: "Build budget per repository, in minutes"
         required: false
         type: string
+      smoke:
+        description: "After a successful build, launch the program under a virtual display for a bounded time and record what happens (1 = yes)"
+        required: false
+        default: "0"
+        type: string
         default: "20"
 
 permissions:
@@ -87,6 +92,7 @@ jobs:
       TARGET_PLATFORM: ${{ matrix.platform }}
       TARGET_OUTCOME: ${{ matrix.outcome }}
       BUILD_TIMEOUT_MINUTES: ${{ needs.plan.outputs.timeout }}
+      SMOKE: ${{ inputs.smoke }}
     steps:
       - uses: actions/checkout@v4
 
@@ -169,6 +175,25 @@ jobs:
           tail -n 40 /tmp/inner.stderr || true
           exit 0
 
+      - name: "Smoke run (optional): launch what the build produced with no game files present"
+        id: smoke
+        if: steps.clone.outputs.status == '0' && env.SMOKE == '1'
+        timeout-minutes: 8
+        run: |
+          set +e
+          if ! python3 -c "import json,sys; d=json.load(open('/tmp/inner.json')); sys.exit(0 if d.get('result')=='built' else 1)" 2>/dev/null; then
+            echo '{"outcome":"not_built"}' > /tmp/smoke.json
+            echo "build did not succeed; nothing to run"
+            exit 0
+          fi
+          sudo apt-get install -y -qq --no-install-recommends xvfb x11-utils file > /tmp/smoke-apt.log 2>&1 || tail -n 5 /tmp/smoke-apt.log
+          chmod +x "$GITHUB_WORKSPACE/scripts/smoke-run.sh"
+          bash "$GITHUB_WORKSPACE/scripts/smoke-run.sh" /tmp/target /tmp/clone.log > /tmp/smoke.json 2> /tmp/smoke.stderr
+          echo "smoke-run exit: $?"
+          tail -n 20 /tmp/smoke.stderr || true
+          python3 -c "import json; d=json.load(open('/tmp/smoke.json')); print('outcome:', d.get('outcome'), '| exe:', d.get('executable'), '| windows:', d.get('windows'))" || cat /tmp/smoke.json
+          exit 0
+
       - name: Write result
         env:
           CLONE_STATUS: ${{ steps.clone.outputs.status }}
@@ -238,6 +263,13 @@ jobs:
               "run_id": env.get("RUN_ID"),
               "checked_at": datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat(),
           }
+          # Optional runtime smoke result (see scripts/smoke-run.sh); absent when the smoke input was off.
+          if os.path.exists("/tmp/smoke.json"):
+              try:
+                  with open("/tmp/smoke.json") as fh:
+                      out["smoke"] = json.load(fh)
+              except Exception:
+                  out["smoke"] = {"outcome": "smoke_error"}
           tid = env["TARGET_ID"]
           with open(f"result/{tid}.json", "w") as fh:
               json.dump(out, fh, indent=2)

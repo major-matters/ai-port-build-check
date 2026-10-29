@@ -1,0 +1,34 @@
+[
+ {
+  "id": "w031",
+  "repo": "https://github.com/jkdansereau/goldeneye-pc-port",
+  "title": "GoldenEye 007 (Nintendo 64, 1997) port with Claude Sonnet 5",
+  "platform": "Nintendo 64 to Windows / Linux / Steam Deck",
+  "outcome": "Works",
+  "slug": "/p/goldeneye-007-pc-port-agents"
+ },
+ {
+  "id": "w076",
+  "repo": "https://github.com/pakompom/SpaceRangers1_decomp",
+  "title": "Space Rangers 1 (PC, v1.7.2 English Steam) decompilation",
+  "platform": "Windows PC",
+  "outcome": "Works",
+  "slug": "/p/space-rangers-1-delphi-decomp-gpt"
+ },
+ {
+  "id": "w007",
+  "repo": "https://github.com/sedthh/batch_and_vibe",
+  "title": "Black & White (Lionhead, 2001): reverse engineered with AI",
+  "platform": "Windows",
+  "outcome": "Works",
+  "slug": "/p/black-and-white-llm-creature-mod"
+ },
+ {
+  "id": "p009",
+  "repo": "https://github.com/openblack/bw1-decomp",
+  "title": "Black & White decompilation with Claude \u00b7 Reversed with AI",
+  "platform": "Windows / Classic Mac OS",
+  "outcome": "Partial",
+  "slug": "/p/black-white-decomp"
+ }
+]
