@@ -1,10 +1,11 @@
 # Security
 
-The AEO Citation Tracker is read-only and bring-your-own-keys. Its threat surface is small by design.
+This repository is a clean-room build check for games rebuilt with coding agents. It clones third-party repositories and runs their build systems, so it treats every repository it touches as untrusted.
 
-- **No live probing.** It sends queries to four fixed, hardcoded provider endpoints (Anthropic, Perplexity, OpenAI, Google) and reads the answers. It does not fetch the cited URLs or connect to anything else.
-- **Keys stay local.** API keys are read from files (`.anthropic-api-key`, `.perplexity-api-key`, ...) or environment variables and are never written to the database, logs, or output. Error strings are redacted so a key in a request URL (Gemini) cannot leak.
-- **No injection surface.** All SQL uses parameterized queries; queries you supply are sent only as prompt text to the LLM APIs.
-- **Nothing secret is committed.** Key files and the local `aeo.db` are gitignored.
+- **GitHub-hosted runners only.** Builds and smoke launches run inside GitHub Actions on fresh virtual machines that are discarded after the job. There is no script here for running a batch on a developer machine, and none should be added.
+- **No game files.** The harness never supplies, downloads or stores a ROM, disc image, BIOS or any publisher asset. Projects that need one record the request and stop.
+- **Bounded runs.** Every build has a time budget (20 minutes by default) and every smoke launch a 45 second budget under a virtual display with dummy audio.
+- **Results are machine-written.** The JSON under `results/` is produced by the workflow from recorded logs. Rows are never edited by hand; corrections are made by rerunning.
+- **No secrets.** The workflow uses the repository's default token with read access only, plus write access to commit results. No third-party credentials are involved.
 
-This is a v0 research tool. Open an issue for anything that looks like a key leak or an SSRF path.
+Report a problem (a way to escape the runner, a path that could run a repository's code outside the job, a mistake in the recorded data) through GitHub's private vulnerability reporting on this repository, or open an issue for anything that is not sensitive.
