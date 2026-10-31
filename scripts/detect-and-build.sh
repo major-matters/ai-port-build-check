@@ -65,8 +65,21 @@ if [ "${1:-}" = "--install-packages" ]; then
   exit 0
 fi
 
+if [ -z "${1:-}" ] || [ "${1:-}" = "-h" ] || [ "${1:-}" = "--help" ]; then
+  echo "usage: $0 <checked-out-repository-dir> | --install-packages" >&2
+  exit 2
+fi
+
+# Everything below runs a third-party repository's build system. That only ever happens on a
+# disposable GitHub-hosted runner (SECURITY.md); a developer machine is refused outright.
+# (`bash -n` for a syntax check, `--help` and `--install-packages` never reach this line.)
+if [ "${GITHUB_ACTIONS:-}" != "true" ]; then
+  echo "detect-and-build.sh: refusing to run outside GitHub Actions (GITHUB_ACTIONS is not \"true\"); this script runs untrusted third-party build systems" >&2
+  exit 2
+fi
+
 DIR="${1:-}"
-if [ -z "$DIR" ] || [ ! -d "$DIR" ]; then
+if [ ! -d "$DIR" ]; then
   echo "usage: $0 <checked-out-repository-dir> | --install-packages" >&2
   exit 2
 fi

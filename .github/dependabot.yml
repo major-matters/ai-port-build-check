@@ -1,0 +1,9 @@
+# Weekly action updates. Actions are pinned to commit SHAs in the workflows;
+# Dependabot bumps the SHA and the version comment together. There is no npm or
+# pip manifest in this repository.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

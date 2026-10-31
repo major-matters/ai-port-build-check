@@ -8,6 +8,16 @@
 #
 # Usage: smoke-run.sh <checkout-dir> <clone-marker-file>   (writes JSON to stdout, log to stderr)
 set -u
+if [ "${1:-}" = "-h" ] || [ "${1:-}" = "--help" ]; then
+  echo "usage: $0 <checkout-dir> <clone-marker-file>" >&2
+  exit 2
+fi
+# This launches an executable a third-party repository just built. That only ever happens on a
+# disposable GitHub-hosted runner (SECURITY.md); a developer machine is refused outright.
+if [ "${GITHUB_ACTIONS:-}" != "true" ]; then
+  echo "smoke-run.sh: refusing to run outside GitHub Actions (GITHUB_ACTIONS is not \"true\"); this script launches untrusted third-party binaries" >&2
+  exit 2
+fi
 DIR=${1:-/tmp/target}
 MARKER=${2:-/tmp/clone.log}
 SECONDS_BUDGET=${SMOKE_SECONDS:-45}
