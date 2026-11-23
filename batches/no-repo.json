@@ -1,79 +1,85 @@
 [
   {
-    "slug": "/p/688-attack-sub-9a1d49f9",
-    "title": "688 Attack Sub: 688 Attack Sub Reborn Reverse Engineering",
+    "slug": "/p/stunt-car-racer-1989-f4d76437",
+    "title": "Scientific Brad reverses Stunt Car Racer (Amiga) using Ghidra and Gemini",
     "outcome": "Research",
     "repos_listed": []
   },
   {
-    "slug": "/p/ai-map-mission-binary-hook-poc",
-    "title": "Unspecified game map/mission data reverse engineered",
-    "outcome": "Partial",
-    "repos_listed": []
-  },
-  {
-    "slug": "/p/boba-fett-red-dead-redemption-2-mod-claude",
-    "title": "Red Dead Redemption 2 and Star Wars Battlefront II",
+    "slug": "/p/tank-blaster-e6aeb4d2",
+    "title": "Rebuilt Tank Blaster as an open-source remake in Go with AI assistance",
     "outcome": "Works",
     "repos_listed": []
   },
   {
-    "slug": "/p/chromatron-recompiled",
-    "title": "Chromatron recompiled with Claude Opus 4.6",
+    "slug": "/p/sublogic-flight-simulator-ii-commodore-64-71c9fac6",
+    "title": "Reverse Engineering Commodore 64 Flight Simulator with Claude Code",
     "outcome": "Works",
     "repos_listed": []
   },
   {
-    "slug": "/p/fps-decomp-agent-swarm",
-    "title": "Unnamed first-person shooter decompilation",
+    "slug": "/p/moon-buggy-ab455e56",
+    "title": "Moon-Buggy: Florian BURNEL uses REA and Claude to read a binary and rebuild a browser game",
     "outcome": "Works",
+    "repos_listed": []
+  },
+  {
+    "slug": "/p/street-fighter-the-movie-snes-port-f4b8b4ff",
+    "title": "Street Fighter the Movie toward SNES: Old Man Rukus credits AI/Ghidra symbol naming",
+    "outcome": "Research",
     "repos_listed": []
   },
   {
     "slug": "/p/kingdom-hearts-358-2-days-pc-port-5cb8a982",
-    "title": "Kingdom Hearts: 358/2 Days PC Port decompilation",
+    "title": "Days PC Port: AI-Assisted Decompilation",
     "outcome": "Research",
     "repos_listed": []
   },
   {
-    "slug": "/p/mega-man-x6-afd4f9af",
-    "title": "Mega Man X6 decompilation \u00b7 Reversed with AI",
-    "outcome": "Partial",
-    "repos_listed": []
-  },
-  {
-    "slug": "/p/river-raid-unlimited-lives",
-    "title": "River Raid (Atari 8-bit): reverse engineered with Claude",
+    "slug": "/p/virtueel-zoetermeer-1b062b2f",
+    "title": "AI-Assisted Decompilation of Virtueel Zoetermeer",
     "outcome": "Works",
     "repos_listed": []
   },
   {
-    "slug": "/p/snowboard-kids-c0f9ab01",
-    "title": "Snowboard Kids matching decompilation \u00b7 Reversed with AI",
+    "slug": "/p/ai-map-mission-binary-hook-poc",
+    "title": "Reverse engineering Metal Gear Solid 2 map and mission data with AI assistance",
     "outcome": "Research",
     "repos_listed": []
   },
   {
     "slug": "/p/sonic-3d-blast-saturn-decomp-pc-port-claude",
-    "title": "Sonic 3D Blast (Sega Saturn) decompilation with Claude Opus",
+    "title": "Decompiled Sonic 3D Blast (Saturn) byte for byte and began a native PC port, with Claude",
     "outcome": "Partial",
     "repos_listed": []
   },
   {
-    "slug": "/p/unnamed-2001-game-boy-advance-game-80cc9a70",
-    "title": "Unnamed 2001 Game Boy Advance game decompilation with Claude",
-    "outcome": "Research",
-    "repos_listed": []
-  },
-  {
     "slug": "/p/urban-terror-web-port-fable",
-    "title": "Urban Terror: reverse engineered with Claude Fable 5.1",
+    "title": "Got Urban Terror running in the browser after Claude Fable found a 4-byte struct mismatch",
     "outcome": "Works",
     "repos_listed": []
   },
   {
-    "slug": "/p/virtueel-zoetermeer-1b062b2f",
-    "title": "Virtueel Zoetermeer decompilation with Claude",
+    "slug": "/p/boba-fett-red-dead-redemption-2-mod-claude",
+    "title": "Put Boba Fett into Red Dead Redemption 2 with Claude, which wrote its own model exporter",
+    "outcome": "Works",
+    "repos_listed": []
+  },
+  {
+    "slug": "/p/river-raid-unlimited-lives",
+    "title": "Gave Atari River Raid unlimited lives with Claude driving Ghidra",
+    "outcome": "Works",
+    "repos_listed": []
+  },
+  {
+    "slug": "/p/fps-decomp-agent-swarm",
+    "title": "500+ billion tokens: an agent swarm decompiled a first-person shooter",
+    "outcome": "Works",
+    "repos_listed": []
+  },
+  {
+    "slug": "/p/chromatron-recompiled",
+    "title": "Recompiled a 20-year-old puzzle game for Apple Silicon and the web",
     "outcome": "Works",
     "repos_listed": []
   }

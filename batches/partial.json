@@ -1,1018 +1,2394 @@
 [
   {
     "id": "p001",
-    "repo": "https://github.com/JasonRucinski/ace-of-angels-preservation",
-    "title": "Ace of Angels: Ace of Angels Preservation Project",
-    "platform": "Windows 10/11, Ubuntu Server 24.04",
+    "repo": "https://github.com/smolderyguest/Super3DXPlus",
+    "title": "Ported Wangan Midnight Maximum Tune 3DX+ to PC, Android and Raspberry Pi with Claude",
+    "platform": "Arcade to native Windows, Linux, Android and Raspberry Pi",
     "outcome": "Partial",
-    "slug": "/p/ace-of-angels-9413ff34"
+    "slug": "/p/wangan-midnight-maximum-tune-3dx-plus-native-port-claude"
   },
   {
     "id": "p002",
-    "repo": "https://github.com/librematch/genie",
-    "title": "Age of Empires II: Definitive Edition engine and formats",
-    "platform": "Rust library",
+    "repo": "https://github.com/gtguerreiro-max/IronBrigadeRecomp",
+    "title": "Recompiled Iron Brigade from Xbox 360 to a native Windows program with Claude",
+    "platform": "Xbox 360 to native Windows",
     "outcome": "Partial",
-    "slug": "/p/age-of-empires-ii-genie-engine"
+    "slug": "/p/iron-brigade-xbox-360-recompilation-claude"
   },
   {
     "id": "p003",
-    "repo": "https://github.com/GeneralPawz/acr",
-    "title": "American Conquest: GeneralPawz/acr \u00b7 Reversed with AI",
-    "platform": "Windows, WebAssembly",
+    "repo": "https://github.com/pedrowallybandeira/RDR_recomp",
+    "title": "Recompiled Red Dead Redemption from PS3 to Windows with Claude",
+    "platform": "PS3 to native Windows x64",
     "outcome": "Partial",
-    "slug": "/p/american-conquest-c6684d5c"
+    "slug": "/p/red-dead-redemption-ps3-recompilation-claude"
   },
   {
     "id": "p004",
-    "repo": "https://github.com/minty-hippo/amped3revamped",
-    "title": "Amped 3 (Xbox 360, 2005) recompiled with Claude Opus 5.5",
-    "platform": "Windows (from an Xbox 360 disc image)",
+    "repo": "https://github.com/JahsiasWhite/civ5-decomp",
+    "title": "A byte-matching decompilation of Civilization V worked on by AI agents",
+    "platform": "Windows x86, Ghidra",
     "outcome": "Partial",
-    "slug": "/p/amped-3-xbox-recomp-claude"
+    "slug": "/p/civilization-v-matching-decompilation-ai-agents"
   },
   {
     "id": "p005",
-    "repo": "https://github.com/Nycolazs/ACNHRecomp",
-    "title": "Animal Crossing: New Horizons reverse engineered with Claude",
-    "platform": "Linux",
+    "repo": "https://github.com/Blightwidow/ps2-decomp-assist",
+    "title": "A local fine-tuned model that proposes matching C++ for PS2 functions, trained on the Sly Cooper games",
+    "platform": "PS2 (MIPS R5900), Apple silicon",
     "outcome": "Partial",
-    "slug": "/p/animal-crossing-new-horizons-8cd2df96"
+    "slug": "/p/ps2-decomp-assist-sly-cooper-gemma-local-model"
   },
   {
     "id": "p006",
-    "repo": "https://github.com/byroweb/AC1_RE",
-    "title": "Armored Core (PS1, SLUS-01323): reverse engineered with AI",
-    "platform": "PlayStation",
+    "repo": "https://github.com/NicoWayne95/lcs-ps2-recomp",
+    "title": "An experimental PS2 to Windows recompilation of Liberty City Stories built with Claude and a local Qwen model",
+    "platform": "PS2 to native Windows x64",
     "outcome": "Partial",
-    "slug": "/p/armored-core-ps1-re-farsi-claude"
+    "slug": "/p/liberty-city-stories-ps2-recompilation-claude-qwen"
   },
   {
     "id": "p007",
-    "repo": "https://github.com/MoisesEliaquim/Bakuten_Shoot_Beyblade_Gekitou_Saikyou_Blader_English",
-    "title": "Bakuten Shoot Beyblade: Gekitou! Saikyou Blader",
-    "platform": "Game Boy Advance",
+    "repo": "https://github.com/SirWinstonChurchillTheFirst/mario-party-9-native",
+    "title": "Recompiled Mario Party 9 from Wii to native PC with Claude",
+    "platform": "Wii to native Windows and Linux",
     "outcome": "Partial",
-    "slug": "/p/bakuten-shoot-beyblade-gekitou-saikyou-blader-d22ff287"
+    "slug": "/p/mario-party-9-wii-static-recompilation-claude"
   },
   {
     "id": "p008",
-    "repo": "https://github.com/coach7290/balloon-fight-recompiled",
-    "title": "Balloon Fight (NES, USA) recompiled with Codex",
-    "platform": "NES",
+    "repo": "https://github.com/gminustwo/red_two",
+    "title": "Recompiled Star Wars Rogue Squadron II: Rogue Leader from GameCube to PC with Claude",
+    "platform": "GameCube to native PC (Windows, Linux)",
     "outcome": "Partial",
-    "slug": "/p/balloon-fight-recompiled"
+    "slug": "/p/red-two-rogue-squadron-ii-gamecube-recompilation-claude"
   },
   {
     "id": "p009",
-    "repo": "https://github.com/openblack/bw1-decomp",
-    "title": "Black & White decompilation with Claude \u00b7 Reversed with AI",
-    "platform": "Windows / Classic Mac OS",
+    "repo": "https://github.com/anpage/demech2",
+    "title": "AI-assisted matching decompilation of MechWarrior 2 (Windows 95)",
+    "platform": "Windows 95 (x86)",
     "outcome": "Partial",
-    "slug": "/p/black-white-decomp"
+    "slug": "/p/mechwarrior-2-windows-95-decompilation-claude"
   },
   {
     "id": "p010",
-    "repo": "https://github.com/bloodborne-native/bloodborne-mac",
-    "title": "Bloodborne: bloodborne-native/bloodborne-mac",
-    "platform": "macOS (Apple Silicon)",
+    "repo": "https://github.com/ramonfabrega/attrition",
+    "title": "Reimplementing Rise of Nations in Rust with Claude",
+    "platform": "Windows to Rust",
     "outcome": "Partial",
-    "slug": "/p/bloodborne-c8a6a729"
+    "slug": "/p/rise-of-nations-rust-reimplementation-claude"
   },
   {
     "id": "p011",
-    "repo": "https://github.com/moozilla/boktai3-decomp",
-    "title": "Shin Bokura no Taiyou: Gyakushuu no Sabata (Boktai 3, GBA)",
-    "platform": "Game Boy Advance",
+    "repo": "https://github.com/Swisha33/NFSCVita",
+    "title": "Need for Speed Carbon on the PS Vita through static recompilation with Claude",
+    "platform": "PC to PS Vita",
     "outcome": "Partial",
-    "slug": "/p/boktai-3-gba-agentic-decomp"
+    "slug": "/p/need-for-speed-carbon-ps-vita-static-recompilation-claude"
   },
   {
     "id": "p012",
-    "repo": "https://github.com/literalynn/BurnoutDominatorReversed",
-    "title": "Burnout Dominator (PlayStation 2, Europe) recompiled",
-    "platform": "PlayStation 2 to PC",
+    "repo": "https://github.com/turboboy215/jazz-gba-decomp",
+    "title": "Matching decompilation of Jazz Jackrabbit for the Game Boy Advance with Claude",
+    "platform": "GBA",
     "outcome": "Partial",
-    "slug": "/p/burnout-dominator-ps2-recomp-claude"
+    "slug": "/p/jazz-jackrabbit-gba-matching-decompilation-claude"
   },
   {
     "id": "p013",
-    "repo": "https://github.com/VictorDMor/cm0102mac",
-    "title": "Championship Manager 01/02: reverse engineered with Claude",
-    "platform": "PowerPC / Apple Silicon macOS",
+    "repo": "https://github.com/CouldntFindit/korra-recomp",
+    "title": "Static recompilation of The Legend of Korra (PC) with AI agents",
+    "platform": "Windows x86 to Windows and Android arm64",
     "outcome": "Partial",
-    "slug": "/p/championship-manager-0102-macos-recomp"
+    "slug": "/p/legend-of-korra-pc-static-recompilation-ai-agents"
   },
   {
     "id": "p014",
-    "repo": "https://github.com/Armandpro12/chibi-robo-pc",
-    "title": "Chibi-Robo!: reverse engineered with Claude Code",
-    "platform": "GameCube to PC",
+    "repo": "https://github.com/Qilin1066/GBTGhoulies-Qilincomp",
+    "title": "Static recompilation of Grabbed by the Ghoulies (Xbox) with Claude",
+    "platform": "Xbox to portable C++",
     "outcome": "Partial",
-    "slug": "/p/chibi-robo-pc-static-recomp"
+    "slug": "/p/grabbed-by-the-ghoulies-xbox-static-recompilation-claude"
   },
   {
     "id": "p015",
-    "repo": "https://github.com/pablocpas/CMR2Decomp",
-    "title": "Colin McRae Rally 2.0 (PC, 2000): reverse engineered with AI",
-    "platform": "Windows (Win32)",
+    "repo": "https://github.com/goodshepherd23/Baroque-PS1-Recompiled",
+    "title": "Baroque: Yuganda Mousou (PS1) recompiled for PC with PSXRecomp, developed with Claude",
+    "platform": "Windows, Linux, macOS",
     "outcome": "Partial",
-    "slug": "/p/colin-mcrae-rally-2-decomp-claude-codex"
+    "slug": "/p/baroque-yuganda-mousou-ps1-05fdc858"
   },
   {
     "id": "p016",
-    "repo": "https://github.com/liolu/cooking-mama-decomp",
-    "title": "Cooking Mama (Nintendo DS, USA) matching decompilation",
-    "platform": "Nintendo DS (ARM7 and ARM9)",
+    "repo": "https://github.com/finalpantasy/hot-shots-golf-ps3-recomp",
+    "title": "Hot Shots Golf: World Invitational (PS3) statically recompiled to Windows with ps3recomp",
+    "platform": "Windows 10/11 x86-64",
     "outcome": "Partial",
-    "slug": "/p/cooking-mama-ds-decomp-claude"
+    "slug": "/p/hot-shots-golf-world-invitational-ps3-c9f8c9d8"
   },
   {
     "id": "p017",
-    "repo": "https://github.com/matty45/Crackdown2-Decomp",
-    "title": "Crackdown 2 decompilation with Claude \u00b7 Reversed with AI",
-    "platform": "Xbox 360",
+    "repo": "https://github.com/devall96/TempleFrog",
+    "title": "TempleFrog: Frogger's Adventures: Temple of the Frog (GBA) recompiled for PC with Claude",
+    "platform": "Windows, Linux",
     "outcome": "Partial",
-    "slug": "/p/crackdown-2-76c5f541"
+    "slug": "/p/frogger-s-adventures-temple-of-the-frog-gba-533cdd32"
   },
   {
     "id": "p018",
-    "repo": "https://github.com/GioPixelGH/Crash-Twinsanity-Windows",
-    "title": "Crash Twinsanity decompilation: native PC port with Claude",
-    "platform": "PlayStation 2 to Windows",
+    "repo": "https://github.com/thefixinhixon/woohoo-flight-school",
+    "title": "Recompiled Pilotwings Resort (3DS) into a native port with Claude",
+    "platform": "Nintendo 3DS",
     "outcome": "Partial",
-    "slug": "/p/crash-twinsanity-windows-port-claude-code"
+    "slug": "/p/pilotwings-resort-3ds-recomp-claude"
   },
   {
     "id": "p019",
-    "repo": "https://github.com/consolesplayingconsoles/crazy-taxi-decomp",
-    "title": "Crazy Taxi (Sega Dreamcast) decompilation",
-    "platform": "Sega Dreamcast",
+    "repo": "https://github.com/wearetommybruh/legaia2-decomp",
+    "title": "Matching decompilation of Legaia 2: Duel Saga (PS2) with Claude and Codex",
+    "platform": "PlayStation 2",
     "outcome": "Partial",
-    "slug": "/p/crazy-taxi-dreamcast-decomp-claude"
+    "slug": "/p/legaia-2-duel-saga-ps2-decomp-claude"
   },
   {
     "id": "p020",
-    "repo": "https://github.com/daaki85/darksun-recompiled",
-    "title": "Dark Sun: Shattered Lands (DOS, 1993) recompiled",
-    "platform": "Windows and Linux (SDL)",
+    "repo": "https://github.com/zcanann/sfa-decomp",
+    "title": "Matching decompilation of Star Fox Adventures (GameCube) with Claude",
+    "platform": "GameCube",
     "outcome": "Partial",
-    "slug": "/p/darksun-shattered-lands-native-claude"
+    "slug": "/p/star-fox-adventures-gamecube-decomp-claude"
   },
   {
     "id": "p021",
-    "repo": "https://github.com/Clergyman0013/arizona-vamp-recomp",
-    "title": "Darkwatch: Arizona Vamp Recomp \u00b7 Reversed with AI",
-    "platform": "Windows 10/11 x64",
+    "repo": "https://github.com/liolu/rayman-rr-usa-decomp",
+    "title": "Matching decompilation of Rayman Raving Rabbids (DS) with Claude",
+    "platform": "Nintendo DS",
     "outcome": "Partial",
-    "slug": "/p/darkwatch-728035c9"
+    "slug": "/p/rayman-raving-rabbids-ds-decomp-claude"
   },
   {
     "id": "p022",
-    "repo": "https://github.com/WadeWinningWilson/dmc3-decomp",
-    "title": "Devil May Cry 3: Dante's Awakening (PlayStation 2)",
-    "platform": "PlayStation 2",
+    "repo": "https://github.com/zer0ducksgiven/pgr4-regpu",
+    "title": "Recompiled Project Gotham Racing 4 (Xbox 360) into a native port with Claude",
+    "platform": "Xbox 360",
     "outcome": "Partial",
-    "slug": "/p/devil-may-cry-3-ps2-decomp-claude"
+    "slug": "/p/project-gotham-racing-4-xbox-360-recomp-claude"
   },
   {
     "id": "p023",
-    "repo": "https://github.com/VCKing101/Dissidia012-pc",
-    "title": "Dissidia 012 Duodecim Final Fantasy reverse engineered",
-    "platform": "Windows, Steam Deck (via Proton)",
+    "repo": "https://github.com/orymizak/hwtr-decomp",
+    "title": "Matching decompilation of Hot Wheels Turbo Racing (N64) with Claude",
+    "platform": "Nintendo 64",
     "outcome": "Partial",
-    "slug": "/p/dissidia-012-duodecim-final-fantasy-408e806e"
+    "slug": "/p/hot-wheels-turbo-racing-n64-decomp-claude"
   },
   {
     "id": "p024",
-    "repo": "https://github.com/Igrise12/DQVIIIPC",
-    "title": "Dragon Quest VIII: Journey of the Cursed King (PS2, NTSC-U)",
-    "platform": "Windows, Linux",
+    "repo": "https://github.com/brian-oblivion/lsddecomp",
+    "title": "Matching decompilation of LSD: Dream Emulator (PS1) with Claude",
+    "platform": "PlayStation",
     "outcome": "Partial",
-    "slug": "/p/dragon-quest-viii-native-recomp"
+    "slug": "/p/lsd-dream-emulator-ps1-decomp-claude"
   },
   {
     "id": "p025",
-    "repo": "https://github.com/victor-takai/dragon-valor-recomp",
-    "title": "Dragon Valor (PlayStation, USA) recompiled",
-    "platform": "Windows",
+    "repo": "https://github.com/cblackler19/shox-rr-decomp",
+    "title": "Matching decompilation of Shox: Rally Reinvented (PS2) with Codex",
+    "platform": "PlayStation 2",
     "outcome": "Partial",
-    "slug": "/p/dragon-valor-recompiled"
+    "slug": "/p/shox-rally-reinvented-ps2-decomp-codex"
   },
   {
     "id": "p026",
-    "repo": "https://github.com/BlackLineInteractive/Driveclub-Port",
-    "title": "Driveclub (PlayStation 4) port with Claude",
-    "platform": "PS4 (x86-64) to macOS and Windows",
+    "repo": "https://github.com/andrewnakas/gtav-recomp",
+    "title": "Recompiled Grand Theft Auto V (Xbox 360) into a native port with Claude",
+    "platform": "Xbox 360",
     "outcome": "Partial",
-    "slug": "/p/driveclub-native-port-claude"
+    "slug": "/p/grand-theft-auto-v-xbox-360-recomp-claude"
   },
   {
     "id": "p027",
-    "repo": "https://github.com/olink9/driver1-decomp",
-    "title": "Driver: You Are the Wheelman reverse engineered with Claude",
-    "platform": "PlayStation",
+    "repo": "https://github.com/liolu/harvest-moon-ds-decomp",
+    "title": "Matching decompilation of Harvest Moon DS (DS) with Claude",
+    "platform": "Nintendo DS",
     "outcome": "Partial",
-    "slug": "/p/driver-1-ps1-matching-decomp-claude"
+    "slug": "/p/harvest-moon-ds-ds-decomp-claude"
   },
   {
     "id": "p028",
-    "repo": "https://github.com/alexbeavs-ps1-ports/driver-recomp",
-    "title": "Driver recompiled \u00b7 Reversed with AI",
-    "platform": "Windows x64",
+    "repo": "https://github.com/tekrantgaming/whopping-recompilation-collection",
+    "title": "Recompiled Sneak King, Big Bumpin' and PocketBike Racer (Xbox 360) into a native port with Claude",
+    "platform": "Xbox 360",
     "outcome": "Partial",
-    "slug": "/p/driver-44251a64"
+    "slug": "/p/sneak-king-big-bumpin-and-pocketbike-racer-xbox-360-recomp-claude"
   },
   {
     "id": "p029",
-    "repo": "https://github.com/liolu/ds-decomp-studio",
-    "title": "Nintendo DS games: reverse engineered with Claude Opus 5.5",
-    "platform": "Nintendo DS",
+    "repo": "https://github.com/opokxeno/xsg-i-decomp",
+    "title": "Matching decompilation of Xenosaga Episode I: Der Wille zur Macht (PS2) with Claude",
+    "platform": "PlayStation 2",
     "outcome": "Partial",
-    "slug": "/p/ds-decomp-studio-32-games-ai-agents"
+    "slug": "/p/xenosaga-episode-i-der-wille-zur-macht-ps2-decomp-claude"
   },
   {
     "id": "p030",
-    "repo": "https://github.com/bashalarmistdecomp/eternal-silver-sssc-decomp",
-    "title": "Lunar: Silver Star Story Complete reverse engineered with AI",
-    "platform": "PlayStation",
+    "repo": "https://github.com/liolu/livly-garden-decomp",
+    "title": "Matching decompilation of Livly Garden (DS) with Claude",
+    "platform": "Nintendo DS",
     "outcome": "Partial",
-    "slug": "/p/eternal-silver-sssc-decomp"
+    "slug": "/p/livly-garden-ds-decomp-claude"
   },
   {
     "id": "p031",
-    "repo": "https://github.com/VinceIP/fci-recomp",
-    "title": "Far Cry Instincts (Xbox, 2005) recompiled",
-    "platform": "Xbox to Windows",
+    "repo": "https://github.com/hk21x/007eon-recomp",
+    "title": "Recompiled 007: Everything or Nothing (Xbox) into a native port with Claude",
+    "platform": "Xbox",
     "outcome": "Partial",
-    "slug": "/p/far-cry-instincts-xbox-recomp-claude"
+    "slug": "/p/007-everything-or-nothing-xbox-recomp-claude"
   },
   {
     "id": "p032",
-    "repo": "https://github.com/kaustubhxd/ReFreedomFighters",
-    "title": "Freedom Fighters (PC, 2003, Glacier 1 engine) port",
-    "platform": "Windows PC to web browser",
+    "repo": "https://github.com/liolu/mysims-decomp",
+    "title": "Matching decompilation of MySims (DS) with Claude",
+    "platform": "Nintendo DS",
     "outcome": "Partial",
-    "slug": "/p/freedom-fighters-pc-formats-decomp-claude"
+    "slug": "/p/mysims-ds-decomp-claude"
   },
   {
     "id": "p033",
-    "repo": "https://github.com/Karlos-fr/fun-tracks-recomp-releases",
-    "title": "Fun Tracks (1997) recompiled with Codex \u00b7 Reversed with AI",
-    "platform": "Windows 10/11 (64-bit), Android 10+ (64-bit ARM)",
+    "repo": "https://github.com/alexbeavs-ps1-ports/syphon-filter-2-recomp",
+    "title": "Recompiled Syphon Filter 2 (PS1) into a native port with AI assistance",
+    "platform": "PlayStation",
     "outcome": "Partial",
-    "slug": "/p/fun-tracks-1997-11d16e8a"
+    "slug": "/p/syphon-filter-2-ps1-recomp-ai"
   },
   {
     "id": "p034",
+    "repo": "https://github.com/thesorahd/thelaststorydecomp",
+    "title": "Matching decompilation of The Last Story (Wii) with Claude and Codex",
+    "platform": "Wii",
+    "outcome": "Partial",
+    "slug": "/p/the-last-story-wii-decomp-claude"
+  },
+  {
+    "id": "p035",
+    "repo": "https://github.com/liolu/fairy-tail-madoushi-decomp",
+    "title": "Matching decompilation of Fairy Tail: Gekitou! Madoushi Kessen (DS) with Claude",
+    "platform": "Nintendo DS",
+    "outcome": "Partial",
+    "slug": "/p/fairy-tail-gekitou-madoushi-kessen-ds-decomp-claude"
+  },
+  {
+    "id": "p036",
+    "repo": "https://github.com/shulkmaster/mk-deception",
+    "title": "Matching decompilation of Mortal Kombat: Deception (GameCube) with Claude",
+    "platform": "GameCube",
+    "outcome": "Partial",
+    "slug": "/p/mortal-kombat-deception-gamecube-decomp-claude"
+  },
+  {
+    "id": "p037",
+    "repo": "https://github.com/harskov/fate-unlimited-codes-jp",
+    "title": "Matching decompilation of Fate/Unlimited Codes (PS2) with Claude",
+    "platform": "PlayStation 2",
+    "outcome": "Partial",
+    "slug": "/p/fate-unlimited-codes-ps2-decomp-claude"
+  },
+  {
+    "id": "p038",
+    "repo": "https://github.com/hk21x/pgr2-recomp",
+    "title": "Recompiled Project Gotham Racing 2 (Xbox) into a native port with Claude",
+    "platform": "Xbox",
+    "outcome": "Partial",
+    "slug": "/p/project-gotham-racing-2-xbox-recomp-claude"
+  },
+  {
+    "id": "p039",
+    "repo": "https://github.com/liolu/farm-frenzy-decomp",
+    "title": "Matching decompilation of Farm Frenzy (DS) with Claude",
+    "platform": "Nintendo DS",
+    "outcome": "Partial",
+    "slug": "/p/farm-frenzy-ds-decomp-claude"
+  },
+  {
+    "id": "p040",
+    "repo": "https://github.com/johnsoellnerdev/mlss-decomp",
+    "title": "Matching decompilation of Mario & Luigi: Superstar Saga (GBA) with Claude",
+    "platform": "Game Boy Advance",
+    "outcome": "Partial",
+    "slug": "/p/mario-luigi-superstar-saga-gba-decomp-claude"
+  },
+  {
+    "id": "p041",
+    "repo": "https://github.com/openrac/rac2-decomp",
+    "title": "Matching decompilation of Ratchet & Clank: Going Commando (PS2) with Claude",
+    "platform": "PlayStation 2",
+    "outcome": "Partial",
+    "slug": "/p/ratchet-clank-going-commando-ps2-decomp-claude"
+  },
+  {
+    "id": "p042",
+    "repo": "https://github.com/harskov/stretch-panic-usa",
+    "title": "Matching decompilation of Stretch Panic (PS2) with Claude",
+    "platform": "PlayStation 2",
+    "outcome": "Partial",
+    "slug": "/p/stretch-panic-ps2-decomp-claude"
+  },
+  {
+    "id": "p043",
+    "repo": "https://github.com/tekrantgaming/incredible-hulk-recompiled",
+    "title": "Recompiled The Incredible Hulk (Xbox 360) into a native port with Claude",
+    "platform": "Xbox 360",
+    "outcome": "Partial",
+    "slug": "/p/the-incredible-hulk-xbox-360-recomp-claude"
+  },
+  {
+    "id": "p044",
+    "repo": "https://github.com/liolu/fairy-tail-kardia-decomp",
+    "title": "Matching decompilation of Fairy Tail: Gekitotsu! Kardia Daiseidou (DS) with Claude",
+    "platform": "Nintendo DS",
+    "outcome": "Partial",
+    "slug": "/p/fairy-tail-gekitotsu-kardia-daiseidou-ds-decomp-claude"
+  },
+  {
+    "id": "p045",
+    "repo": "https://github.com/silentsudin/roadtripadventure-recomp",
+    "title": "Recompiled Road Trip (Choro Q HG 2) (PS2) into a native port with Claude",
+    "platform": "PlayStation 2",
+    "outcome": "Partial",
+    "slug": "/p/road-trip-choro-q-hg-2-ps2-recomp-claude"
+  },
+  {
+    "id": "p046",
+    "repo": "https://github.com/dev-camo/shadow-decomp",
+    "title": "Matching decompilation of Shadow the Hedgehog (GameCube) with AI assistance",
+    "platform": "GameCube",
+    "outcome": "Partial",
+    "slug": "/p/shadow-the-hedgehog-gamecube-decomp-ai"
+  },
+  {
+    "id": "p047",
+    "repo": "https://github.com/vonhoff/lemball-decomp",
+    "title": "Matching decompilation of Lemmings Paintball (Windows) with Codex",
+    "platform": "Windows",
+    "outcome": "Partial",
+    "slug": "/p/lemmings-paintball-windows-decomp-codex"
+  },
+  {
+    "id": "p048",
+    "repo": "https://github.com/liolu/eyeshield-21-decomp",
+    "title": "Matching decompilation of Eyeshield 21: Max Devil Power! (DS) with Claude",
+    "platform": "Nintendo DS",
+    "outcome": "Partial",
+    "slug": "/p/eyeshield-21-max-devil-power-ds-decomp-claude"
+  },
+  {
+    "id": "p049",
+    "repo": "https://github.com/danielgomesvieira2000/body-harvest-recomp",
+    "title": "Recompiled Body Harvest (N64) into a native port with Claude",
+    "platform": "Nintendo 64",
+    "outcome": "Partial",
+    "slug": "/p/body-harvest-n64-recomp-claude"
+  },
+  {
+    "id": "p050",
+    "repo": "https://github.com/harskov/redakai-vs-lokar-flash",
+    "title": "Matching decompilation of Redakai vs Lokar (Flash) with Claude",
+    "platform": "Web (Flash)",
+    "outcome": "Partial",
+    "slug": "/p/redakai-vs-lokar-flash-decomp-claude"
+  },
+  {
+    "id": "p051",
+    "repo": "https://github.com/liolu/dragon-ball-origins-decomp",
+    "title": "Matching decompilation of Dragon Ball: Origins (DS) with Claude",
+    "platform": "Nintendo DS",
+    "outcome": "Partial",
+    "slug": "/p/dragon-ball-origins-ds-decomp-claude"
+  },
+  {
+    "id": "p052",
+    "repo": "https://github.com/sushi-shi/homm3-decomp",
+    "title": "Matching decompilation of Heroes of Might and Magic III Complete (Windows) with Claude",
+    "platform": "Windows",
+    "outcome": "Partial",
+    "slug": "/p/heroes-of-might-and-magic-iii-complete-windows-decomp-claude"
+  },
+  {
+    "id": "p053",
+    "repo": "https://github.com/dougchansan/pkmn-colosseum",
+    "title": "Matching decompilation of Pokemon Colosseum (GC6E01) (GameCube) with Claude",
+    "platform": "GameCube",
+    "outcome": "Partial",
+    "slug": "/p/pokemon-colosseum-gc6e01-gamecube-decomp-claude"
+  },
+  {
+    "id": "p054",
+    "repo": "https://github.com/yuutatsubasa/free-riders-recompiled",
+    "title": "Recompiled Sonic Free Riders (Xbox 360) into a native port with Claude",
+    "platform": "Xbox 360",
+    "outcome": "Partial",
+    "slug": "/p/sonic-free-riders-xbox-360-recomp-claude"
+  },
+  {
+    "id": "p055",
+    "repo": "https://github.com/openrac/rac5-sm-decomp",
+    "title": "Matching decompilation of Ratchet & Clank: Size Matters (PS2) with Claude and Codex",
+    "platform": "PlayStation 2",
+    "outcome": "Partial",
+    "slug": "/p/ratchet-clank-size-matters-ps2-decomp-claude"
+  },
+  {
+    "id": "p056",
+    "repo": "https://github.com/zcanann/ffcc-decomp",
+    "title": "Matching decompilation of Final Fantasy Crystal Chronicles (GameCube) with Claude and Codex",
+    "platform": "GameCube",
+    "outcome": "Partial",
+    "slug": "/p/final-fantasy-crystal-chronicles-gamecube-decomp-claude"
+  },
+  {
+    "id": "p057",
+    "repo": "https://github.com/liolu/lego-star-wars-ii-the-original-trilogy-decomp",
+    "title": "Matching decompilation of LEGO Star Wars II: The Original Trilogy (DS) with Claude",
+    "platform": "Nintendo DS",
+    "outcome": "Partial",
+    "slug": "/p/lego-star-wars-ii-the-original-trilogy-ds-decomp-claude"
+  },
+  {
+    "id": "p058",
+    "repo": "https://github.com/asarafanov/fracturerecomp",
+    "title": "Recompiled Fracture (Xbox 360) into a native port with Claude",
+    "platform": "Xbox 360",
+    "outcome": "Partial",
+    "slug": "/p/fracture-xbox-360-recomp-claude"
+  },
+  {
+    "id": "p059",
+    "repo": "https://github.com/hk21x/pgr1-recomp",
+    "title": "Recompiled Project Gotham Racing (Xbox) into a native port with Claude",
+    "platform": "Xbox",
+    "outcome": "Partial",
+    "slug": "/p/project-gotham-racing-xbox-recomp-claude"
+  },
+  {
+    "id": "p060",
+    "repo": "https://github.com/pedrohenrique505/digimon-rumble-arena-2-recomp",
+    "title": "Recompiled Digimon Rumble Arena 2 (PS2) to a native Linux program with Claude",
+    "platform": "PS2 to Linux",
+    "outcome": "Partial",
+    "slug": "/p/digimon-rumble-arena-2-ps2-static-recompilation-claude"
+  },
+  {
+    "id": "p061",
+    "repo": "https://github.com/DrummingBird1/sonic06-recomp",
+    "title": "Recompiled Sonic the Hedgehog (2006, PS3) into a native PC port with Claude",
+    "platform": "PS3 to Windows",
+    "outcome": "Partial",
+    "slug": "/p/sonic-the-hedgehog-2006-ps3-recompilation-claude"
+  },
+  {
+    "id": "p062",
+    "repo": "https://github.com/almost-drowned-rat/Orta-Recompiled",
+    "title": "Recompiled Panzer Dragoon Orta (Xbox) with Claude Code",
+    "platform": "Xbox to PC",
+    "outcome": "Partial",
+    "slug": "/p/panzer-dragoon-orta-xbox-static-recompilation-claude"
+  },
+  {
+    "id": "p063",
+    "repo": "https://github.com/ripleyXLR8/atlantis-native",
+    "title": "Rebuilt the Atlantis adventure games as a native Rust port with Claude",
+    "platform": "Windows PC to native Rust",
+    "outcome": "Partial",
+    "slug": "/p/atlantis-lost-tales-cryo-native-port-rust-claude"
+  },
+  {
+    "id": "p064",
+    "repo": "https://github.com/darkuni/warriors-recomp",
+    "title": "Recompiled The Warriors (Xbox) to a native 32-bit Windows executable with Claude",
+    "platform": "Xbox to Windows",
+    "outcome": "Partial",
+    "slug": "/p/the-warriors-xbox-recompilation-claude"
+  },
+  {
+    "id": "p065",
+    "repo": "https://github.com/LittleBitUA/DownpourRecomp",
+    "title": "Recompiled Silent Hill: Downpour into a native Windows port with Claude",
+    "platform": "Console to Windows",
+    "outcome": "Partial",
+    "slug": "/p/silent-hill-downpour-recompilation-claude"
+  },
+  {
+    "id": "p066",
+    "repo": "https://github.com/shinyquagsire23/LocoDecomp",
+    "title": "Decompiled LEGO Locomotive with an LLM",
+    "platform": "PC game",
+    "outcome": "Partial",
+    "slug": "/p/lego-locomotive-llm-decompilation"
+  },
+  {
+    "id": "p067",
+    "repo": "https://github.com/tonykastaneda/dmc3psp",
+    "title": "Ported Devil May Cry 3 Special Edition (PS2) to the PSP with Claude",
+    "platform": "PS2 to PSP",
+    "outcome": "Partial",
+    "slug": "/p/devil-may-cry-3-ps2-to-psp-port-claude"
+  },
+  {
+    "id": "p068",
+    "repo": "https://github.com/mstan/EmeraldRecomp",
+    "title": "Recompiled Pokemon Emerald (GBA) to native code with Claude",
+    "platform": "GBA to Windows",
+    "outcome": "Partial",
+    "slug": "/p/pokemon-emerald-gba-static-recompilation-claude"
+  },
+  {
+    "id": "p069",
+    "repo": "https://github.com/projectedan/McRae05-XBE-Recomp",
+    "title": "Recompiled Colin McRae Rally 2005 (Xbox) into a native PC port with Claude",
+    "platform": "Xbox to Windows",
+    "outcome": "Partial",
+    "slug": "/p/colin-mcrae-rally-2005-xbox-xbe-recomp-claude"
+  },
+  {
+    "id": "p070",
+    "repo": "https://github.com/MaChInEgUn3/tg3000-decomp",
+    "title": "Disassembled Top Gear 3000 (SNES) and rewrote its logic as readable C with Claude",
+    "platform": "SNES (65816 and DSP-4)",
+    "outcome": "Partial",
+    "slug": "/p/top-gear-3000-snes-disassembly-readable-c-claude"
+  },
+  {
+    "id": "p071",
+    "repo": "https://github.com/Jovinull/sonicheroes",
+    "title": "Decompiled Sonic Heroes (GameCube) to byte-matching source with Claude",
+    "platform": "GameCube",
+    "outcome": "Partial",
+    "slug": "/p/sonic-heroes-gamecube-matching-decompilation-claude"
+  },
+  {
+    "id": "p072",
+    "repo": "https://github.com/southcitycapture/hybridheaven-decomp",
+    "title": "Decompiled Hybrid Heaven (N64) to matching C as an AI decompilation experiment",
+    "platform": "N64",
+    "outcome": "Partial",
+    "slug": "/p/hybrid-heaven-n64-matching-decompilation-ai-research"
+  },
+  {
+    "id": "p073",
+    "repo": "https://github.com/nekomancer01/DarkSoulsPS2",
+    "title": "Converted Dark Souls Remastered data for a PS2 homebrew port with Claude",
+    "platform": "PC game data to PS2 homebrew",
+    "outcome": "Partial",
+    "slug": "/p/dark-souls-remastered-ps2-homebrew-port-claude"
+  },
+  {
+    "id": "p074",
+    "repo": "https://github.com/nathsou/acnl",
+    "title": "Rewrote Animal Crossing: New Leaf (3DS) as readable C++ and proved functions equal with Claude",
+    "platform": "3DS to C++",
+    "outcome": "Partial",
+    "slug": "/p/animal-crossing-new-leaf-3ds-readable-cpp-rewrite-claude"
+  },
+  {
+    "id": "p075",
+    "repo": "https://github.com/opensagadev/saga",
+    "title": "Decompiled LEGO Star Wars: The Complete Saga (Android x86) to matching C++ with Claude",
+    "platform": "Android x86 to C++",
+    "outcome": "Partial",
+    "slug": "/p/lego-star-wars-complete-saga-android-matching-decomp-claude"
+  },
+  {
+    "id": "p076",
+    "repo": "https://github.com/mstan/MetroidNESRecomp",
+    "title": "Recompiled Metroid (NES) to native code with nesrecomp and Claude",
+    "platform": "NES to native PC",
+    "outcome": "Partial",
+    "slug": "/p/metroid-nes-static-recompilation-nesrecomp-claude"
+  },
+  {
+    "id": "p077",
+    "repo": "https://github.com/ZeldaWWHDDecomp/wwhd",
+    "title": "Decompiled The Legend of Zelda: The Wind Waker HD (Wii U) function by function with Claude",
+    "platform": "Wii U to C++",
+    "outcome": "Partial",
+    "slug": "/p/zelda-wind-waker-hd-verified-decompilation-claude"
+  },
+  {
+    "id": "p078",
+    "repo": "https://github.com/mstan/RubySapphireRecomp",
+    "title": "Recompiled Pokemon Ruby and Sapphire (GBA) to native code with Claude",
+    "platform": "GBA to native PC",
+    "outcome": "Partial",
+    "slug": "/p/pokemon-ruby-sapphire-gba-static-recompilation-claude"
+  },
+  {
+    "id": "p079",
+    "repo": "https://github.com/mabencs/Dragon-Age-Origins-Recomp-Android-Duo",
+    "title": "Recompiled Dragon Age: Origins (Xbox 360) for Android with Claude",
+    "platform": "Xbox 360 to Android ARM64",
+    "outcome": "Partial",
+    "slug": "/p/dragon-age-origins-xbox-360-recomp-android-claude"
+  },
+  {
+    "id": "p080",
+    "repo": "https://github.com/cpressland/stl-recomp",
+    "title": "Recompiled Star Trek: Legacy from its Win32 binaries for macOS with Claude",
+    "platform": "Windows x86 to macOS Metal",
+    "outcome": "Partial",
+    "slug": "/p/star-trek-legacy-win32-static-recompilation-macos-claude"
+  },
+  {
+    "id": "p081",
+    "repo": "https://github.com/replayrevival/ste-recomp",
+    "title": "Recompiled Godzilla: Save the Earth (Xbox) into a PC port with AI tools",
+    "platform": "Xbox to Windows",
+    "outcome": "Partial",
+    "slug": "/p/godzilla-save-the-earth-xbox-recomp-claude"
+  },
+  {
+    "id": "p082",
+    "repo": "https://github.com/jbond2003/MOHRS-XBERecomp",
+    "title": "Recompiled Medal of Honor: Rising Sun (Xbox) into a PC port with Claude",
+    "platform": "Xbox to Windows",
+    "outcome": "Partial",
+    "slug": "/p/medal-of-honor-rising-sun-xbox-recomp-claude"
+  },
+  {
+    "id": "p083",
+    "repo": "https://github.com/sosso33/omikron-tns-omk-engine",
+    "title": "Reimplemented the Omikron: The Nomad Soul engine and documented its formats with Claude",
+    "platform": "Windows PC engine",
+    "outcome": "Partial",
+    "slug": "/p/omikron-nomad-soul-open-engine-claude"
+  },
+  {
+    "id": "p084",
+    "repo": "https://github.com/mstan/YoshiNESRecomp",
+    "title": "Recompiled Yoshi (NES) to native code as a test of the nesrecomp framework with Claude",
+    "platform": "NES to Windows / Linux",
+    "outcome": "Partial",
+    "slug": "/p/yoshi-nes-static-recompilation-nesrecomp-claude"
+  },
+  {
+    "id": "p085",
+    "repo": "https://github.com/mstan/ApeEscapeRecomp",
+    "title": "Recompiled Ape Escape (PS1) to native code with psxrecomp and Claude",
+    "platform": "PS1 to Windows / Linux",
+    "outcome": "Partial",
+    "slug": "/p/ape-escape-ps1-static-recompilation-psxrecomp-claude"
+  },
+  {
+    "id": "p086",
+    "repo": "https://github.com/dennis48326/MM",
+    "title": "Statically recompiling Mega Man 1 through 6 for NES to native Windows programs with Claude",
+    "platform": "NES to native Windows",
+    "outcome": "Partial",
+    "slug": "/p/mega-man-1-6-nes-static-recomp-claude"
+  },
+  {
+    "id": "p087",
+    "repo": "https://github.com/tmcleroy/soulcalibur2-recomp",
+    "title": "Soulcalibur II for Xbox as a native macOS, Linux and Windows port with Claude",
+    "platform": "Xbox to macOS, Linux and Windows",
+    "outcome": "Partial",
+    "slug": "/p/soulcalibur-2-xbox-native-recomp-claude"
+  },
+  {
+    "id": "p088",
+    "repo": "https://github.com/dennisabalo18-bot/red-dead-revolver-pc",
+    "title": "Running the PAL Xbox Red Dead Revolver natively on PC by static recompilation with Claude",
+    "platform": "Xbox to native PC",
+    "outcome": "Partial",
+    "slug": "/p/red-dead-revolver-xbox-pal-pc-recomp-claude"
+  },
+  {
+    "id": "p089",
+    "repo": "https://github.com/KIexster/god-of-war-recomp",
+    "title": "Statically recompiling God of War for PS2 to a native PC port with Claude",
+    "platform": "PlayStation 2 to native PC",
+    "outcome": "Partial",
+    "slug": "/p/god-of-war-ps2-static-recomp-claude"
+  },
+  {
+    "id": "p090",
+    "repo": "https://github.com/mstan/SuperMarioBrosNESRecomp",
+    "title": "Recompiling Super Mario Bros. for NES to native code with Claude",
+    "platform": "NES to native PC",
+    "outcome": "Partial",
+    "slug": "/p/super-mario-bros-nes-static-recomp-claude"
+  },
+  {
+    "id": "p091",
+    "repo": "https://github.com/YggdrasziI/mhfu-decomp",
+    "title": "Decompiling Monster Hunter Freedom Unite for PSP with AI help on commentary and code",
+    "platform": "PlayStation Portable",
+    "outcome": "Partial",
+    "slug": "/p/monster-hunter-freedom-unite-psp-decompilation-ai-disclosed"
+  },
+  {
+    "id": "p092",
+    "repo": "https://github.com/matpdev/SaintSeiyaRecomp",
+    "title": "Native Linux port and decompilation of Saint Seiya: The Hades for PS2 with Claude",
+    "platform": "PlayStation 2 to Linux",
+    "outcome": "Partial",
+    "slug": "/p/saint-seiya-the-hades-ps2-recomp-claude"
+  },
+  {
+    "id": "p093",
+    "repo": "https://github.com/OriginalSwayze/Streets-Of-Rage-Recomp",
+    "title": "Native PC ports of Streets of Rage 1, 2 and 3 by static recompilation with Claude",
+    "platform": "Sega Genesis to native PC",
+    "outcome": "Partial",
+    "slug": "/p/streets-of-rage-collection-recomp-claude"
+  },
+  {
+    "id": "p094",
+    "repo": "https://github.com/N0zoM1z0/th105",
+    "title": "Reconstructing Touhou 10.5 Scarlet Weather Rhapsody with Claude Opus",
+    "platform": "Windows PC",
+    "outcome": "Partial",
+    "slug": "/p/touhou-scarlet-weather-rhapsody-th105-reconstruction-claude"
+  },
+  {
+    "id": "p095",
+    "repo": "https://github.com/dpt/ChaseHQ",
+    "title": "Reconstructing the ZX Spectrum port of Chase H.Q. in portable C with Claude agents",
+    "platform": "ZX Spectrum to portable C",
+    "outcome": "Partial",
+    "slug": "/p/chase-hq-zx-spectrum-disassembly-portable-c-claude"
+  },
+  {
+    "id": "p096",
+    "repo": "https://github.com/orkosoftware/tje3-recomp",
+    "title": "Recompiling ToeJam and Earl III: Mission to Earth for Xbox to native Windows and Android with Claude",
+    "platform": "Xbox to Windows and Android",
+    "outcome": "Partial",
+    "slug": "/p/toejam-and-earl-iii-xbox-static-recomp-claude"
+  },
+  {
+    "id": "p097",
+    "repo": "https://github.com/evaa-01/adam",
+    "title": "Recompiling the Japanese N64 Neon Genesis Evangelion to a native build with AI",
+    "platform": "Nintendo 64 to native Windows",
+    "outcome": "Partial",
+    "slug": "/p/neon-genesis-evangelion-n64-recomp-ai"
+  },
+  {
+    "id": "p098",
+    "repo": "https://github.com/SamiEnazi/infamous2-port",
+    "title": "Recompiling inFAMOUS 2 from PS3 into a native Windows program with Claude Code",
+    "platform": "PS3 to Windows and Linux",
+    "outcome": "Partial",
+    "slug": "/p/infamous-2-ps3-native-windows-recomp-claude"
+  },
+  {
+    "id": "p099",
+    "repo": "https://github.com/rzrbld/TheFamilia",
+    "title": "Porting Mafia: The City of Lost Heaven to ARM64 Linux handhelds by static recompilation with Claude",
+    "platform": "Windows x86 to ARM64 Linux",
+    "outcome": "Partial",
+    "slug": "/p/mafia-city-of-lost-heaven-arm64-linux-recomp-claude"
+  },
+  {
+    "id": "p100",
+    "repo": "https://github.com/sombertwilight-maker/Fatal-Frame-1-Xbox-Port",
+    "title": "Recompiling Fatal Frame for Xbox to a native Windows executable with Claude",
+    "platform": "Xbox to native Windows",
+    "outcome": "Partial",
+    "slug": "/p/fatal-frame-xbox-native-windows-recomp-claude"
+  },
+  {
+    "id": "p101",
+    "repo": "https://github.com/gminustwo/RondoRecomp",
+    "title": "Recompiling Castlevania: Rondo of Blood for PC Engine Super CD-ROM2 to native PC with Claude",
+    "platform": "PC Engine to Windows and Linux",
+    "outcome": "Partial",
+    "slug": "/p/castlevania-rondo-of-blood-pc-engine-static-recomp-claude"
+  },
+  {
+    "id": "p102",
+    "repo": "https://github.com/kobayashi90/beach_recomp",
+    "title": "AI-assisted recompilation of Beach Spikers for GameCube on Linux",
+    "platform": "GameCube to Linux",
+    "outcome": "Partial",
+    "slug": "/p/beach-spikers-gamecube-static-recomp-ai-assisted"
+  },
+  {
+    "id": "p103",
+    "repo": "https://github.com/OpokXeno/xenogears-recomp",
+    "title": "Recompiled Xenogears (PS1) to a native build with Claude",
+    "platform": "PS1 to Windows / Linux",
+    "outcome": "Partial",
+    "slug": "/p/xenogears-ps1-static-recompilation-claude"
+  },
+  {
+    "id": "p104",
+    "repo": "https://github.com/Tenome/Golgo-13-Decomp",
+    "title": "Disassembled and decompiled Golgo 13 (NES) with Claude Sonnet",
+    "platform": "NES",
+    "outcome": "Partial",
+    "slug": "/p/golgo-13-nes-matching-disassembly-claude-sonnet"
+  },
+  {
+    "id": "p105",
+    "repo": "https://github.com/bryankruman/BeetleDecomp",
+    "title": "Decompiled Beetle Adventure Racing (N64) to matching C with LLM help",
+    "platform": "N64",
+    "outcome": "Partial",
+    "slug": "/p/beetle-adventure-racing-n64-matching-decomp-llm"
+  },
+  {
+    "id": "p106",
+    "repo": "https://github.com/Subarasheese/daytona-xbla-recomp",
+    "title": "Recompiled Daytona USA (Xbox 360 XBLA) with ReXGlue and Claude",
+    "platform": "Xbox 360 to native PC",
+    "outcome": "Partial",
+    "slug": "/p/daytona-usa-xbla-recompilation-claude"
+  },
+  {
+    "id": "p107",
+    "repo": "https://github.com/mstan/PokemonRedAndBlueRecomp",
+    "title": "Recompiled Pokemon Red and Blue (Game Boy) to native PC with Claude",
+    "platform": "Game Boy to Windows",
+    "outcome": "Partial",
+    "slug": "/p/pokemon-red-blue-game-boy-static-recompilation-claude"
+  },
+  {
+    "id": "p108",
+    "repo": "https://github.com/chanadinh/pokemon-x-decomp",
+    "title": "Reconstructed Pokemon X (3DS) subsystems as verified C with Claude",
+    "platform": "3DS to native C",
+    "outcome": "Partial",
+    "slug": "/p/pokemon-x-3ds-reconstruction-claude"
+  },
+  {
+    "id": "p109",
+    "repo": "https://github.com/FireEmblemUniverse/fireemblem6j",
+    "title": "Fire Emblem: The Binding Blade decompilation with Claude Opus and Cursor trailers",
+    "platform": "Game Boy Advance",
+    "outcome": "Partial",
+    "slug": "/p/fire-emblem-binding-blade-gba-decomp-claude"
+  },
+  {
+    "id": "p110",
+    "repo": "https://github.com/mstan/StarFoxSNESRecomp",
+    "title": "Recompiling Star Fox for SNES to native PC with Claude",
+    "platform": "SNES to native PC",
+    "outcome": "Partial",
+    "slug": "/p/star-fox-snes-static-recomp-claude"
+  },
+  {
+    "id": "p111",
+    "repo": "https://github.com/mstan/SonicTheHedgehogSMSRecomp",
+    "title": "Recompiling Sonic the Hedgehog for Sega Master System to native C with Claude",
+    "platform": "Master System to native C",
+    "outcome": "Partial",
+    "slug": "/p/sonic-the-hedgehog-master-system-static-recomp-claude"
+  },
+  {
+    "id": "p112",
+    "repo": "https://github.com/mstan/SonicTheHedgehog2Recomp",
+    "title": "Recompiling Sonic the Hedgehog 2 for Genesis to native code with Claude",
+    "platform": "Mega Drive to native",
+    "outcome": "Partial",
+    "slug": "/p/sonic-the-hedgehog-2-genesis-static-recomp-claude"
+  },
+  {
+    "id": "p113",
+    "repo": "https://github.com/HossEz/fifa-world-cup-2014-recompiled",
+    "title": "Recompiled 2014 FIFA World Cup Brazil (Xbox 360) into a native PC port with AI agents",
+    "platform": "Xbox 360 to Windows",
+    "outcome": "Partial",
+    "slug": "/p/fifa-world-cup-2014-xbox-360-recomp-claude"
+  },
+  {
+    "id": "p114",
+    "repo": "https://github.com/obaidr1/hercules-recompiled",
+    "title": "Recompiled Disney's Hercules (PlayStation, 1997) into a native PC port with AI agents",
+    "platform": "PlayStation to Windows / Linux",
+    "outcome": "Partial",
+    "slug": "/p/disneys-hercules-ps1-recomp-claude"
+  },
+  {
+    "id": "p115",
+    "repo": "https://github.com/Bitsandbreakpoints/roll-away-psx-pc-recomp",
+    "title": "Recompiled Roll Away (PlayStation, 1998) into a native PC port with AI agents",
+    "platform": "PlayStation to Windows",
+    "outcome": "Partial",
+    "slug": "/p/roll-away-ps1-recomp-claude"
+  },
+  {
+    "id": "p116",
+    "repo": "https://github.com/coccofresco/TriAevum",
+    "title": "Recompiled The Legend of Zelda: Ocarina of Time 3D and Majora's Mask 3D into a native PC port with AI agents",
+    "platform": "Nintendo 3DS to PC",
+    "outcome": "Partial",
+    "slug": "/p/triaevum-ocarina-majora-3ds-recomp-claude"
+  },
+  {
+    "id": "p117",
+    "repo": "https://github.com/TechnicallyComputers/TwistedMetal4Recomp",
+    "title": "Recompiled Twisted Metal 4 (PlayStation) into a native PC port with AI agents",
+    "platform": "PlayStation to PC",
+    "outcome": "Partial",
+    "slug": "/p/twisted-metal-4-ps1-recomp-claude"
+  },
+  {
+    "id": "p118",
+    "repo": "https://github.com/MildRain479/PokePark-Wiicompiled",
+    "title": "Recompiled PokePark Wii: Pikachu's Adventure into a native PC port with AI agents",
+    "platform": "Wii to Windows / Android",
+    "outcome": "Partial",
+    "slug": "/p/pokepark-wii-recomp-claude"
+  },
+  {
+    "id": "p119",
+    "repo": "https://github.com/gascarcella/dw2003recomp",
+    "title": "Recompiled Digimon World 2003 (PlayStation, SLES-03936) into a native PC port with AI agents",
+    "platform": "PlayStation to PC",
+    "outcome": "Partial",
+    "slug": "/p/digimon-world-2003-ps1-decomp-claude"
+  },
+  {
+    "id": "p120",
+    "repo": "https://github.com/craigshaw/FZeroRecomp",
+    "title": "Recompiled F-Zero (SNES, USA) into a native PC port with AI agents",
+    "platform": "SNES to native PC",
+    "outcome": "Partial",
+    "slug": "/p/f-zero-snes-recomp-codex"
+  },
+  {
+    "id": "p121",
+    "repo": "https://github.com/puckhead73/nhl-legacy-recomp",
+    "title": "Recompiled NHL Legacy (Xbox 360) into a native PC port with AI agents",
+    "platform": "Xbox 360 to Windows",
+    "outcome": "Partial",
+    "slug": "/p/nhl-legacy-xbox-360-recomp-claude"
+  },
+  {
+    "id": "p122",
+    "repo": "https://github.com/mathewdouglas/Tourline-Prologue",
+    "title": "Recompiled Gran Turismo 5 Prologue (PS3) into a native PC port with AI agents",
+    "platform": "PS3 to PC",
+    "outcome": "Partial",
+    "slug": "/p/gran-turismo-5-prologue-ps3-recomp-claude"
+  },
+  {
+    "id": "p123",
+    "repo": "https://github.com/GreenNaugahyde/ZeldaWWHDRecompAndroid",
+    "title": "Recompiled The Legend of Zelda: The Wind Waker HD (Wii U) into a native PC port with AI agents",
+    "platform": "Wii U to macOS",
+    "outcome": "Partial",
+    "slug": "/p/wind-waker-hd-wii-u-macos-recomp-claude"
+  },
+  {
+    "id": "p124",
+    "repo": "https://github.com/ElKev118/ghostrecon2-recomp",
+    "title": "Recompiled Tom Clancy's Ghost Recon 2 (original Xbox, 2004) into a native PC port with AI agents",
+    "platform": "Xbox to Windows",
+    "outcome": "Partial",
+    "slug": "/p/ghost-recon-2-xbox-recomp-claude"
+  },
+  {
+    "id": "p125",
+    "repo": "https://github.com/DrummingBird1/gow-psp-recomp",
+    "title": "Recompiled God of War: Chains of Olympus and Ghost of Sparta (PSP) into a native PC port with AI agents",
+    "platform": "PSP to Windows",
+    "outcome": "Partial",
+    "slug": "/p/god-of-war-psp-recomp-claude"
+  },
+  {
+    "id": "p126",
+    "repo": "https://github.com/zonehammer/wet-recomp",
+    "title": "Recompiled WET (Xbox 360, 2009) into a native PC port with AI agents",
+    "platform": "Xbox 360 to Windows",
+    "outcome": "Partial",
+    "slug": "/p/wet-xbox-360-recomp-claude"
+  },
+  {
+    "id": "p127",
+    "repo": "https://github.com/hiburn8/Futurama-The-Game-The-Recomp",
+    "title": "Recompiled Futurama: The Game (original Xbox, 2003) into a native PC port with AI agents",
+    "platform": "Xbox to Windows / Linux",
+    "outcome": "Partial",
+    "slug": "/p/futurama-the-game-xbox-recomp-claude"
+  },
+  {
+    "id": "p128",
+    "repo": "https://github.com/Sinan-Karakaya/DQ8-Recompiled",
+    "title": "Recompiled Dragon Quest VIII: Journey of the Cursed King (PS2) into a native PC port with AI agents",
+    "platform": "PS2 to PC",
+    "outcome": "Partial",
+    "slug": "/p/dragon-quest-viii-ps2-recomp-claude"
+  },
+  {
+    "id": "p129",
+    "repo": "https://github.com/giangra/stuntdouble-reignition",
+    "title": "Recompiled Stuntman: Ignition (Xbox 360, 2007) into a native PC port with AI agents",
+    "platform": "Xbox 360 to PC",
+    "outcome": "Partial",
+    "slug": "/p/stuntman-ignition-xbox-360-recomp-claude"
+  },
+  {
+    "id": "p130",
+    "repo": "https://github.com/Mava-b/folklore-decomp",
+    "title": "Recompiled Folklore (PS3, 2007) into a native PC port with AI agents",
+    "platform": "PS3 to Windows",
+    "outcome": "Partial",
+    "slug": "/p/folklore-ps3-recomp-claude"
+  },
+  {
+    "id": "p131",
+    "repo": "https://github.com/mstan/Tomba2Recomp",
+    "title": "Recompiled Tomba! 2: The Evil Swine Return (PlayStation) into a native PC port with AI agents",
+    "platform": "PlayStation to PC",
+    "outcome": "Partial",
+    "slug": "/p/tomba-2-ps1-recomp-claude"
+  },
+  {
+    "id": "p132",
+    "repo": "https://github.com/Shmargus/GSRecomp",
+    "title": "Recompiled Golden Sun and Golden Sun: The Lost Age (GBA) into a native PC port with AI agents",
+    "platform": "Game Boy Advance to Windows / Linux",
+    "outcome": "Partial",
+    "slug": "/p/golden-sun-gba-recomp-claude"
+  },
+  {
+    "id": "p133",
+    "repo": "https://github.com/thegh0sts/bourne-conspiracy-x360-recomp",
+    "title": "Recompiled The Bourne Conspiracy (Xbox 360) into a native PC port with AI agents",
+    "platform": "Xbox 360 to Windows",
+    "outcome": "Partial",
+    "slug": "/p/bourne-conspiracy-xbox-360-recomp-claude-2"
+  },
+  {
+    "id": "p134",
+    "repo": "https://github.com/DiegoDeDios/AlienReRecomp",
+    "title": "Recompiled Alien Resurrection (PlayStation, SLUS-00633) into a native PC port with AI agents",
+    "platform": "PlayStation to macOS / Windows / Linux",
+    "outcome": "Partial",
+    "slug": "/p/alien-resurrection-ps1-recomp-claude"
+  },
+  {
+    "id": "p135",
+    "repo": "https://github.com/Spooky098529/ITC-Recomp",
+    "title": "Recompiled Import Tuner Challenge (Xbox 360, 2006) into a native PC port with AI agents",
+    "platform": "Xbox 360 to Linux / Windows",
+    "outcome": "Partial",
+    "slug": "/p/import-tuner-challenge-xbox-360-recomp-claude"
+  },
+  {
+    "id": "p136",
+    "repo": "https://github.com/riotashley81-jpg/vagrantstory_recomp",
+    "title": "Recompiled Vagrant Story (PlayStation, SLUS-01040) into a native PC port with AI agents",
+    "platform": "PlayStation to PC",
+    "outcome": "Partial",
+    "slug": "/p/vagrant-story-ps1-recomp-claude"
+  },
+  {
+    "id": "p137",
+    "repo": "https://github.com/EtherAura/xenogears-pc",
+    "title": "A native PC port of Xenogears built from a matching decompilation with Claude",
+    "platform": "PlayStation 1 to Linux and Windows",
+    "outcome": "Partial",
+    "slug": "/p/xenogears-native-pc-port-from-matching-decomp-claude"
+  },
+  {
+    "id": "p138",
+    "repo": "https://github.com/mstan/DrMarioNesRecomp",
+    "title": "Recompiling Dr. Mario for NES to native PC with Claude",
+    "platform": "NES to native PC",
+    "outcome": "Partial",
+    "slug": "/p/dr-mario-nes-static-recomp-claude"
+  },
+  {
+    "id": "p139",
+    "repo": "https://github.com/DenisTRW/bis-recomp",
+    "title": "Recompiling Mario and Luigi: Bowser's Inside Story for DS, written mostly by Claude Code",
+    "platform": "Nintendo DS to native PC",
+    "outcome": "Partial",
+    "slug": "/p/mario-luigi-bowsers-inside-story-ds-recomp-claude"
+  },
+  {
+    "id": "p140",
+    "repo": "https://github.com/kazuyette/shino-legion-decomp",
+    "title": "Reverse engineering Shinobi Legions for Sega Saturn toward a PC port with Claude",
+    "platform": "Sega Saturn to PC",
+    "outcome": "Partial",
+    "slug": "/p/shinobi-legions-saturn-reverse-engineering-claude"
+  },
+  {
+    "id": "p141",
+    "repo": "https://github.com/mstan/MinishCapRecomp",
+    "title": "Recompiling The Legend of Zelda: The Minish Cap for GBA to native PC with Claude",
+    "platform": "Game Boy Advance to native PC",
+    "outcome": "Partial",
+    "slug": "/p/zelda-minish-cap-gba-static-recomp-claude"
+  },
+  {
+    "id": "p142",
+    "repo": "https://github.com/scarface-decomp/scarface_decomp",
+    "title": "Matching decompilation of Scarface: The World Is Yours for PC and Xbox with Claude",
+    "platform": "Windows x86 and Xbox",
+    "outcome": "Partial",
+    "slug": "/p/scarface-the-world-is-yours-matching-decomp-claude"
+  },
+  {
+    "id": "p143",
+    "repo": "https://github.com/bugcoder00/FarCryInstinctsPredatorRecomp",
+    "title": "Recompiling Far Cry Instincts Predator for Xbox 360 to a Windows DirectX 12 build with Claude",
+    "platform": "Xbox 360 to Windows",
+    "outcome": "Partial",
+    "slug": "/p/far-cry-instincts-predator-xbox-360-recomp-claude"
+  },
+  {
+    "id": "p144",
+    "repo": "https://github.com/vitalya834/boogerman-rom-tools",
+    "title": "Took apart the Boogerman (Mega Drive) cartridge and rebuilt it with Claude",
+    "platform": "Mega Drive to PC",
+    "outcome": "Partial",
+    "slug": "/p/boogerman-mega-drive-cartridge-extraction-remake-claude"
+  },
+  {
+    "id": "p145",
+    "repo": "https://github.com/alinsavix/gauntlet-gamerom-ai-reveng",
+    "title": "Reverse engineered the Gauntlet II arcade game ROM with AI assistance",
+    "platform": "Atari arcade hardware (68010)",
+    "outcome": "Partial",
+    "slug": "/p/gauntlet-ii-arcade-game-rom-ai-reverse-engineering"
+  },
+  {
+    "id": "p146",
+    "repo": "https://github.com/junewunder/gbaa",
+    "title": "GBA Advanced, a Game Boy Advance static recompiler to Rust written by Claude agents",
+    "platform": "Game Boy Advance to native Rust",
+    "outcome": "Partial",
+    "slug": "/p/gba-advanced-static-recompiler-written-by-claude-agents"
+  },
+  {
+    "id": "p147",
+    "repo": "https://github.com/thierbig/iwd2r",
+    "title": "Recovering the Icewind Dale II engine by decompilation with Claude and GLM workers",
+    "platform": "Windows x86 to Linux, Windows and macOS",
+    "outcome": "Partial",
+    "slug": "/p/icewind-dale-2-decompilation-claude-glm-workers"
+  },
+  {
+    "id": "p148",
+    "repo": "https://github.com/tgg12321/ReBushido",
+    "title": "ReBushido, bug fixes for Bushido Blade 2 built on a complete decompilation written by Claude",
+    "platform": "PlayStation 1",
+    "outcome": "Partial",
+    "slug": "/p/bushido-blade-2-decompilation-mod-claude"
+  },
+  {
+    "id": "p149",
+    "repo": "https://github.com/zhouwuqi/noitadroid",
+    "title": "Recompiling Noita to native ARM64 for Android with Claude",
+    "platform": "Windows x86-64 to Android ARM64",
+    "outcome": "Partial",
+    "slug": "/p/noita-android-static-recomp-claude"
+  },
+  {
+    "id": "p150",
+    "repo": "https://github.com/zm2283145/syphon-filter-omega-strain-decomp",
+    "title": "Matching decompilation of the Syphon Filter: The Omega Strain PS2 executable with Claude",
+    "platform": "PlayStation 2",
+    "outcome": "Partial",
+    "slug": "/p/syphon-filter-omega-strain-ps2-matching-decomp-claude"
+  },
+  {
+    "id": "p151",
+    "repo": "https://github.com/centollOS/SwitchWakerHD",
+    "title": "SwitchWakerHD, a native Switch homebrew port of a Wii U adventure game by static recompilation with Claude",
+    "platform": "Wii U to Nintendo Switch homebrew",
+    "outcome": "Partial",
+    "slug": "/p/switchwakerhd-wii-u-to-switch-native-port-claude"
+  },
+  {
+    "id": "p152",
+    "repo": "https://github.com/baezahuertaelias/manhunt1_nx",
+    "title": "Porting the original Xbox Manhunt to Nintendo Switch homebrew by static recompilation with Claude",
+    "platform": "Xbox to Nintendo Switch homebrew",
+    "outcome": "Partial",
+    "slug": "/p/manhunt-xbox-switch-static-recomp-claude"
+  },
+  {
+    "id": "p153",
+    "repo": "https://github.com/andrewnakas/thug-decomp",
+    "title": "Matching decompilation of Tony Hawk's Underground for PS2 with Claude",
+    "platform": "PlayStation 2",
+    "outcome": "Partial",
+    "slug": "/p/tony-hawks-underground-ps2-matching-decomp-claude"
+  },
+  {
+    "id": "p154",
+    "repo": "https://github.com/gothamor/gta-vcs-recomp",
+    "title": "Recompiled GTA: Vice City Stories (PS2) into a native C++ port for Windows and Linux with Claude",
+    "platform": "PS2 to Windows / Linux",
+    "outcome": "Partial",
+    "slug": "/p/gta-vice-city-stories-ps2-recomp-claude"
+  },
+  {
+    "id": "p155",
+    "repo": "https://github.com/mstan/FireRedLeafGreenRecomp",
+    "title": "Statically recompiling Pok\u00e9mon FireRed and LeafGreen to native PC with Claude",
+    "platform": "Game Boy Advance to native PC",
+    "outcome": "Partial",
+    "slug": "/p/pokemon-firered-leafgreen-gba-static-recomp-claude"
+  },
+  {
+    "id": "p156",
+    "repo": "https://github.com/hk21x/007-agentunderfire-recomp",
+    "title": "Recompiling 007: Agent Under Fire for Xbox to a native PC port with Claude",
+    "platform": "Xbox to native Windows",
+    "outcome": "Partial",
+    "slug": "/p/007-agent-under-fire-xbox-xbe-recomp-claude"
+  },
+  {
+    "id": "p157",
+    "repo": "https://github.com/Pallypots/Kids-Next-Door-D.E.C.O.M.P.",
+    "title": "Decompiled Codename: Kids Next Door (Xbox) toward a native port with Claude",
+    "platform": "Xbox to native",
+    "outcome": "Partial",
+    "slug": "/p/codename-kids-next-door-xbox-decomp-claude"
+  },
+  {
+    "id": "p158",
+    "repo": "https://github.com/jadzziaa/sly-rs",
+    "title": "Recompiled the PS2 Sly Cooper trilogy into Rust with Claude",
+    "platform": "PS2 to native Rust",
+    "outcome": "Partial",
+    "slug": "/p/sly-cooper-trilogy-rust-recomp-claude"
+  },
+  {
+    "id": "p159",
+    "repo": "https://github.com/mstan/SuperMarioWorldRecomp",
+    "title": "Super Mario World statically recompiled to native C, with some AI help",
+    "platform": "SNES to native Windows and Linux",
+    "outcome": "Partial",
+    "slug": "/p/super-mario-world-snes-static-recomp-claude"
+  },
+  {
+    "id": "p160",
+    "repo": "https://github.com/shinyquagsire23/Yodecomp",
+    "title": "Claude decompiling the Star Wars: Yoda Stories engine into C++",
+    "platform": "Windows (MFC), native SDL, WASM",
+    "outcome": "Partial",
+    "slug": "/p/yoda-stories-yodesk-decompilation-claude"
+  },
+  {
+    "id": "p161",
+    "repo": "https://github.com/isledecomp/racers",
+    "title": "Matching decompilation of LEGO Racers (1999) with Claude Opus 5.5",
+    "platform": "Windows (32-bit x86)",
+    "outcome": "Partial",
+    "slug": "/p/lego-racers-decompilation-claude-opus"
+  },
+  {
+    "id": "p162",
+    "repo": "https://github.com/SansNope/MarathonRecomp-Android",
+    "title": "Recompiled Sonic the Hedgehog (2006) for Android using MarathonRecomp",
+    "platform": "Android (arm64-v8a, API 29+)",
+    "outcome": "Partial",
+    "slug": "/p/sonic-the-hedgehog-2006-e2320876"
+  },
+  {
+    "id": "p163",
+    "repo": "https://github.com/i2kiselev/fm4-static-recomp",
+    "title": "Forza Motorsport 4 static recompilation for Windows using ShiftGlue",
+    "platform": "Windows 10+ x64",
+    "outcome": "Partial",
+    "slug": "/p/forza-motorsport-4-98a7a9ca"
+  },
+  {
+    "id": "p164",
+    "repo": "https://github.com/matbourgon/gex64decomp",
+    "title": "Decompiled Gex 64: Enter the Gecko (N64) into C source code",
+    "platform": "Nintendo 64",
+    "outcome": "Partial",
+    "slug": "/p/gex-64-enter-the-gecko-7b4beeca"
+  },
+  {
+    "id": "p165",
+    "repo": "https://github.com/Barthes-Recompiled/HP3-Recompiled",
+    "title": "Recompiled Harry Potter and the Prisoner of Azkaban (Xbox) into a native Windows port",
+    "platform": "Windows",
+    "outcome": "Partial",
+    "slug": "/p/harry-potter-and-the-prisoner-of-azkaban-xbox-6bad7a51"
+  },
+  {
+    "id": "p166",
+    "repo": "https://github.com/sirbilliams/Rollerbot-Android",
+    "title": "Reconstructed Rollerbot: A Time Journey for Android and Linux with Claude",
+    "platform": "Android, Linux",
+    "outcome": "Partial",
+    "slug": "/p/rollerbot-a-time-journey-2da045bb"
+  },
+  {
+    "id": "p167",
+    "repo": "https://github.com/AsukaNeo/aggro-royale",
+    "title": "Aggro Royale recompiles Aggressive Inline (Xbox) for native Windows execution",
+    "platform": "Windows 10/11 64-bit",
+    "outcome": "Partial",
+    "slug": "/p/aggressive-inline-6c0507bc"
+  },
+  {
+    "id": "p168",
+    "repo": "https://github.com/RetroPulse03/WinBackRecomp",
+    "title": "Recompiled WinBack: Covert Operations (N64) into a native PC port with Claude",
+    "platform": "Windows 10/11",
+    "outcome": "Partial",
+    "slug": "/p/winback-covert-operations-n64-5167b9e6"
+  },
+  {
+    "id": "p169",
+    "repo": "https://github.com/albovsky/nd-blackmoor-decomp",
+    "title": "Reconstructed Blackmoor (GOG) into a buildable x86 executable with Claude",
+    "platform": "x86",
+    "outcome": "Partial",
+    "slug": "/p/blackmoor-2abc444c"
+  },
+  {
+    "id": "p170",
+    "repo": "https://github.com/TheBozos/SoulCaliburIII_Recomp",
+    "title": "Recompiled Soulcalibur III (PS2) into a native Linux and Windows port with Claude",
+    "platform": "Linux, Windows",
+    "outcome": "Partial",
+    "slug": "/p/soulcalibur-iii-slus-21216-128f1f7a"
+  },
+  {
+    "id": "p171",
+    "repo": "https://github.com/seilc/incredibles",
+    "title": "Decompiled The Incredibles (GameCube) using decomp-toolkit",
+    "platform": "GameCube",
+    "outcome": "Partial",
+    "slug": "/p/the-incredibles-gamecube-17c217cc"
+  },
+  {
+    "id": "p172",
+    "repo": "https://github.com/TawhidI-602/The-House-of-the-Dead-ReWrithe",
+    "title": "Recompiled The House of the Dead (Arcade/PC) into a native C++ rewrite with Claude",
+    "platform": "Windows, Linux, macOS",
+    "outcome": "Partial",
+    "slug": "/p/the-house-of-the-dead-1996-1998-ffcc3e44"
+  },
+  {
+    "id": "p173",
+    "repo": "https://github.com/JimmyMcThiccus/Shadow-Hearts-Covenant-Slop-Decomp-Recomp",
+    "title": "Decompiled Shadow Hearts: Covenant (PS2) and implemented a native Rust/Bevy port",
+    "platform": "Windows, macOS, Linux",
+    "outcome": "Partial",
+    "slug": "/p/shadow-hearts-covenant-731e3b2a"
+  },
+  {
+    "id": "p174",
+    "repo": "https://github.com/BitJager-dev/segarally-online-arcade-recomp",
+    "title": "Recompiled SEGA Rally Online Arcade (PS3) into a native PC port with Claude",
+    "platform": "Linux",
+    "outcome": "Partial",
+    "slug": "/p/sega-rally-online-arcade-ps3-0c1a6107"
+  },
+  {
+    "id": "p175",
+    "repo": "https://github.com/boodyandmustafa-create/MOH-EuropeanAssault-PC-Port",
+    "title": "Medal of Honor: European Assault: Claude-assisted Xbox recompilation and an author-tested Windows port",
+    "platform": "Windows 10/11 64-bit",
+    "outcome": "Partial",
+    "slug": "/p/medal-of-honor-european-assault-6176778e"
+  },
+  {
+    "id": "p176",
+    "repo": "https://github.com/duanefields/7cities",
+    "title": "Recompiled Seven Cities of Gold (C64) into a native macOS port with Claude",
+    "platform": "macOS 14+",
+    "outcome": "Partial",
+    "slug": "/p/seven-cities-of-gold-8d06ba4b"
+  },
+  {
+    "id": "p177",
+    "repo": "https://github.com/gustavomorinaga/project-vekta",
+    "title": "Recompiled Killzone HD (PS3) into a native PC port with Claude",
+    "platform": "Linux x64, Windows x64",
+    "outcome": "Partial",
+    "slug": "/p/killzone-hd-c373c02c"
+  },
+  {
+    "id": "p178",
+    "repo": "https://github.com/Korvonordico/shadow-of-rome-recompiled",
+    "title": "Recompiled Shadow of Rome (PS2) into a native PC port with Claude",
+    "platform": "Windows",
+    "outcome": "Partial",
+    "slug": "/p/shadow-of-rome-ps2-622f134d"
+  },
+  {
+    "id": "p179",
+    "repo": "https://github.com/Anaphygon/un5-nx",
+    "title": "Recompiled Naruto Shippuden: Ultimate Ninja 5 (PS2) into a native port for Nintendo Switch and macOS with Claude",
+    "platform": "Nintendo Switch, macOS, Windows",
+    "outcome": "Partial",
+    "slug": "/p/naruto-shippuden-ultimate-ninja-5-5acc7f27"
+  },
+  {
+    "id": "p180",
+    "repo": "https://github.com/springah/zuma_recomp",
+    "title": "Recompiled Zuma (Xbox 360) into a native PC port with Claude",
+    "platform": "Windows",
+    "outcome": "Partial",
+    "slug": "/p/zuma-xbox-360-xbla-0c8ba302"
+  },
+  {
+    "id": "p181",
+    "repo": "https://github.com/mstan/Megaman3NESRecomp",
+    "title": "Static recompilation of Mega Man 3 (NES) to native PC with NESRecomp",
+    "platform": "Windows, Linux, macOS",
+    "outcome": "Partial",
+    "slug": "/p/mega-man-3-nes-b215680f"
+  },
+  {
+    "id": "p182",
+    "repo": "https://github.com/missingno7/ac1_recomp",
+    "title": "Recompiled Assassin's Creed 1 into a native Windows and Android executable with Claude",
+    "platform": "Windows x64, Android ARM64",
+    "outcome": "Partial",
+    "slug": "/p/assassin-s-creed-1-cba56e2a"
+  },
+  {
+    "id": "p183",
+    "repo": "https://github.com/exoteric33/ps2-native-recomp",
+    "title": "ps2-native-recomp: static recompiler that turns PS2 discs into native Windows/Linux executables",
+    "platform": "Windows, Linux",
+    "outcome": "Partial",
+    "slug": "/p/playstation-2-8774c07e"
+  },
+  {
+    "id": "p184",
+    "repo": "https://github.com/victor-takai/rogue-galaxy-recomp",
+    "title": "Recompiled Rogue Galaxy (PS2) into a native Windows game with Claude",
+    "platform": "Windows 10/11 (64-bit)",
+    "outcome": "Partial",
+    "slug": "/p/rogue-galaxy-scus-97490-64c9d336"
+  },
+  {
+    "id": "p185",
+    "repo": "https://github.com/seilc/rat",
+    "title": "Decompiled Ratatouille (Jan 18, 2006 prototype) using LLM assistance",
+    "platform": "GameCube",
+    "outcome": "Partial",
+    "slug": "/p/ratatouille-jan-18-2006-prototype-2f5f3452"
+  },
+  {
+    "id": "p186",
+    "repo": "https://github.com/OZORDI/tt-decomp",
+    "title": "Recompiled Rockstar Presents Table Tennis (Xbox 360) into C++ with Claude",
+    "platform": "Xbox 360",
+    "outcome": "Partial",
+    "slug": "/p/rockstar-presents-table-tennis-4ef052f0"
+  },
+  {
+    "id": "p187",
+    "repo": "https://github.com/ElGuslml/KameoRecomp",
+    "title": "KameoRecomp is a static recompilation of the Xbox 360 game Kameo: Elements of Power for Windows.",
+    "platform": "Windows 10/11 (64-bit)",
+    "outcome": "Partial",
+    "slug": "/p/kameo-elements-of-power-76da2f64"
+  },
+  {
+    "id": "p188",
+    "repo": "https://github.com/Ryubara/coney",
+    "title": "Reimplemented The Warriors (2005) natively in C++ from its PS2 and Xbox versions, with Claude",
+    "platform": "Windows, Linux, macOS",
+    "outcome": "Partial",
+    "slug": "/p/the-warriors-6985f0d0"
+  },
+  {
+    "id": "p189",
+    "repo": "https://github.com/arichmondphoto/DragonWarrior4NESRecomp",
+    "title": "Recompiled Dragon Warrior IV (NES) for macOS and Linux with an AI-made HD graphics pack, with Claude",
+    "platform": "macOS (Apple Silicon), Linux (x86_64)",
+    "outcome": "Partial",
+    "slug": "/p/dragon-warrior-iv-nes-5f8d93ec"
+  },
+  {
+    "id": "p190",
+    "repo": "https://github.com/malinkin-s/naruto-rise-of-a-ninja-nx",
+    "title": "Naruto: Rise of a Ninja Nintendo Switch Port",
+    "platform": "Nintendo Switch",
+    "outcome": "Partial",
+    "slug": "/p/naruto-rise-of-a-ninja-37367f49"
+  },
+  {
+    "id": "p191",
+    "repo": "https://github.com/Marvisak/mafia-re",
+    "title": "mafia-re (decomp)",
+    "platform": "Windows",
+    "outcome": "Partial",
+    "slug": "/p/mafia-the-city-of-lost-heaven-45dedf33"
+  },
+  {
+    "id": "p192",
     "repo": "https://github.com/JRickey/gba-recomp",
-    "title": "GBA-Recomp: gba-recomp \u00b7 Reversed with AI",
+    "title": "gba-recomp",
     "platform": "Windows, macOS, Linux",
     "outcome": "Partial",
     "slug": "/p/gba-recomp-182a2f32"
   },
   {
-    "id": "p035",
-    "repo": "https://github.com/rexglue/rexglue-sdk",
-    "title": "Gears of War 3 (Xbox 360) recompiled \u00b7 Reversed with AI",
-    "platform": "Xbox 360 (PowerPC) to Linux",
-    "outcome": "Partial",
-    "slug": "/p/gears-of-war-3-linux-recomp-rexglue"
-  },
-  {
-    "id": "p036",
-    "repo": "https://github.com/LasVola/godhand-recomp",
-    "title": "God Hand (PlayStation 2) recompiled with Claude",
-    "platform": "PS2 (MIPS) to Windows",
-    "outcome": "Partial",
-    "slug": "/p/god-hand-ps2-recomp-claude-code"
-  },
-  {
-    "id": "p037",
-    "repo": "https://github.com/cxldsakeb/GoW2-nativo-PS2",
-    "title": "God of War II (PlayStation 2): reverse engineered with AI",
-    "platform": "PS2 (MIPS) to Windows",
-    "outcome": "Partial",
-    "slug": "/p/god-of-war-2-ps2-recomp-claude-code"
-  },
-  {
-    "id": "p038",
-    "repo": "https://github.com/otavix010/gow-ascension-pc",
-    "title": "God of War: Ascension reverse engineered with Claude",
-    "platform": "Windows 10/11 64-bit",
-    "outcome": "Partial",
-    "slug": "/p/god-of-war-ascension-16aa3bca"
-  },
-  {
-    "id": "p039",
-    "repo": "https://github.com/gustavocanepa/gt3-decomp",
-    "title": "Gran Turismo 3: A-Spec (PS2) matching decompilation",
-    "platform": "PlayStation 2",
-    "outcome": "Partial",
-    "slug": "/p/gran-turismo-3-decomp-claude"
-  },
-  {
-    "id": "p040",
-    "repo": "https://github.com/gustavocanepa/gt4-decomp",
-    "title": "Gran Turismo 4 (PS2): reverse engineered with Claude",
-    "platform": "PlayStation 2",
-    "outcome": "Partial",
-    "slug": "/p/gran-turismo-4-decomp-claude"
-  },
-  {
-    "id": "p041",
-    "repo": "https://github.com/kirklandsig/halo2-decompiled",
-    "title": "Halo 2 (Xbox retail build) matching decompilation",
-    "platform": "Xbox",
-    "outcome": "Partial",
-    "slug": "/p/halo-2-xbox-retail-build-db711625"
-  },
-  {
-    "id": "p042",
-    "repo": "https://github.com/liolu/heroes-of-mana-decomp",
-    "title": "Heroes of Mana (Nintendo DS) decompilation",
-    "platform": "Nintendo DS (ARM)",
-    "outcome": "Partial",
-    "slug": "/p/heroes-of-mana-ds-decomp-agents"
-  },
-  {
-    "id": "p043",
-    "repo": "https://github.com/abhinavt0681/hitman-contracts_clone",
-    "title": "Hitman: Contracts (PC, 2004) reverse engineered with AI",
-    "platform": "Windows (x86)",
-    "outcome": "Partial",
-    "slug": "/p/hitman-contracts-rust-rebuild-claude"
-  },
-  {
-    "id": "p044",
-    "repo": "https://github.com/matthewfcarlson/thunderclap",
-    "title": "The Incredible Hulk: Ultimate Destruction (Xbox, 2005)",
-    "platform": "Xbox",
-    "outcome": "Partial",
-    "slug": "/p/hulk-ultimate-destruction-xbox-decomp-llm"
-  },
-  {
-    "id": "p045",
-    "repo": "https://github.com/feanor-noldorin/ico-recomp",
-    "title": "ICO: reverse engineered with Claude \u00b7 Reversed with AI",
-    "platform": "PS3 (PPU/SPU) to Windows",
-    "outcome": "Partial",
-    "slug": "/p/ico-ps3-recomp-claude"
-  },
-  {
-    "id": "p046",
-    "repo": "https://github.com/mrOt4/babel-recomp",
-    "title": "Illusion of Gaia (SNES, USA) port with Claude Opus 5.5",
-    "platform": "SNES to Linux / Windows / Android / consoles",
-    "outcome": "Partial",
-    "slug": "/p/illusion-of-gaia-snes-recomp-claude"
-  },
-  {
-    "id": "p047",
-    "repo": "https://github.com/anishchandra24/Juiced2-Recompiled",
-    "title": "Juiced 2: Hot Import Nights recompiled with Claude",
-    "platform": "Windows 10/11 (64-bit)",
-    "outcome": "Partial",
-    "slug": "/p/juiced-2-hot-import-nights-0a1a9fab"
-  },
-  {
-    "id": "p048",
-    "repo": "https://github.com/undecuple/project-helghast",
-    "title": "Killzone 3 port \u00b7 Reversed with AI",
-    "platform": "Windows x64",
-    "outcome": "Partial",
-    "slug": "/p/killzone-3-7f50a48f"
-  },
-  {
-    "id": "p049",
-    "repo": "https://github.com/Tzeentchnet/KillzoneLiberation-Recomp",
-    "title": "Killzone: Liberation recompiled with Claude",
-    "platform": "PlayStation Portable / Windows",
-    "outcome": "Partial",
-    "slug": "/p/killzone-liberation-recomp"
-  },
-  {
-    "id": "p050",
-    "repo": "https://github.com/drakolordx7/KillzoneRecomp",
-    "title": "Killzone (PS2, 2004) recompiled with Claude",
-    "platform": "PlayStation 2 to Windows",
-    "outcome": "Partial",
-    "slug": "/p/killzone-ps2-recomp-claude-code"
-  },
-  {
-    "id": "p051",
-    "repo": "https://github.com/Yokimitsuro/khdays-port",
-    "title": "Kingdom Hearts 358/2 Days matching decompilation",
-    "platform": "Windows x64",
-    "outcome": "Partial",
-    "slug": "/p/kingdom-hearts-358-2-days-62c9652a"
-  },
-  {
-    "id": "p052",
-    "repo": "https://github.com/sonofskywalker3/khdays-358-android",
-    "title": "Kingdom Hearts 358/2 Days: reverse engineered with AI",
-    "platform": "Android",
-    "outcome": "Partial",
-    "slug": "/p/kingdom-hearts-358-2-days-eeff5b0a"
-  },
-  {
-    "id": "p053",
-    "repo": "https://github.com/Cor3Duo/kirikae",
-    "title": "Kirikae recompiled \u00b7 Reversed with AI",
-    "platform": "Windows x64, Linux x64",
-    "outcome": "Partial",
-    "slug": "/p/kirikae-99d8b560"
-  },
-  {
-    "id": "p054",
-    "repo": "https://github.com/Dream-Atelier/kl-eod-decomp",
-    "title": "Klonoa: Empire of Dreams (GBA) decompilation with Claude",
-    "platform": "Game Boy Advance",
-    "outcome": "Partial",
-    "slug": "/p/klonoa-gba-decomp"
-  },
-  {
-    "id": "p055",
-    "repo": "https://github.com/CmdrLucid/Project-Friday",
-    "title": "Landstalker: The Treasures of King Nole (Mega Drive)",
-    "platform": "Mega Drive (68000) to Windows and Steam Deck",
-    "outcome": "Partial",
-    "slug": "/p/landstalker-megadrive-recomp-claude"
-  },
-  {
-    "id": "p056",
-    "repo": "https://github.com/ryanhood10/LegacyOfHercule",
-    "title": "Dragon Ball Z: The Legacy of Goku II (GBA, USA)",
-    "platform": "Game Boy Advance",
-    "outcome": "Partial",
-    "slug": "/p/legacy-of-goku-2-gba-coop-decomp-claude"
-  },
-  {
-    "id": "p057",
-    "repo": "https://github.com/AndrewAltimit/legend-of-legaia-re",
-    "title": "Legend of Legaia: Legend of Legaia Reverse Engineering",
-    "platform": "PlayStation",
-    "outcome": "Partial",
-    "slug": "/p/legend-of-legaia-re"
-  },
-  {
-    "id": "p058",
-    "repo": "https://github.com/peiikai/LASRecomp",
-    "title": "Link's Awakening (Switch) recomp, built with Claude Code",
-    "platform": "Nintendo Switch to macOS / Windows / Linux",
-    "outcome": "Partial",
-    "slug": "/p/link-awakening-switch-recomp-claude"
-  },
-  {
-    "id": "p059",
-    "repo": "https://github.com/anishchandra24/MaddenNFL08-Recompiled",
-    "title": "Madden NFL 08 (Xbox 360) recompiled with Claude",
-    "platform": "Windows 10/11 (64-bit)",
-    "outcome": "Partial",
-    "slug": "/p/madden-nfl-08-xbox-360-572942ca"
-  },
-  {
-    "id": "p060",
-    "repo": "https://github.com/AlmazProud/metal-slug-3-recomp",
-    "title": "Metal Slug 3 (Neo Geo MVS, 2000) recompiled",
-    "platform": "Neo Geo to Windows",
-    "outcome": "Partial",
-    "slug": "/p/metal-slug-3-neo-geo-recomp-claude"
-  },
-  {
-    "id": "p061",
-    "repo": "https://github.com/Japabu/mickey-saves-the-day-3d-adventure",
-    "title": "Disney's Mickey Saves the Day 3D Adventure (PC, 2000)",
-    "platform": "Windows PC to macOS (Apple Silicon)",
-    "outcome": "Partial",
-    "slug": "/p/mickey-saves-the-day-3d-decomp-claude"
-  },
-  {
-    "id": "p062",
-    "repo": "https://github.com/nickallevato/mi_n64_exe",
-    "title": "Mission: Impossible (Nintendo 64) reverse engineered with AI",
-    "platform": "Linux",
-    "outcome": "Partial",
-    "slug": "/p/mission-impossible-n64-1a8b113c"
-  },
-  {
-    "id": "p063",
-    "repo": "https://github.com/HopeAero/MLBPowerPros2008Recomp",
-    "title": "MLB Power Pros 2008 (Wii) recompiled with Claude Opus 5.5",
-    "platform": "Wii to Windows",
-    "outcome": "Partial",
-    "slug": "/p/mlb-power-pros-2008-wii-recomp-claude"
-  },
-  {
-    "id": "p064",
-    "repo": "https://github.com/Mango77x/MHForever",
-    "title": "Monster Hunter Freedom Unite: MHForever \u00b7 Reversed with AI",
-    "platform": "Windows",
-    "outcome": "Partial",
-    "slug": "/p/monster-hunter-freedom-unite-6f4a6a59"
-  },
-  {
-    "id": "p065",
-    "repo": "https://github.com/Jstackzz/MK-3D-rollback",
-    "title": "Mortal Kombat: Deadly Alliance, Deception, and Armageddon",
-    "platform": "Windows",
-    "outcome": "Partial",
-    "slug": "/p/mortal-kombat-deadly-alliance-deception-and-armage-fa8359e9"
-  },
-  {
-    "id": "p066",
-    "repo": "https://github.com/ptitty12/mvp2005-decomp",
-    "title": "MVP Baseball 2005 (GameCube, USA rev 0) decompilation",
-    "platform": "GameCube to web browser",
-    "outcome": "Partial",
-    "slug": "/p/mvp-baseball-2005-gamecube-decomp-claude"
-  },
-  {
-    "id": "p067",
-    "repo": "https://github.com/mitsevox/nflstreet2",
-    "title": "NFL Street 2 (GameCube) decompilation with Claude",
-    "platform": "macOS ARM64, Linux x86-64",
-    "outcome": "Partial",
-    "slug": "/p/nfl-street-2-gamecube-3a63c872"
-  },
-  {
-    "id": "p068",
-    "repo": "https://github.com/liolu/nintendogs-dachshund-decomp",
-    "title": "Nintendogs: Dachshund and Friends reverse engineered with AI",
-    "platform": "Nintendo DS (ARM7 and ARM9)",
-    "outcome": "Partial",
-    "slug": "/p/nintendogs-dachshund-decomp-claude"
-  },
-  {
-    "id": "p069",
-    "repo": "https://github.com/ben-wright-1/OpenRiseOfNations",
-    "title": "Rise of Nations: Extended Edition reverse engineered with AI",
-    "platform": "Windows to macOS (Metal)",
-    "outcome": "Partial",
-    "slug": "/p/open-rise-of-nations-macos-engine-claude-code"
-  },
-  {
-    "id": "p070",
-    "repo": "https://github.com/OpenRAC/OpenRAC",
-    "title": "Ratchet & Clank series (PlayStation 2) decompilation",
-    "platform": "PS2 (MIPS) to Windows, macOS and Linux",
-    "outcome": "Partial",
-    "slug": "/p/openrac-ratchet-clank-pc-port"
-  },
-  {
-    "id": "p071",
-    "repo": "https://github.com/TeosVerdi/ParkanOpenStrategy",
-    "title": "Parkan: Iron Strategy reverse engineered with AI",
-    "platform": "macOS",
-    "outcome": "Partial",
-    "slug": "/p/parkan-iron-strategy-dc28bd1e"
-  },
-  {
-    "id": "p072",
-    "repo": "https://github.com/amazingalek/perfect-dark-recomp",
-    "title": "Perfect Dark (N64) recompiled with Claude Opus 5.5",
-    "platform": "Windows, Linux (WSL2), Web",
-    "outcome": "Partial",
-    "slug": "/p/perfect-dark-n64-18048c5a"
-  },
-  {
-    "id": "p073",
-    "repo": "https://github.com/Subarasheese/pes6decomp",
-    "title": "Pro Evolution Soccer 6 (PlayStation 2) decompilation",
-    "platform": "PlayStation 2",
-    "outcome": "Partial",
-    "slug": "/p/pes6-ps2-decompilation"
-  },
-  {
-    "id": "p074",
-    "repo": "https://github.com/ElGuslml/PiratesAtWorldsEndRecomp",
-    "title": "Pirates of the Caribbean: At World's End reverse engineered",
-    "platform": "Windows 10/11 (x86-64-v2)",
-    "outcome": "Partial",
-    "slug": "/p/pirates-of-the-caribbean-at-world-s-end-a0565baa"
-  },
-  {
-    "id": "p075",
-    "repo": "https://github.com/unowncollectables/Pokemon-Soulsilver-New3ds",
-    "title": "Pok\u00e9mon SoulSilver: reverse engineered with Claude",
-    "platform": "New Nintendo 3DS",
-    "outcome": "Partial",
-    "slug": "/p/pok-mon-soulsilver-7f700c91"
-  },
-  {
-    "id": "p076",
-    "repo": "https://github.com/tylergraydev/UltraSunnyMoon",
-    "title": "Pok\u00e9mon Ultra Sun decompilation with Claude",
-    "platform": "Ubuntu WSL",
-    "outcome": "Partial",
-    "slug": "/p/pok-mon-ultra-sun-be81e56c"
-  },
-  {
-    "id": "p077",
-    "repo": "https://github.com/wastelandgunner/pokemon-colosseum-recompiled",
-    "title": "Pok\u00e9mon Colosseum recompiled with Claude \u00b7 Reversed with AI",
-    "platform": "Nintendo GameCube / Rust",
-    "outcome": "Partial",
-    "slug": "/p/pokemon-colosseum-recompiled"
-  },
-  {
-    "id": "p078",
-    "repo": "https://github.com/ClickingMaster/ssrecomp",
-    "title": "Pokemon SoulSilver (Nintendo DS, US) recompiled",
-    "platform": "Nintendo DS to Linux / Windows / Android",
-    "outcome": "Partial",
-    "slug": "/p/pokemon-soulsilver-ssrecomp-claude"
-  },
-  {
-    "id": "p079",
-    "repo": "https://github.com/liolu/powerpuff-girls-z-decomp",
-    "title": "Powerpuff Girls Z (Nintendo DS, JP) decompilation",
-    "platform": "Nintendo DS (ARM7 and ARM9)",
-    "outcome": "Partial",
-    "slug": "/p/powerpuff-girls-z-ds-decomp-claude"
-  },
-  {
-    "id": "p080",
-    "repo": "https://github.com/thebardockgames/Precursor",
-    "title": "Precursor: reverse engineered with Claude",
-    "platform": "Android (arm64-v8a)",
-    "outcome": "Partial",
-    "slug": "/p/precursor-7d68f8cf"
-  },
-  {
-    "id": "p081",
-    "repo": "https://github.com/FulGerNet/rePOP",
-    "title": "Prince of Persia: The Sands of Time (Xbox) recompiled",
-    "platform": "Xbox (x86) to Windows and Android",
-    "outcome": "Partial",
-    "slug": "/p/prince-of-persia-sands-xbox-recomp-claude"
-  },
-  {
-    "id": "p082",
-    "repo": "https://github.com/snuri00/ps2-web-recomp",
-    "title": "Gran Turismo 4 and God of War II (PlayStation 2) recompiled",
-    "platform": "PS2 (R5900) to WebAssembly in Chrome",
-    "outcome": "Partial",
-    "slug": "/p/ps2-web-recomp-gt4-gow2"
-  },
-  {
-    "id": "p083",
-    "repo": "https://github.com/N0zoM1z0/dx-ball",
-    "title": "DX-Ball 1.07 (1996): reverse engineered with Codex",
-    "platform": "Windows",
-    "outcome": "Partial",
-    "slug": "/p/rea-dx-ball-reconstruction"
-  },
-  {
-    "id": "p084",
-    "repo": "https://github.com/N0zoM1z0/th04",
-    "title": "Touhou 4: Lotus Land Story reverse engineered with AI",
-    "platform": "PC-98 (DOS)",
-    "outcome": "Partial",
-    "slug": "/p/rea-th04-bullet-patterns"
-  },
-  {
-    "id": "p085",
-    "repo": "https://github.com/eray1605/re2ds",
-    "title": "Resident Evil 2: reverse engineered with Claude Opus 5.5",
-    "platform": "PS1 to Nintendo DS",
-    "outcome": "Partial",
-    "slug": "/p/resident-evil-2-nintendo-ds-engine-claude"
-  },
-  {
-    "id": "p086",
-    "repo": "https://github.com/aikatore/recvx-enhanced-port",
-    "title": "Resident Evil Code: Veronica X (PS2, NTSC-U) decompilation",
-    "platform": "PlayStation 2 to Linux / Windows",
-    "outcome": "Partial",
-    "slug": "/p/resident-evil-code-veronica-x-pc-port-claude"
-  },
-  {
-    "id": "p087",
-    "repo": "https://github.com/mstan/snesrecomp",
-    "title": "Retro console games: reverse engineered with Claude Opus 4.6",
-    "platform": "NES, SNES, Genesis, PlayStation and more, to PC",
-    "outcome": "Partial",
-    "slug": "/p/retro-recomp-family-nes-snes-psx"
-  },
-  {
-    "id": "p088",
-    "repo": "https://github.com/cheviman/robotech-decomp",
-    "title": "Robotech: Battlecry decompilation with Claude",
-    "platform": "Windows, Xbox Series, Linux, Mac",
-    "outcome": "Partial",
-    "slug": "/p/robotech-battlecry-36594f39"
-  },
-  {
-    "id": "p089",
-    "repo": "https://github.com/MikeSemicolonD/RogueSquadron64Recomp",
-    "title": "Star Wars: Rogue Squadron (Nintendo 64, 1998) recompiled",
-    "platform": "Nintendo 64 to Windows",
-    "outcome": "Partial",
-    "slug": "/p/rogue-squadron-64-recomp-claude"
-  },
-  {
-    "id": "p090",
-    "repo": "https://github.com/cabi24/SFRush2049-Dreamcast-decomp",
-    "title": "San Francisco Rush 2049 (Dreamcast) decompilation",
-    "platform": "Windows",
-    "outcome": "Partial",
-    "slug": "/p/san-francisco-rush-2049-dreamcast-a48f5144"
-  },
-  {
-    "id": "p091",
-    "repo": "https://github.com/mitsevox/n100f",
-    "title": "Scooby-Doo! Night of 100 Frights: mitsevox/n100f",
-    "platform": "Nintendo GameCube",
-    "outcome": "Partial",
-    "slug": "/p/scooby-doo-night-of-100-frights-4eb9539c"
-  },
-  {
-    "id": "p092",
-    "repo": "https://github.com/TheRealestNwah/sotc-decomp",
-    "title": "Shadow of the Colossus (PS2, NTSC-U) matching decompilation",
-    "platform": "PlayStation 2",
-    "outcome": "Partial",
-    "slug": "/p/shadow-of-the-colossus-matching-decomp"
-  },
-  {
-    "id": "p093",
-    "repo": "https://github.com/BigSnek9/ShadowRecomp",
-    "title": "Shadow the Hedgehog (GameCube, USA) recompiled with Claude",
-    "platform": "Windows",
-    "outcome": "Partial",
-    "slug": "/p/shadow-the-hedgehog-recomp"
-  },
-  {
-    "id": "p094",
-    "repo": "https://github.com/adumah/SheepDogWolf-NX",
-    "title": "Sheep, Dog \u2019n\u2019 Wolf: Rewooled reverse engineered with Claude",
-    "platform": "PC to Nintendo Switch",
-    "outcome": "Partial",
-    "slug": "/p/sheep-dog-wolf-nx-decomp"
-  },
-  {
-    "id": "p095",
-    "repo": "https://github.com/Quof/BreezySRPG95",
-    "title": "Sim RPG Maker 95: reverse engineered with Claude",
-    "platform": "Windows 10/11, 64-bit",
-    "outcome": "Partial",
-    "slug": "/p/sim-rpg-maker-95-ac05f490"
-  },
-  {
-    "id": "p096",
-    "repo": "https://github.com/DabDavis/socom2-decomp",
-    "title": "SOCOM II (SCUS-97275 r0001) decompilation with Claude",
-    "platform": "PlayStation 2",
-    "outcome": "Partial",
-    "slug": "/p/socom-ii-scus-97275-r0001-abcdbb69"
-  },
-  {
-    "id": "p097",
-    "repo": "https://github.com/Randomno/pinball-decomp",
-    "title": "3D Pinball for Windows: Space Cadet (Windows XP SP3)",
-    "platform": "Windows",
-    "outcome": "Partial",
-    "slug": "/p/space-cadet-pinball-matching-decomp-llm"
-  },
-  {
-    "id": "p098",
-    "repo": "https://github.com/esp-cpp/tpm-decomp",
-    "title": "Star Wars Episode I: The Phantom Menace (USA Rev 1)",
-    "platform": "PlayStation, M5Stack Tab5 (ESP32-P4), Desktop",
-    "outcome": "Partial",
-    "slug": "/p/star-wars-episode-i-the-phantom-menace-usa-rev-1-f76d6b67"
-  },
-  {
-    "id": "p099",
-    "repo": "https://github.com/CalenCyr/superbowling64-decomp",
-    "title": "Super Bowling 64 decompilation with Claude",
-    "platform": "Linux/WSL",
-    "outcome": "Partial",
-    "slug": "/p/super-bowling-64-b029e21a"
-  },
-  {
-    "id": "p100",
-    "repo": "https://github.com/Kodoque1/sm64-gba",
-    "title": "Super Mario 64: reverse engineered with Claude Opus 5.5",
-    "platform": "Nintendo 64 to Game Boy Advance",
-    "outcome": "Partial",
-    "slug": "/p/super-mario-64-gba-ai-port"
-  },
-  {
-    "id": "p101",
-    "repo": "https://github.com/chasem-dev/sms-english",
-    "title": "Super Mario Sunshine (GMSE01) matching decompilation",
-    "platform": "Windows, macOS, Linux",
-    "outcome": "Partial",
-    "slug": "/p/super-mario-sunshine-gmse01-e7a0122d"
-  },
-  {
-    "id": "p102",
-    "repo": "https://github.com/Denkishi/ssbu-recomp",
-    "title": "Super Smash Bros. Ultimate recompiled with Claude",
-    "platform": "Windows 10/11 x64",
-    "outcome": "Partial",
-    "slug": "/p/super-smash-bros-ultimate-fa951651"
-  },
-  {
-    "id": "p103",
-    "repo": "https://github.com/N0zoM1z0/th08",
-    "title": "Touhou Eiyashou: Imperishable Night (PC) reverse engineered",
-    "platform": "Windows (x86) to Linux and browser",
-    "outcome": "Partial",
-    "slug": "/p/th08-imperishable-night-decomp-agents"
-  },
-  {
-    "id": "p104",
-    "repo": "https://github.com/miguel-apereira/TheGetawayRecomp",
-    "title": "The Getaway (SCUS-97133): miguel-apereira/TheGetawayRecomp",
-    "platform": "Windows 10/11 x64",
-    "outcome": "Partial",
-    "slug": "/p/the-getaway-scus-97133-51424161"
-  },
-  {
-    "id": "p105",
-    "repo": "https://github.com/7akeem0/albw-decomp-ai",
-    "title": "The Legend of Zelda: A Link Between Worlds",
-    "platform": "3DS",
-    "outcome": "Partial",
-    "slug": "/p/the-legend-of-zelda-a-link-between-worlds-40003206"
-  },
-  {
-    "id": "p106",
-    "repo": "https://github.com/mamcjr/BOTWRecompAndroid",
-    "title": "The Legend of Zelda: Breath of the Wild reverse engineered",
-    "platform": "Android",
-    "outcome": "Partial",
-    "slug": "/p/the-legend-of-zelda-breath-of-the-wild-a906951e"
-  },
-  {
-    "id": "p107",
-    "repo": "https://github.com/debeanz/LASRecomp-iOS",
-    "title": "The Legend of Zelda: Link's Awakening (2019)",
-    "platform": "iOS, Windows, macOS, Linux",
-    "outcome": "Partial",
-    "slug": "/p/the-legend-of-zelda-link-s-awakening-2019-61b7563b"
-  },
-  {
-    "id": "p108",
-    "repo": "https://github.com/DaBrown95/tsbodp",
-    "title": "The Sims: Bustin' Out (GBA) matching decompilation",
-    "platform": "Game Boy Advance",
-    "outcome": "Partial",
-    "slug": "/p/the-sims-bustin-out-gba-1eff82fe"
-  },
-  {
-    "id": "p109",
-    "repo": "https://github.com/CosmicScribe64/tokimemo-ps1-decomp",
-    "title": "Tokimeki Memorial: reverse engineered with Claude",
-    "platform": "PlayStation",
-    "outcome": "Partial",
-    "slug": "/p/tokimeki-memorial-ps1-decomp-claude-code"
-  },
-  {
-    "id": "p110",
-    "repo": "https://github.com/Juansolo457/graw360-recomp",
-    "title": "Tom Clancy's Ghost Recon Advanced Warfighter (Xbox 360)",
-    "platform": "Windows",
-    "outcome": "Partial",
-    "slug": "/p/tom-clancy-s-ghost-recon-advanced-warfighter-xbox-f7da4634"
-  },
-  {
-    "id": "p111",
-    "repo": "https://github.com/seco560/OpenTonic",
-    "title": "Tonic Trouble: seco560/OpenTonic \u00b7 Reversed with AI",
-    "platform": "macOS, Linux",
-    "outcome": "Partial",
-    "slug": "/p/tonic-trouble-3798ddf5"
-  },
-  {
-    "id": "p112",
+    "id": "p193",
     "repo": "https://github.com/andrewnakas/thpSkate3",
-    "title": "Tony Hawk's Pro Skater (N64): andrewnakas/thpSkate3",
+    "title": "Swapped Tony Hawk's Pro Skater (N64) physics for a Skate 3-style runtime, with Claude",
     "platform": "Linux",
     "outcome": "Partial",
     "slug": "/p/tony-hawk-s-pro-skater-n64-49bb5b52"
   },
   {
-    "id": "p113",
-    "repo": "https://github.com/CanuckAussieKev/thug2-decomp",
-    "title": "Tony Hawk\u2019s Underground 2 (PC) decompilation",
-    "platform": "Windows",
+    "id": "p194",
+    "repo": "https://github.com/Karlos-fr/fun-tracks-recomp-releases",
+    "title": "Fun Tracks Recompiled",
+    "platform": "Windows 10/11 (64-bit), Android 10+ (64-bit ARM)",
     "outcome": "Partial",
-    "slug": "/p/tony-hawks-underground-2-decomp"
+    "slug": "/p/fun-tracks-1997-11d16e8a"
   },
   {
-    "id": "p114",
+    "id": "p195",
+    "repo": "https://github.com/anishchandra24/Juiced2-Recompiled",
+    "title": "Juiced 2: Hot Import Nights Recompiled",
+    "platform": "Windows 10/11 (64-bit)",
+    "outcome": "Partial",
+    "slug": "/p/juiced-2-hot-import-nights-0a1a9fab"
+  },
+  {
+    "id": "p196",
+    "repo": "https://github.com/esp-cpp/tpm-decomp",
+    "title": "Started a matching decompilation of Star Wars Episode I: The Phantom Menace (PS1), with Claude",
+    "platform": "PlayStation, M5Stack Tab5 (ESP32-P4), Desktop",
+    "outcome": "Partial",
+    "slug": "/p/star-wars-episode-i-the-phantom-menace-usa-rev-1-f76d6b67"
+  },
+  {
+    "id": "p197",
+    "repo": "https://github.com/mitsevox/n100f",
+    "title": "Started a byte-identical decompilation of Scooby-Doo! Night of 100 Frights (GameCube), with Claude",
+    "platform": "GameCube",
+    "outcome": "Partial",
+    "slug": "/p/scooby-doo-night-of-100-frights-4eb9539c"
+  },
+  {
+    "id": "p198",
+    "repo": "https://github.com/Quof/BreezySRPG95",
+    "title": "BreezySRPG95: Quof uses Claude to disassemble an old runtime and build a replacement SRPG client",
+    "platform": "Windows 10/11, 64-bit",
+    "outcome": "Partial",
+    "slug": "/p/sim-rpg-maker-95-ac05f490"
+  },
+  {
+    "id": "p199",
+    "repo": "https://github.com/Jstackzz/MK-3D-rollback",
+    "title": "Recompiled three original Xbox Mortal Kombat games into native Windows ports, with Claude",
+    "platform": "Windows",
+    "outcome": "Partial",
+    "slug": "/p/mortal-kombat-deadly-alliance-deception-and-armage-fa8359e9"
+  },
+  {
+    "id": "p200",
+    "repo": "https://github.com/Cimentacion/kf4-kingsfield-tools",
+    "title": "FIELDIV-ENGINE: King's Field IV Modding Tools",
+    "platform": "Windows",
+    "outcome": "Partial",
+    "slug": "/p/king-s-field-iv-sles-50920-c62877b3"
+  },
+  {
+    "id": "p201",
+    "repo": "https://github.com/CalenCyr/superbowling64-decomp",
+    "title": "Super Bowling 64 decompilation into C source code",
+    "platform": "Nintendo 64",
+    "outcome": "Partial",
+    "slug": "/p/super-bowling-64-b029e21a"
+  },
+  {
+    "id": "p202",
     "repo": "https://github.com/Felipe-Gomes-Amorim/touhou-reiiden-port",
-    "title": "Touhou Reiiden (The Highly Responsive to Prayers) port",
+    "title": "Ported Touhou Reiiden (PC-98) to C# using the ReC98 decompilation, with Claude",
     "platform": "Windows x64",
     "outcome": "Partial",
     "slug": "/p/touhou-reiiden-the-highly-responsive-to-prayers-fac05df1"
   },
   {
-    "id": "p115",
-    "repo": "https://github.com/gustavocanepa/tt-decomp",
-    "title": "Tourist Trophy (PS2): reverse engineered with Claude",
+    "id": "p203",
+    "repo": "https://github.com/Juansolo457/graw360-recomp",
+    "title": "Tom Clancy's Ghost Recon Advanced Warfighter (Xbox 360) statically recompiled to native PC",
+    "platform": "Windows, Linux, Steam Deck",
+    "outcome": "Partial",
+    "slug": "/p/tom-clancy-s-ghost-recon-advanced-warfighter-xbox-f7da4634"
+  },
+  {
+    "id": "p204",
+    "repo": "https://github.com/DabDavis/socom2-decomp",
+    "title": "Started a byte-exact decompilation of SOCOM II (PS2) with AI-drafted functions, with Claude",
     "platform": "PlayStation 2",
     "outcome": "Partial",
-    "slug": "/p/tourist-trophy-decomp-claude"
+    "slug": "/p/socom-ii-scus-97275-r0001-abcdbb69"
   },
   {
-    "id": "p116",
-    "repo": "https://github.com/kayliox/transformers-ps2-decomp",
-    "title": "Transformers / Transformers Armada: Prelude to Energon\u2026",
-    "platform": "PlayStation 2",
+    "id": "p205",
+    "repo": "https://github.com/thebardockgames/Precursor",
+    "title": "Precursor: Native Jak and Daxter Trilogy for Android",
+    "platform": "Android (arm64-v8a)",
     "outcome": "Partial",
-    "slug": "/p/transformers-ps2-decomp-claude"
+    "slug": "/p/precursor-7d68f8cf"
   },
   {
-    "id": "p117",
-    "repo": "https://github.com/liolu/ultimate-spider-man-decomp",
-    "title": "Ultimate Spider-Man (Nintendo DS) decompilation",
-    "platform": "Nintendo DS (ARM)",
+    "id": "p206",
+    "repo": "https://github.com/Clergyman0013/arizona-vamp-recomp",
+    "title": "Arizona Vamp Recomp",
+    "platform": "Windows 10/11 x64",
     "outcome": "Partial",
-    "slug": "/p/ultimate-spider-man-ds-decomp-agents"
+    "slug": "/p/darkwatch-728035c9"
   },
   {
-    "id": "p118",
-    "repo": "https://github.com/ser-pounce/rood-reverse",
-    "title": "Vagrant Story (PlayStation, 2000) matching decompilation",
-    "platform": "PlayStation (MIPS)",
+    "id": "p207",
+    "repo": "https://github.com/anishchandra24/MaddenNFL08-Recompiled",
+    "title": "Recompiled Madden NFL 08 (Xbox 360) into a native Windows port, with Claude",
+    "platform": "Windows 10/11 (64-bit)",
     "outcome": "Partial",
-    "slug": "/p/vagrant-story-ps1-decomp-claude"
+    "slug": "/p/madden-nfl-08-xbox-360-572942ca"
   },
   {
-    "id": "p119",
-    "repo": "https://github.com/ethannicholas/bluestorm-recomp",
-    "title": "Wave Race: Blue Storm recompiled with Claude",
-    "platform": "Nintendo GameCube",
+    "id": "p208",
+    "repo": "https://github.com/VCKing101/Dissidia012-pc",
+    "title": "Recompiled Dissidia 012 Duodecim Final Fantasy (PSP) into a native PC port, with Claude",
+    "platform": "Windows, Steam Deck (via Proton)",
     "outcome": "Partial",
-    "slug": "/p/wave-race-blue-storm-recomp"
+    "slug": "/p/dissidia-012-duodecim-final-fantasy-408e806e"
   },
   {
-    "id": "p120",
-    "repo": "https://github.com/dnb4ever/way-of-the-samurai-decomp",
-    "title": "Way of the Samurai (PS2) decompilation with Claude",
-    "platform": "PS2",
+    "id": "p209",
+    "repo": "https://github.com/MoisesEliaquim/Bakuten_Shoot_Beyblade_Gekitou_Saikyou_Blader_English",
+    "title": "Bakuten Shoot Beyblade: Gekitou! Saikyou Blader English Translation",
+    "platform": "Game Boy Advance",
     "outcome": "Partial",
-    "slug": "/p/way-of-the-samurai-ps2-e0f58a57"
+    "slug": "/p/bakuten-shoot-beyblade-gekitou-saikyou-blader-d22ff287"
   },
   {
-    "id": "p121",
-    "repo": "https://github.com/WK2D/White-Knight-Chronicles-2-Decomp",
-    "title": "White Knight Chronicles II (PS3, USA BLUS30784) recompiled",
-    "platform": "PS3 to Windows (Vulkan)",
+    "id": "p210",
+    "repo": "https://github.com/teclilla18/sonic-riders-recomp",
+    "title": "Recompiled Sonic Riders (GameCube) for native Windows and modded Switch, with Claude",
+    "platform": "Windows 10/11, Nintendo Switch, Nintendo Switch 2, Android, Linux / Steam Deck, iPhone / iPad",
     "outcome": "Partial",
-    "slug": "/p/white-knight-chronicles-2-ps3-recomp-claude"
+    "slug": "/p/sonic-riders-b7569c4d"
   },
   {
-    "id": "p122",
-    "repo": "https://github.com/flossbud/WWHDRecomp",
-    "title": "The Legend of Zelda: The Wind Waker HD (Wii U) recompiled",
-    "platform": "Wii U to Linux",
+    "id": "p211",
+    "repo": "https://github.com/debeanz/LASRecomp-iOS",
+    "title": "Recompiled Link's Awakening (2019) for Windows, macOS, Linux and iOS, with Claude",
+    "platform": "iOS, Windows, macOS, Linux",
     "outcome": "Partial",
-    "slug": "/p/wind-waker-hd-linux-recomp-claude"
+    "slug": "/p/the-legend-of-zelda-link-s-awakening-2019-61b7563b"
   },
   {
-    "id": "p123",
-    "repo": "https://github.com/ldkeeton/phoonzang",
-    "title": "Wizardry VII: Crusaders of the Dark Savant decompilation",
-    "platform": "DOS",
+    "id": "p212",
+    "repo": "https://github.com/seco560/OpenTonic",
+    "title": "Reimplementing the Tonic Trouble engine for macOS and Linux with Claude",
+    "platform": "macOS, Linux",
     "outcome": "Partial",
-    "slug": "/p/wizardry-vii-crusaders-of-the-dark-savant-adec82d2"
+    "slug": "/p/tonic-trouble-3798ddf5"
   },
   {
-    "id": "p124",
+    "id": "p213",
+    "repo": "https://github.com/senguttuvang/Chessmaster-Web",
+    "title": "Chessmaster 9000: SenG uses Codex to reconstruct The King from x86 into browser Wasm",
+    "platform": "Web",
+    "outcome": "Partial",
+    "slug": "/p/chessmaster-9000-db8357d7"
+  },
+  {
+    "id": "p214",
     "repo": "https://github.com/shaneomac1337/SVR2011-Recomp",
-    "title": "WWE SmackDown vs. Raw 2011 recompiled with Claude",
+    "title": "SVR2011-Recomp: A ReXGlue Recompilation of WWE SmackDown vs. Raw 2011",
     "platform": "Windows 10/11 (64-bit)",
     "outcome": "Partial",
     "slug": "/p/wwe-smackdown-vs-raw-2011-7064b815"
   },
   {
-    "id": "p125",
-    "repo": "https://github.com/filippgl/xena-psx-decomp",
-    "title": "Xena: Warrior Princess reverse engineered with Claude",
-    "platform": "PlayStation, Windows",
+    "id": "p215",
+    "repo": "https://github.com/alexbeavs-ps1-ports/driver-recomp",
+    "title": "Driver Recompiled: A PSX Recompilation Project",
+    "platform": "Windows x64",
     "outcome": "Partial",
-    "slug": "/p/xena-warrior-princess-ps1-decomp"
+    "slug": "/p/driver-44251a64"
   },
   {
-    "id": "p126",
+    "id": "p216",
+    "repo": "https://github.com/DaBrown95/tsbodp",
+    "title": "The Sims: Bustin' Out GBA Matching Decompilation",
+    "platform": "Game Boy Advance",
+    "outcome": "Partial",
+    "slug": "/p/the-sims-bustin-out-gba-1eff82fe"
+  },
+  {
+    "id": "p217",
+    "repo": "https://github.com/dnb4ever/way-of-the-samurai-decomp",
+    "title": "Started a matching decompilation and native PC port of Way of the Samurai (PS2), with Claude",
+    "platform": "PS2",
+    "outcome": "Partial",
+    "slug": "/p/way-of-the-samurai-ps2-e0f58a57"
+  },
+  {
+    "id": "p218",
+    "repo": "https://github.com/ElGuslml/PiratesAtWorldsEndRecomp",
+    "title": "PiratesAtWorldsEndRecomp",
+    "platform": "Windows 10/11 (x86-64-v2)",
+    "outcome": "Partial",
+    "slug": "/p/pirates-of-the-caribbean-at-world-s-end-a0565baa"
+  },
+  {
+    "id": "p219",
+    "repo": "https://github.com/MauricioSuporte/SuperBomberman5SNESRecomp",
+    "title": "Recompiled Super Bomberman 5 (SNES) into a native PC port with netplay, with Claude",
+    "platform": "Windows 10+ x64, Linux (glibc 2.35+), Android 9+ (arm64)",
+    "outcome": "Partial",
+    "slug": "/p/super-bomberman-5-509e43ba"
+  },
+  {
+    "id": "p220",
+    "repo": "https://github.com/chasem-dev/sms-english",
+    "title": "Super Mario Sunshine (USA): an AI-assisted matching decompilation fork",
+    "platform": "Windows, macOS, Linux",
+    "outcome": "Partial",
+    "slug": "/p/super-mario-sunshine-gmse01-e7a0122d"
+  },
+  {
+    "id": "p221",
+    "repo": "https://github.com/GeneralPawz/acr",
+    "title": "Reimplemented the American Conquest engine in Rust, running the original data natively and in the browser, with Claude",
+    "platform": "Windows, Linux, Web",
+    "outcome": "Partial",
+    "slug": "/p/american-conquest-c6684d5c"
+  },
+  {
+    "id": "p222",
+    "repo": "https://github.com/Mango77x/MHForever",
+    "title": "MHForever",
+    "platform": "Windows",
+    "outcome": "Partial",
+    "slug": "/p/monster-hunter-freedom-unite-6f4a6a59"
+  },
+  {
+    "id": "p223",
+    "repo": "https://github.com/nickallevato/mi_n64_exe",
+    "title": "Mission: Impossible PC Recomp",
+    "platform": "Linux",
+    "outcome": "Partial",
+    "slug": "/p/mission-impossible-n64-1a8b113c"
+  },
+  {
+    "id": "p224",
+    "repo": "https://github.com/tylergraydev/UltraSunnyMoon",
+    "title": "UltraSunnyMoon: Pok\u00e9mon Ultra Sun Decompilation Project",
+    "platform": "Ubuntu WSL",
+    "outcome": "Partial",
+    "slug": "/p/pok-mon-ultra-sun-be81e56c"
+  },
+  {
+    "id": "p225",
+    "repo": "https://github.com/7akeem0/albw-decomp-ai",
+    "title": "A Link Between Worlds Matching Decompilation Project",
+    "platform": "3DS",
+    "outcome": "Partial",
+    "slug": "/p/the-legend-of-zelda-a-link-between-worlds-40003206"
+  },
+  {
+    "id": "p226",
+    "repo": "https://github.com/pedryvo/rrt2-decomp",
+    "title": "Recreated Railroad Tycoon 2 from reverse engineering, matching the original on 131 test cases, with Claude",
+    "platform": "Linux, Windows, macOS",
+    "outcome": "Partial",
+    "slug": "/p/railroad-tycoon-2-227c2c2b"
+  },
+  {
+    "id": "p227",
+    "repo": "https://github.com/TeosVerdi/ParkanOpenStrategy",
+    "title": "Rebuilt the Parkan: Iron Strategy engine for macOS from its decompiled Windows binaries, with Claude",
+    "platform": "macOS",
+    "outcome": "Partial",
+    "slug": "/p/parkan-iron-strategy-dc28bd1e"
+  },
+  {
+    "id": "p228",
+    "repo": "https://github.com/amazingalek/perfect-dark-recomp",
+    "title": "Perfect Dark: Recompiled",
+    "platform": "Windows, Linux (WSL2), Web",
+    "outcome": "Partial",
+    "slug": "/p/perfect-dark-n64-18048c5a"
+  },
+  {
+    "id": "p229",
+    "repo": "https://github.com/victor-takai/dragon-valor-recomp",
+    "title": "Dragon Valor Recompiled",
+    "platform": "Windows",
+    "outcome": "Partial",
+    "slug": "/p/dragon-valor-recompiled"
+  },
+  {
+    "id": "p230",
     "repo": "https://github.com/ILFforever/YW4Recomp",
-    "title": "Yo-kai Watch 4++ (Nintendo Switch, final update) recompiled",
+    "title": "Yo-kai Watch 4++ Recompilation",
     "platform": "Windows, Linux",
     "outcome": "Partial",
     "slug": "/p/yokai-watch-4-plus-plus-recomp"
   },
   {
-    "id": "p127",
-    "repo": "https://github.com/Nycolazs/EoWRecomp",
-    "title": "The Legend of Zelda: Echoes of Wisdom recompiled with Claude",
-    "platform": "Nintendo Switch / PC",
+    "id": "p231",
+    "repo": "https://github.com/Igrise12/DQVIIIPC",
+    "title": "Dragon Quest VIII Native Recompilation",
+    "platform": "Windows, Linux",
     "outcome": "Partial",
-    "slug": "/p/zelda-echoes-of-wisdom-recomp"
+    "slug": "/p/dragon-quest-viii-native-recomp"
+  },
+  {
+    "id": "p232",
+    "repo": "https://github.com/librematch/genie",
+    "title": "Genie: Reimplementing the Age of Empires II DE Engine",
+    "platform": "Rust library",
+    "outcome": "Partial",
+    "slug": "/p/age-of-empires-ii-genie-engine"
+  },
+  {
+    "id": "p233",
+    "repo": "https://github.com/Subarasheese/pes6decomp",
+    "title": "Pro Evolution Soccer 6 PS2 Decompilation",
+    "platform": "PlayStation 2",
+    "outcome": "Partial",
+    "slug": "/p/pes6-ps2-decompilation"
+  },
+  {
+    "id": "p234",
+    "repo": "https://github.com/CanuckAussieKev/thug2-decomp",
+    "title": "Tony Hawk\u2019s Underground 2 PC Decompilation",
+    "platform": "Windows",
+    "outcome": "Partial",
+    "slug": "/p/tony-hawks-underground-2-decomp"
+  },
+  {
+    "id": "p235",
+    "repo": "https://github.com/filippgl/xena-psx-decomp",
+    "title": "Xena: Warrior Princess PS1 Decompilation",
+    "platform": "PlayStation, Windows",
+    "outcome": "Partial",
+    "slug": "/p/xena-warrior-princess-ps1-decomp"
+  },
+  {
+    "id": "p236",
+    "repo": "https://github.com/bashalarmistdecomp/eternal-silver-sssc-decomp",
+    "title": "Lunar: Silver Star Story Complete Decompilation",
+    "platform": "PlayStation",
+    "outcome": "Partial",
+    "slug": "/p/eternal-silver-sssc-decomp"
+  },
+  {
+    "id": "p237",
+    "repo": "https://github.com/coach7290/balloon-fight-recompiled",
+    "title": "Balloon Fight Recompiled",
+    "platform": "NES",
+    "outcome": "Partial",
+    "slug": "/p/balloon-fight-recompiled"
+  },
+  {
+    "id": "p238",
+    "repo": "https://github.com/VictorDMor/cm0102mac",
+    "title": "Championship Manager 01/02 on Apple Silicon",
+    "platform": "PowerPC / Apple Silicon macOS",
+    "outcome": "Partial",
+    "slug": "/p/championship-manager-0102-macos-recomp"
+  },
+  {
+    "id": "p239",
+    "repo": "https://github.com/Tzeentchnet/KillzoneLiberation-Recomp",
+    "title": "Killzone: Liberation Recompilation",
+    "platform": "PlayStation Portable / Windows",
+    "outcome": "Partial",
+    "slug": "/p/killzone-liberation-recomp"
+  },
+  {
+    "id": "p240",
+    "repo": "https://github.com/wastelandgunner/pokemon-colosseum-recompiled",
+    "title": "Pok\u00e9mon Colosseum Recompiled",
+    "platform": "Nintendo GameCube / Rust",
+    "outcome": "Partial",
+    "slug": "/p/pokemon-colosseum-recompiled"
+  },
+  {
+    "id": "p241",
+    "repo": "https://github.com/openblack/bw1-decomp",
+    "title": "Black & White (Lionhead) Decompilation",
+    "platform": "Windows / Classic Mac OS",
+    "outcome": "Partial",
+    "slug": "/p/black-white-decomp"
+  },
+  {
+    "id": "p242",
+    "repo": "https://github.com/ethannicholas/bluestorm-recomp",
+    "title": "Wave Race: Blue Storm Recompilation",
+    "platform": "Nintendo GameCube",
+    "outcome": "Partial",
+    "slug": "/p/wave-race-blue-storm-recomp"
+  },
+  {
+    "id": "p243",
+    "repo": "https://github.com/AndrewAltimit/legend-of-legaia-re",
+    "title": "Legend of Legaia Reverse Engineering",
+    "platform": "PlayStation",
+    "outcome": "Partial",
+    "slug": "/p/legend-of-legaia-re"
+  },
+  {
+    "id": "p244",
+    "repo": "https://github.com/adumah/SheepDogWolf-NX",
+    "title": "Reconstructed Sheep, Dog \u2019n\u2019 Wolf for Switch with Claude and Codex",
+    "platform": "PC to Nintendo Switch",
+    "outcome": "Partial",
+    "slug": "/p/sheep-dog-wolf-nx-decomp"
+  },
+  {
+    "id": "p245",
+    "repo": "https://github.com/Armandpro12/chibi-robo-pc",
+    "title": "Rebuilt Chibi-Robo as a native PC game with AI coding agents",
+    "platform": "GameCube to PC",
+    "outcome": "Partial",
+    "slug": "/p/chibi-robo-pc-static-recomp"
+  },
+  {
+    "id": "p246",
+    "repo": "https://github.com/Kodoque1/sm64-gba",
+    "title": "Adapted Super Mario 64 movement code for GBA with Claude",
+    "platform": "Nintendo 64 to Game Boy Advance",
+    "outcome": "Partial",
+    "slug": "/p/super-mario-64-gba-ai-port"
+  },
+  {
+    "id": "p247",
+    "repo": "https://github.com/N0zoM1z0/th08",
+    "title": "Reconstructed Touhou 8 to 99.9 percent exact source with AI agents and made it playable",
+    "platform": "Windows (x86) to Linux and browser",
+    "outcome": "Partial",
+    "slug": "/p/th08-imperishable-night-decomp-agents"
+  },
+  {
+    "id": "p248",
+    "repo": "https://github.com/liolu/ultimate-spider-man-decomp",
+    "title": "Matched 31 percent of Ultimate Spider-Man (DS) as an agent-driven decompilation",
+    "platform": "Nintendo DS (ARM)",
+    "outcome": "Partial",
+    "slug": "/p/ultimate-spider-man-ds-decomp-agents"
+  },
+  {
+    "id": "p249",
+    "repo": "https://github.com/FulGerNet/rePOP",
+    "title": "Recompiled Prince of Persia: The Sands of Time (Xbox) for Windows, with AI agents",
+    "platform": "Xbox (x86) to Windows and Android",
+    "outcome": "Partial",
+    "slug": "/p/prince-of-persia-sands-xbox-recomp-claude"
+  },
+  {
+    "id": "p250",
+    "repo": "https://github.com/rexglue/rexglue-sdk",
+    "title": "Started a full recompile of Gears of War 3 (Xbox 360) for Linux, with AI help",
+    "platform": "Xbox 360 (PowerPC) to Linux",
+    "outcome": "Partial",
+    "slug": "/p/gears-of-war-3-linux-recomp-rexglue"
+  },
+  {
+    "id": "p251",
+    "repo": "https://github.com/liolu/heroes-of-mana-decomp",
+    "title": "Matched a fifth of Heroes of Mana (DS) as an agent-driven decompilation",
+    "platform": "Nintendo DS (ARM)",
+    "outcome": "Partial",
+    "slug": "/p/heroes-of-mana-ds-decomp-agents"
+  },
+  {
+    "id": "p252",
+    "repo": "https://github.com/OpenRAC/OpenRAC",
+    "title": "Decompiled Ratchet & Clank games to C and brought the first to PC, with agents",
+    "platform": "PS2 (MIPS) to Windows, macOS, Linux and Android",
+    "outcome": "Partial",
+    "slug": "/p/openrac-ratchet-clank-pc-port"
+  },
+  {
+    "id": "p253",
+    "repo": "https://github.com/snuri00/ps2-web-recomp",
+    "title": "Recompiled PS2 games into the browser at full speed, with Claude in the commits",
+    "platform": "PS2 (R5900) to WebAssembly in Chrome",
+    "outcome": "Partial",
+    "slug": "/p/ps2-web-recomp-gt4-gow2"
+  },
+  {
+    "id": "p254",
+    "repo": "https://github.com/CmdrLucid/Project-Friday",
+    "title": "Recompiled Landstalker (Mega Drive) for PC and Steam Deck, all code written by Claude",
+    "platform": "Mega Drive (68000) to Windows and Steam Deck",
+    "outcome": "Partial",
+    "slug": "/p/landstalker-megadrive-recomp-claude"
+  },
+  {
+    "id": "p255",
+    "repo": "https://github.com/feanor-noldorin/ico-recomp",
+    "title": "Recompiled ICO (PS3 Collection) into a native Windows build, with Claude in the commits",
+    "platform": "PS3 (PPU/SPU) to Windows",
+    "outcome": "Partial",
+    "slug": "/p/ico-ps3-recomp-claude"
+  },
+  {
+    "id": "p256",
+    "repo": "https://github.com/BlackLineInteractive/Driveclub-Port",
+    "title": "Ported Driveclub (PS4) to native macOS and Windows, with Claude in the commits",
+    "platform": "PS4 (x86-64) to macOS and Windows",
+    "outcome": "Partial",
+    "slug": "/p/driveclub-native-port-claude"
+  },
+  {
+    "id": "p257",
+    "repo": "https://github.com/cxldsakeb/GoW2-nativo-PS2",
+    "title": "Brought God of War II (PS2) to a playable first zone as native PC code, with Claude Code",
+    "platform": "PS2 (MIPS) to Windows",
+    "outcome": "Partial",
+    "slug": "/p/god-of-war-2-ps2-recomp-claude-code"
+  },
+  {
+    "id": "p258",
+    "repo": "https://github.com/LasVola/godhand-recomp",
+    "title": "Recompiled God Hand (PS2) into a native Windows port, built with Claude Code and Codex",
+    "platform": "PS2 (MIPS) to Windows",
+    "outcome": "Partial",
+    "slug": "/p/god-hand-ps2-recomp-claude-code"
+  },
+  {
+    "id": "p259",
+    "repo": "https://github.com/liolu/nintendogs-dachshund-decomp",
+    "title": "Matched 17 percent of the Nintendogs Dachshund DS code in an agent-driven matching decompilation",
+    "platform": "Nintendo DS (ARM7 and ARM9)",
+    "outcome": "Partial",
+    "slug": "/p/nintendogs-dachshund-decomp-claude"
+  },
+  {
+    "id": "p260",
+    "repo": "https://github.com/liolu/powerpuff-girls-z-decomp",
+    "title": "Matched 26 percent of Powerpuff Girls Z on Nintendo DS in an agent-driven decompilation",
+    "platform": "Nintendo DS (ARM7 and ARM9)",
+    "outcome": "Partial",
+    "slug": "/p/powerpuff-girls-z-ds-decomp-claude"
+  },
+  {
+    "id": "p261",
+    "repo": "https://github.com/liolu/cooking-mama-decomp",
+    "title": "Matched 15 percent of the Cooking Mama DS code in an AI-agent driven matching decompilation",
+    "platform": "Nintendo DS (ARM7 and ARM9)",
+    "outcome": "Partial",
+    "slug": "/p/cooking-mama-ds-decomp-claude"
+  },
+  {
+    "id": "p262",
+    "repo": "https://github.com/minty-hippo/amped3revamped",
+    "title": "Recompiled Amped 3 (Xbox 360) for modern Windows with ReXGlue and Claude",
+    "platform": "Windows, Linux and ARM Linux (from an Xbox 360 disc image)",
+    "outcome": "Partial",
+    "slug": "/p/amped-3-xbox-recomp-claude"
+  },
+  {
+    "id": "p263",
+    "repo": "https://github.com/daaki85/darksun-recompiled",
+    "title": "Recompiled Dark Sun: Shattered Lands (DOS 1993) to a native program instead of DOSBox, with Claude",
+    "platform": "Windows and Linux (SDL)",
+    "outcome": "Partial",
+    "slug": "/p/darksun-shattered-lands-native-claude"
+  },
+  {
+    "id": "p264",
+    "repo": "https://github.com/ser-pounce/rood-reverse",
+    "title": "Matched 76.5 percent of Vagrant Story on PS1 in a Claude-assisted matching decompilation",
+    "platform": "PlayStation (MIPS)",
+    "outcome": "Partial",
+    "slug": "/p/vagrant-story-ps1-decomp-claude"
+  },
+  {
+    "id": "p265",
+    "repo": "https://github.com/liolu/ds-decomp-studio",
+    "title": "Built a work queue that lets people and AI agents split up Nintendo DS matching decompilations across 32 games",
+    "platform": "Nintendo DS",
+    "outcome": "Partial",
+    "slug": "/p/ds-decomp-studio-32-games-ai-agents"
+  },
+  {
+    "id": "p266",
+    "repo": "https://github.com/eray1605/re2ds",
+    "title": "Built a Nintendo DS engine for Resident Evil 2 from the PS1 executable's rules, with Claude Code",
+    "platform": "PS1 to Nintendo DS",
+    "outcome": "Partial",
+    "slug": "/p/resident-evil-2-nintendo-ds-engine-claude"
+  },
+  {
+    "id": "p267",
+    "repo": "https://github.com/WK2D/White-Knight-Chronicles-2-Decomp",
+    "title": "Began a static recompilation of White Knight Chronicles II (PS3) to a native Windows program, with Claude",
+    "platform": "PS3 to Windows (Vulkan)",
+    "outcome": "Partial",
+    "slug": "/p/white-knight-chronicles-2-ps3-recomp-claude"
+  },
+  {
+    "id": "p268",
+    "repo": "https://github.com/VinceIP/fci-recomp",
+    "title": "Recompiled Far Cry Instincts (Xbox) into a native Windows port with a working map editor, using Claude",
+    "platform": "Xbox to Windows",
+    "outcome": "Partial",
+    "slug": "/p/far-cry-instincts-xbox-recomp-claude"
+  },
+  {
+    "id": "p269",
+    "repo": "https://github.com/Randomno/pinball-decomp",
+    "title": "Matched almost every function of Space Cadet Pinball (Windows XP) in a decompilation driven by LLMs",
+    "platform": "Windows",
+    "outcome": "Partial",
+    "slug": "/p/space-cadet-pinball-matching-decomp-llm"
+  },
+  {
+    "id": "p270",
+    "repo": "https://github.com/ryanhood10/LegacyOfHercule",
+    "title": "Reverse engineered The Legacy of Goku II (GBA) to add two-player co-op and netplay, with Claude",
+    "platform": "Game Boy Advance",
+    "outcome": "Partial",
+    "slug": "/p/legacy-of-goku-2-gba-coop-decomp-claude"
+  },
+  {
+    "id": "p271",
+    "repo": "https://github.com/byroweb/AC1_RE",
+    "title": "Documented Armored Core (PS1) file formats and engine systems for a Farsi translation, with Claude",
+    "platform": "PlayStation",
+    "outcome": "Partial",
+    "slug": "/p/armored-core-ps1-re-farsi-claude"
+  },
+  {
+    "id": "p272",
+    "repo": "https://github.com/ben-wright-1/OpenRiseOfNations",
+    "title": "Rebuilt the Rise of Nations engine as a native Mac app from Ghidra specs, with Claude Code",
+    "platform": "Windows to macOS (Metal)",
+    "outcome": "Partial",
+    "slug": "/p/open-rise-of-nations-macos-engine-claude-code"
+  },
+  {
+    "id": "p273",
+    "repo": "https://github.com/gustavocanepa/tt-decomp",
+    "title": "Matched 71% of Tourist Trophy's functions to the original PS2 compiler, using Claude",
+    "platform": "PlayStation 2",
+    "outcome": "Partial",
+    "slug": "/p/tourist-trophy-decomp-claude"
+  },
+  {
+    "id": "p274",
+    "repo": "https://github.com/gustavocanepa/gt3-decomp",
+    "title": "Started a matching decompilation of Gran Turismo 3: A-Spec, using Claude agents",
+    "platform": "PlayStation 2",
+    "outcome": "Partial",
+    "slug": "/p/gran-turismo-3-decomp-claude"
+  },
+  {
+    "id": "p275",
+    "repo": "https://github.com/Japabu/mickey-saves-the-day-3d-adventure",
+    "title": "Decompiled Disney's Mickey Saves the Day 3D Adventure and ported it to macOS, with Claude",
+    "platform": "Windows PC to macOS (Apple Silicon)",
+    "outcome": "Partial",
+    "slug": "/p/mickey-saves-the-day-3d-decomp-claude"
+  },
+  {
+    "id": "p276",
+    "repo": "https://github.com/matthewfcarlson/thunderclap",
+    "title": "Thunderclap: Hulk: Ultimate Destruction (Xbox) decompilation with verified source for 100% of the game, using an LLM farm",
+    "platform": "Xbox",
+    "outcome": "Partial",
+    "slug": "/p/hulk-ultimate-destruction-xbox-decomp-llm"
+  },
+  {
+    "id": "p277",
+    "repo": "https://github.com/kayliox/transformers-armada-recomp",
+    "title": "Native PC port of Transformers (PS2), recompiled with Claude",
+    "platform": "PlayStation 2",
+    "outcome": "Partial",
+    "slug": "/p/transformers-ps2-decomp-claude"
+  },
+  {
+    "id": "p278",
+    "repo": "https://github.com/aikatore/recvx-enhanced-port",
+    "title": "Built a native PC port of Resident Evil Code: Veronica X from its decompilation, using Claude and Codex",
+    "platform": "PlayStation 2 to Linux / Windows",
+    "outcome": "Partial",
+    "slug": "/p/resident-evil-code-veronica-x-pc-port-claude"
+  },
+  {
+    "id": "p279",
+    "repo": "https://github.com/moozilla/boktai3-decomp",
+    "title": "Fully agent-driven matching decompilation of Boktai 3 (GBA), with Claude and GPT agents",
+    "platform": "Game Boy Advance",
+    "outcome": "Partial",
+    "slug": "/p/boktai-3-gba-agentic-decomp"
+  },
+  {
+    "id": "p280",
+    "repo": "https://github.com/kaustubhxd/ReFreedomFighters",
+    "title": "Decoded Freedom Fighters file formats and ported 12,202 functions to verified C++ for a browser port, with Claude",
+    "platform": "Windows PC to web browser",
+    "outcome": "Partial",
+    "slug": "/p/freedom-fighters-pc-formats-decomp-claude"
+  },
+  {
+    "id": "p281",
+    "repo": "https://github.com/ptitty12/mvp2005-decomp",
+    "title": "Driving a GameCube decompilation of MVP Baseball 2005 toward a browser port, entirely by Claude",
+    "platform": "GameCube to web browser",
+    "outcome": "Partial",
+    "slug": "/p/mvp-baseball-2005-gamecube-decomp-claude"
+  },
+  {
+    "id": "p282",
+    "repo": "https://github.com/WadeWinningWilson/dmc3-decomp",
+    "title": "Matching decompilation of Devil May Cry 3 (PS2), written largely with Claude",
+    "platform": "PlayStation 2",
+    "outcome": "Partial",
+    "slug": "/p/devil-may-cry-3-ps2-decomp-claude"
+  },
+  {
+    "id": "p283",
+    "repo": "https://github.com/mrOt4/babel-recomp",
+    "title": "Built Babel Recomp, a native port of Illusion of Gaia (SNES) for PC, Android and handhelds, with Claude Code",
+    "platform": "SNES to Linux / Windows / Android / consoles",
+    "outcome": "Partial",
+    "slug": "/p/illusion-of-gaia-snes-recomp-claude"
+  },
+  {
+    "id": "p284",
+    "repo": "https://github.com/flossbud/WWHDRecomp",
+    "title": "Recompiled Wind Waker HD (Wii U) to run natively on Linux at a true 60 fps, built with Claude",
+    "platform": "Wii U to Linux",
+    "outcome": "Partial",
+    "slug": "/p/wind-waker-hd-linux-recomp-claude"
+  },
+  {
+    "id": "p285",
+    "repo": "https://github.com/AlmazProud/metal-slug-3-recomp",
+    "title": "Recompiled the Neo Geo game Metal Slug 3 into a Windows port, vibe coded with Claude",
+    "platform": "Neo Geo to Windows",
+    "outcome": "Partial",
+    "slug": "/p/metal-slug-3-neo-geo-recomp-claude"
+  },
+  {
+    "id": "p286",
+    "repo": "https://github.com/ClickingMaster/ssrecomp",
+    "title": "Recompiled Pokemon SoulSilver into a widescreen native build for PC and Android, written by Claude",
+    "platform": "Nintendo DS to Linux / Windows / Android / macOS (experimental)",
+    "outcome": "Partial",
+    "slug": "/p/pokemon-soulsilver-ssrecomp-claude"
+  },
+  {
+    "id": "p287",
+    "repo": "https://github.com/HopeAero/MLBPowerPros2008Recomp",
+    "title": "Recompiled MLB Power Pros 2008 (Wii) into a Windows beta, almost entirely with Claude Code",
+    "platform": "Wii to Windows",
+    "outcome": "Partial",
+    "slug": "/p/mlb-power-pros-2008-wii-recomp-claude"
+  },
+  {
+    "id": "p288",
+    "repo": "https://github.com/abhinavt0681/hitman-contracts_clone",
+    "title": "Rebuilt a Hitman: Contracts mission in Rust from the original game files, with Claude",
+    "platform": "Windows (x86)",
+    "outcome": "Partial",
+    "slug": "/p/hitman-contracts-rust-rebuild-claude"
+  },
+  {
+    "id": "p289",
+    "repo": "https://github.com/MikeSemicolonD/RogueSquadron64Recomp",
+    "title": "Recompiled Star Wars: Rogue Squadron (N64) with a custom RT64 module, mostly via Claude",
+    "platform": "Nintendo 64 to Windows",
+    "outcome": "Partial",
+    "slug": "/p/rogue-squadron-64-recomp-claude"
+  },
+  {
+    "id": "p290",
+    "repo": "https://github.com/GioPixelGH/Crash-Twinsanity-Windows",
+    "title": "Crash Twinsanity PC port: PS2 game ported to native Windows from its C++ decompilation, with Claude Code",
+    "platform": "PlayStation 2 to Windows / Linux",
+    "outcome": "Partial",
+    "slug": "/p/crash-twinsanity-windows-port-claude-code"
+  },
+  {
+    "id": "p291",
+    "repo": "https://github.com/CosmicScribe64/tokimemo-ps1-decomp",
+    "title": "Matching decompilation of the PS1 game Tokimeki Memorial, written mostly by Claude Code",
+    "platform": "PlayStation",
+    "outcome": "Partial",
+    "slug": "/p/tokimeki-memorial-ps1-decomp-claude-code"
+  },
+  {
+    "id": "p292",
+    "repo": "https://github.com/pablocpas/CMR2Decomp",
+    "title": "Rebuilt every function of Colin McRae Rally 2.0 as C++ with Claude and Codex agents",
+    "platform": "Windows (Win32)",
+    "outcome": "Partial",
+    "slug": "/p/colin-mcrae-rally-2-decomp-claude-codex"
+  },
+  {
+    "id": "p293",
+    "repo": "https://github.com/TheRealestNwah/sotc-decomp",
+    "title": "Started a matching decompilation of Shadow of the Colossus with Claude Code and Codex",
+    "platform": "PlayStation 2",
+    "outcome": "Partial",
+    "slug": "/p/shadow-of-the-colossus-matching-decomp"
+  },
+  {
+    "id": "p294",
+    "repo": "https://github.com/gustavocanepa/gt4-decomp",
+    "title": "Matched 98% of Gran Turismo 4's functions to the original PS2 compiler, using Claude",
+    "platform": "PlayStation 2",
+    "outcome": "Partial",
+    "slug": "/p/gran-turismo-4-decomp-claude"
+  },
+  {
+    "id": "p295",
+    "repo": "https://github.com/olink9/driver1-decomp",
+    "title": "Matched 71% of Driver (PS1) functions in about a day with parallel Claude agents",
+    "platform": "PlayStation",
+    "outcome": "Partial",
+    "slug": "/p/driver-1-ps1-matching-decomp-claude"
+  },
+  {
+    "id": "p296",
+    "repo": "https://github.com/mstan/snesrecomp",
+    "title": "Grew a PS1 prototype into AI-built static recompilers for eight retro systems",
+    "platform": "NES, SNES, Genesis, PlayStation and more, to PC",
+    "outcome": "Partial",
+    "slug": "/p/retro-recomp-family-nes-snes-psx"
+  },
+  {
+    "id": "p297",
+    "repo": "https://github.com/drakolordx7/KillzoneRecomp",
+    "title": "Recompiled Killzone (PS2) into a native Windows port with mouse aim, using Claude Code",
+    "platform": "PlayStation 2 to Windows",
+    "outcome": "Partial",
+    "slug": "/p/killzone-ps2-recomp-claude-code"
+  },
+  {
+    "id": "p298",
+    "repo": "https://github.com/N0zoM1z0/th04",
+    "title": "Recovered Touhou 4's bullet-ring logic from its PC-98 DOS binary with REA",
+    "platform": "PC-98 (DOS)",
+    "outcome": "Partial",
+    "slug": "/p/rea-th04-bullet-patterns"
+  },
+  {
+    "id": "p299",
+    "repo": "https://github.com/Dream-Atelier/kl-eod-decomp",
+    "title": "Started a decompilation from zero: Claude Code and 51% of a 2001 GBA game",
+    "platform": "Game Boy Advance",
+    "outcome": "Partial",
+    "slug": "/p/klonoa-gba-decomp"
   }
 ]

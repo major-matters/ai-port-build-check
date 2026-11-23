@@ -1,194 +1,290 @@
 [
   {
     "id": "r001",
-    "repo": "https://github.com/briannastatic/aoe3-decomp",
-    "title": "Age of Empires III: The Asian Dynasties (age3y.exe)",
-    "platform": "Linux, macOS",
+    "repo": "https://github.com/BrammekeTV/monsterlab-decomp",
+    "title": "Decompiling Monster Lab for the Wii with Claude",
+    "platform": "Wii (PowerPC)",
     "outcome": "Research",
-    "slug": "/p/age-of-empires-iii-the-asian-dynasties-age3y-exe-2135b536"
+    "slug": "/p/monster-lab-wii-decompilation-pc-port-claude"
   },
   {
     "id": "r002",
-    "repo": "https://github.com/ekwoka/Battlefield-2142-Decomp",
-    "title": "Battlefield 2142 decompilation with Claude",
-    "platform": "macOS",
+    "repo": "https://github.com/SomeoneIsWorking/tomba2-decomp",
+    "title": "Started a Tomba! 2 (PS1) decompilation with Claude and other LLMs",
+    "platform": "PS1",
     "outcome": "Research",
-    "slug": "/p/battlefield-2142-8f5bda22"
+    "slug": "/p/tomba-2-ps1-decompilation-llm-claude"
   },
   {
     "id": "r003",
+    "repo": "https://github.com/AngeloGalav/sh3-vita",
+    "title": "Porting Silent Hill 3 (PC) to the PlayStation Vita by static recompilation with AI agents",
+    "platform": "Windows x86 to PlayStation Vita",
+    "outcome": "Research",
+    "slug": "/p/silent-hill-3-playstation-vita-static-recomp-ai"
+  },
+  {
+    "id": "r004",
+    "repo": "https://github.com/teclilla18/sonic-heroes-recomp",
+    "title": "Recompiling Sonic Heroes for GameCube toward Switch and PC with Claude agents",
+    "platform": "GameCube to Nintendo Switch homebrew and PC",
+    "outcome": "Research",
+    "slug": "/p/sonic-heroes-gamecube-static-recomp-claude"
+  },
+  {
+    "id": "r005",
+    "repo": "https://github.com/extremecodetv/scream-rs",
+    "title": "scream-rs, a Rust reimplementation of the SCream engine behind Scratches: Director's Cut",
+    "platform": "Windows to Rust",
+    "outcome": "Research",
+    "slug": "/p/scratches-scream-engine-rust-reimplementation-claude"
+  },
+  {
+    "id": "r006",
+    "repo": "https://github.com/nicoSWD/psx-recomp",
+    "title": "A PlayStation 1 static recompiler and runtime developed with Claude Code",
+    "platform": "PlayStation 1 to native",
+    "outcome": "Research",
+    "slug": "/p/psx-recomp-static-recompiler-claude-code"
+  },
+  {
+    "id": "r007",
+    "repo": "https://github.com/celsowm/vf2-decomp",
+    "title": "Clean-room C decompilation research of Virtua Fighter 2 on Sega Model 2A with Claude",
+    "platform": "Sega Model 2A arcade",
+    "outcome": "Research",
+    "slug": "/p/virtua-fighter-2-model-2a-clean-room-decomp-claude"
+  },
+  {
+    "id": "r008",
+    "repo": "https://github.com/TheRealestNwah/skate-recomp",
+    "title": "Research toward a native PC port of skate. (Xbox 360) with Claude Code and Codex",
+    "platform": "Xbox 360 to Windows",
+    "outcome": "Research",
+    "slug": "/p/skate-xbox-360-recomp-claude-codex"
+  },
+  {
+    "id": "r009",
+    "repo": "https://github.com/Gui-Tora/dmc-recomp",
+    "title": "PS2 static recompilation of Devil May Cry (PAL) with Claude, still short of gameplay",
+    "platform": "PlayStation 2 to native PC",
+    "outcome": "Research",
+    "slug": "/p/dmc-ps2-static-recomp-claude"
+  },
+  {
+    "id": "r010",
+    "repo": "https://github.com/bloodborne-native/bloodborne-recomp",
+    "title": "Recompiled Bloodborne (PS4) into a native library with static recompilation",
+    "platform": "macOS (arm64/x86-64)",
+    "outcome": "Research",
+    "slug": "/p/bloodborne-ps4-cusa03173-1-09-f14e47f8"
+  },
+  {
+    "id": "r011",
+    "repo": "https://github.com/DCRecomp/HeadHunterRecomp",
+    "title": "Head Hunter (Dreamcast) recompiled into a native Windows x64 application with Claude",
+    "platform": "Windows x64",
+    "outcome": "Research",
+    "slug": "/p/head-hunter-da6b5e6d"
+  },
+  {
+    "id": "r012",
+    "repo": "https://github.com/reverseengineeringgameswithai/ABugsLifePS1",
+    "title": "Reverse engineered A Bug's Life (PS1) using Claude Opus 5.5",
+    "platform": "PlayStation (PS1)",
+    "outcome": "Research",
+    "slug": "/p/a-bug-s-life-ps1-ddf9bca4"
+  },
+  {
+    "id": "r013",
+    "repo": "https://github.com/TheSlackbringer/dbziw-recomp",
+    "title": "Recompiled Dragon Ball Z: Infinite World (PS2) into a native PC port with Claude",
+    "platform": "Windows, Linux",
+    "outcome": "Research",
+    "slug": "/p/dragon-ball-z-infinite-world-3376f062"
+  },
+  {
+    "id": "r014",
+    "repo": "https://github.com/BurnoutDecomp/b5-decomp",
+    "title": "Reconstructed Burnout 5 C++ source code using a collaborative decompilation workflow",
+    "platform": "PC",
+    "outcome": "Research",
+    "slug": "/p/burnout-5-c87eafec"
+  },
+  {
+    "id": "r015",
+    "repo": "https://github.com/liolu/pokemon-dash-decomp",
+    "title": "Decompiled Pokemon Dash (Nintendo DS) using DS Decomp Studio and Claude Opus 5.5",
+    "platform": "Nintendo DS",
+    "outcome": "Research",
+    "slug": "/p/pokemon-dash-usa-900e67d6"
+  },
+  {
+    "id": "r016",
+    "repo": "https://github.com/mstan/MegaManX5Recomp",
+    "title": "MegaManX5Recomp enables experimental co-op play for Mega Man X5 on PC",
+    "platform": "Windows",
+    "outcome": "Research",
+    "slug": "/p/mega-man-x5-usa-slus-01334-883c0b45"
+  },
+  {
+    "id": "r017",
+    "repo": "https://github.com/Sinon-Hecate-II/awdordc-decomp",
+    "title": "Decompilation of Advance Wars: Days of Ruin for Nintendo DS",
+    "platform": "Nintendo DS",
+    "outcome": "Research",
+    "slug": "/p/advance-wars-days-of-ruin-bd7f2bea"
+  },
+  {
+    "id": "r018",
+    "repo": "https://github.com/N0zoM1z0/th11",
+    "title": "Reconstructing Touhou 11 (Subterranean Animism) byte for byte with an AI model and Ghidra",
+    "platform": "Windows i386",
+    "outcome": "Research",
+    "slug": "/p/th11-subterranean-animism-v1-00a-6d4e79f2"
+  },
+  {
+    "id": "r019",
     "repo": "https://github.com/Yharnam-Hunters/Paleblood",
-    "title": "Bloodborne (CUSA03173) decompilation with Claude",
+    "title": "Paleblood: A Functional Decompilation of Bloodborne",
     "platform": "Linux",
     "outcome": "Research",
     "slug": "/p/bloodborne-cusa03173-7fd36aed"
   },
   {
-    "id": "r004",
-    "repo": "https://github.com/MaChInEgUn3/God-of-War-Ascension-Recompiled",
-    "title": "God of War: Ascension recompiled with Claude",
+    "id": "r020",
+    "repo": "https://github.com/2ez4gcx/ff7-ps1-decomp",
+    "title": "Final Fantasy VII (PS1) decompiled into C with Claude assistance",
+    "platform": "PlayStation (USA)",
+    "outcome": "Research",
+    "slug": "/p/final-fantasy-vii-ps1-cb7ac128"
+  },
+  {
+    "id": "r021",
+    "repo": "https://github.com/cabi24/SFRush2049-Dreamcast-decomp",
+    "title": "Started a byte-matching decompilation of San Francisco Rush 2049 (Dreamcast), with Claude",
     "platform": "Windows",
     "outcome": "Research",
-    "slug": "/p/god-of-war-ascension-77379d5f"
+    "slug": "/p/san-francisco-rush-2049-dreamcast-a48f5144"
   },
   {
-    "id": "r005",
-    "repo": "https://github.com/Mozarella-png/Goldeneye-007-Android-Port",
-    "title": "GoldenEye 007 Android Port port with Claude",
-    "platform": "Android",
-    "outcome": "Research",
-    "slug": "/p/goldeneye-007-android-port-6a42c58b"
-  },
-  {
-    "id": "r006",
-    "repo": "https://github.com/gustavocanepa/gt4-native",
-    "title": "Gran Turismo 4 (PC port experiment) matching decompilation",
-    "platform": "PC (from PlayStation 2)",
-    "outcome": "Research",
-    "slug": "/p/gran-turismo-4-native-pc-port-experiment"
-  },
-  {
-    "id": "r007",
-    "repo": "https://github.com/benji-paname/regta-chinatown-wars-pc-port",
-    "title": "Grand Theft Auto: Chinatown Wars reverse engineered with AI",
-    "platform": "Windows x64",
-    "outcome": "Research",
-    "slug": "/p/grand-theft-auto-chinatown-wars-ules-01347-v1-01-924f3f4b"
-  },
-  {
-    "id": "r008",
-    "repo": "https://github.com/Tzeentchnet/KillzoneMercenary-Recomp",
-    "title": "Killzone Mercenary (PCSA00107): reverse engineered with AI",
-    "platform": "Windows x64",
-    "outcome": "Research",
-    "slug": "/p/killzone-mercenary-pcsa00107-598ec110"
-  },
-  {
-    "id": "r009",
-    "repo": "https://github.com/Cimentacion/kf4-kingsfield-tools",
-    "title": "King's Field IV (SLES-50920): reverse engineered with Claude",
-    "platform": "Windows",
-    "outcome": "Research",
-    "slug": "/p/king-s-field-iv-sles-50920-c62877b3"
-  },
-  {
-    "id": "r010",
-    "repo": "https://github.com/gabrielbskk/mcla-recomp-android-g",
-    "title": "Midnight Club: Los Angeles Complete Edition",
-    "platform": "Android ARM64",
-    "outcome": "Research",
-    "slug": "/p/midnight-club-los-angeles-complete-edition-ba6dfbb9"
-  },
-  {
-    "id": "r011",
-    "repo": "https://github.com/bitplane/nokia-dct3-re",
-    "title": "Nokia DCT3: reverse engineered with AI \u00b7 Reversed with AI",
-    "platform": "Linux",
-    "outcome": "Research",
-    "slug": "/p/nokia-dct3-49b1a04f"
-  },
-  {
-    "id": "r012",
-    "repo": "https://github.com/Qanpi/optiver-delta-dash",
-    "title": "Optiver Delta Dash: Qanpi/optiver-delta-dash",
-    "platform": "Web",
-    "outcome": "Research",
-    "slug": "/p/optiver-delta-dash-f9c10d8e"
-  },
-  {
-    "id": "r013",
-    "repo": "https://github.com/sigods/otogi1",
-    "title": "Otogi: Myth of Demons reverse engineered with AI",
-    "platform": "Linux x86-64, Windows x86-64",
-    "outcome": "Research",
-    "slug": "/p/otogi-myth-of-demons-c5f1d6b8"
-  },
-  {
-    "id": "r014",
-    "repo": "https://github.com/rages4calm/pcenginerecomp",
-    "title": "PC Engine / TurboGrafx-16: rages4calm/pcenginerecomp",
-    "platform": "Cross-platform",
-    "outcome": "Research",
-    "slug": "/p/pc-engine-turbografx-16-01ded046"
-  },
-  {
-    "id": "r015",
+    "id": "r022",
     "repo": "https://github.com/gunnaraas/rallytrophy",
-    "title": "Rally Trophy 1.01 decompilation with AI coding agents",
+    "title": "Rally Trophy Decompilation Project",
     "platform": "Windows",
     "outcome": "Research",
     "slug": "/p/rally-trophy-1-01-7af8d6cf"
   },
   {
-    "id": "r016",
-    "repo": "https://github.com/PedroCavalcanti-coder/RE5-SteamVersion-RecompAndroid",
-    "title": "Resident Evil 5: Gold Edition (re5dx9.exe) recompiled",
-    "platform": "Windows, Linux, Android ARM64",
-    "outcome": "Research",
-    "slug": "/p/resident-evil-5-gold-edition-re5dx9-exe-9b6b9d1f"
-  },
-  {
-    "id": "r017",
-    "repo": "https://github.com/YunataSavior/RTWDecomp",
-    "title": "RomeTW.exe: YunataSavior/RTWDecomp \u00b7 Reversed with AI",
-    "platform": "Windows",
-    "outcome": "Research",
-    "slug": "/p/rometw-exe-9eb3279d"
-  },
-  {
-    "id": "r018",
-    "repo": "https://github.com/Yusuff1406/Project-Far-Far-Away",
-    "title": "Shrek 2 (Game Boy Advance): Project Far Far Away",
-    "platform": "Android",
-    "outcome": "Research",
-    "slug": "/p/shrek-2-game-boy-advance-6a404d9b"
-  },
-  {
-    "id": "r019",
+    "id": "r023",
     "repo": "https://github.com/ZacheerKour/oceanic-stars-decomp",
-    "title": "Star Ocean: The Second Story (USA, PS1) decompilation",
+    "title": "Started a byte-matching decompilation and PC port of Star Ocean: The Second Story (PS1), with Claude",
     "platform": "Windows 10/11",
     "outcome": "Research",
     "slug": "/p/star-ocean-the-second-story-usa-ps1-1edb986b"
   },
   {
-    "id": "r020",
-    "repo": "https://github.com/cstout816/steel-battalion-static-decomp",
-    "title": "Steel Battalion (Xbox, 2002) recompiled with ChatGPT Codex",
-    "platform": "Xbox (x86) to Windows (Direct3D 11)",
+    "id": "r024",
+    "repo": "https://github.com/sigods/otogi1",
+    "title": "Otogi: Myth of Demons Technical Preview",
+    "platform": "Linux x86-64, Windows x86-64",
     "outcome": "Research",
-    "slug": "/p/steel-battalion-xbox-static-recomp-codex"
+    "slug": "/p/otogi-myth-of-demons-c5f1d6b8"
   },
   {
-    "id": "r021",
+    "id": "r025",
+    "repo": "https://github.com/matty45/Crackdown2-Decomp",
+    "title": "Started a byte-matching decompilation of Crackdown 2 (Xbox 360) with the original XDK compiler, with Claude",
+    "platform": "Xbox 360",
+    "outcome": "Research",
+    "slug": "/p/crackdown-2-76c5f541"
+  },
+  {
+    "id": "r026",
+    "repo": "https://github.com/Tzeentchnet/KillzoneMercenary-Recomp",
+    "title": "Started a static recompilation of Killzone Mercenary (PS Vita) for Windows, with Claude",
+    "platform": "Windows x64",
+    "outcome": "Research",
+    "slug": "/p/killzone-mercenary-pcsa00107-598ec110"
+  },
+  {
+    "id": "r027",
     "repo": "https://github.com/EstebanPdN/sm64ds-3ds",
-    "title": "Super Mario 64 DS: EstebanPdN/sm64ds-3ds \u00b7 Reversed with AI",
+    "title": "Began a native Nintendo 3DS port of Super Mario 64 DS, with Codex and Claude",
     "platform": "Nintendo 3DS",
     "outcome": "Research",
     "slug": "/p/super-mario-64-ds-08efd918"
   },
   {
-    "id": "r022",
-    "repo": "https://github.com/longurara/SSBU-port-web",
-    "title": "Super Smash Bros. Ultimate port \u00b7 Reversed with AI",
-    "platform": "Web (Browser)",
+    "id": "r028",
+    "repo": "https://github.com/PedroCavalcanti-coder/RE5-SteamVersion-RecompAndroid",
+    "title": "Resident Evil 5: Gold Edition Static Recompilation",
+    "platform": "Windows, Linux, Android ARM64",
     "outcome": "Research",
-    "slug": "/p/super-smash-bros-ultimate-31d972f2"
+    "slug": "/p/resident-evil-5-gold-edition-re5dx9-exe-9b6b9d1f"
   },
   {
-    "id": "r023",
-    "repo": "https://github.com/zeldaret/tww",
-    "title": "The Legend of Zelda: The Wind Waker decompilation",
-    "platform": "GameCube",
+    "id": "r029",
+    "repo": "https://github.com/benji-paname/regta-chinatown-wars-pc-port",
+    "title": "ReGTA CTW: PC Recomp is an independent native port of Grand Theft Auto: Chinatown Wars for Windows x64.",
+    "platform": "Windows x64",
     "outcome": "Research",
-    "slug": "/p/the-legend-of-zelda-the-wind-waker-c9bd32fb"
+    "slug": "/p/grand-theft-auto-chinatown-wars-ules-01347-v1-01-924f3f4b"
   },
   {
-    "id": "r024",
-    "repo": "https://github.com/andrewnakas/thps64",
-    "title": "Tony Hawk's Pro Skater (N64) matching decompilation",
-    "platform": "Windows (reference), Linux, macOS",
+    "id": "r030",
+    "repo": "https://github.com/Indr1d-C0ld/688-Attack-Sub-Enhanced",
+    "title": "688 Attack Sub Reborn Reverse Engineering",
+    "platform": "MS-DOS",
     "outcome": "Research",
-    "slug": "/p/tony-hawk-s-pro-skater-n64-e53fc002"
+    "slug": "/p/688-attack-sub-9a1d49f9"
+  },
+  {
+    "id": "r031",
+    "repo": "https://github.com/rages4calm/pcenginerecomp",
+    "title": "Built an experimental static recompiler for PC Engine / TurboGrafx-16 games",
+    "platform": "Cross-platform",
+    "outcome": "Research",
+    "slug": "/p/pc-engine-turbografx-16-01ded046"
+  },
+  {
+    "id": "r032",
+    "repo": "https://github.com/kirklandsig/halo2-decompiled",
+    "title": "Halo 2: an agent-assisted matching decompilation of an LTCG Xbox build",
+    "platform": "Xbox",
+    "outcome": "Research",
+    "slug": "/p/halo-2-xbox-retail-build-db711625"
+  },
+  {
+    "id": "r033",
+    "repo": "https://github.com/mitsevox/nflstreet2",
+    "title": "Decompilation of NFL Street 2 (GameCube) into a matching source project",
+    "platform": "Linux x86-64, macOS ARM64",
+    "outcome": "Research",
+    "slug": "/p/nfl-street-2-gamecube-3a63c872"
+  },
+  {
+    "id": "r034",
+    "repo": "https://github.com/cstout816/steel-battalion-static-decomp",
+    "title": "Began a static recompilation of the original Xbox game Steel Battalion for Windows, mostly with ChatGPT Codex",
+    "platform": "Xbox (x86) to Windows (Direct3D 11)",
+    "outcome": "Research",
+    "slug": "/p/steel-battalion-xbox-static-recomp-codex"
+  },
+  {
+    "id": "r035",
+    "repo": "https://github.com/gustavocanepa/gt4-native",
+    "title": "Began an experimental native PC port of Gran Turismo 4 from its matching decompilation",
+    "platform": "PC (from PlayStation 2)",
+    "outcome": "Research",
+    "slug": "/p/gran-turismo-4-native-pc-port-experiment"
+  },
+  {
+    "id": "r036",
+    "repo": "https://github.com/Dryxio/reagent",
+    "title": "Reverse engineering GTA San Andreas with autonomous LLM agents (ReAgent)",
+    "platform": "Windows, POSIX",
+    "outcome": "Research",
+    "slug": "/p/gta-san-andreas-reagent"
   }
 ]
