@@ -70,6 +70,7 @@ REASON_VOCAB = {
     "missing_dependency": "CMake, pkg-config or Meson could not find a package, a header is missing, or the build files point at a directory or source file that is not there.",
     "compile_error": "A compiler, rustc, MSVC or linker error line appears in the log.",
     "unclassified": "None of the reason patterns matched; the log has to be read by hand.",
+    "runner_lost": "The job ended without writing a result because the runner was lost during the clone or the build; treat the row as unknown.",
 }
 
 

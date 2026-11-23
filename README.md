@@ -47,7 +47,7 @@ Every result carries `schema_version: 2`.
 | `no_build_system` | no recognized build files anywhere down to three directory levels. `reason` is `notes_only` (fewer than three source files by extension) or `sources_without_build_files` |
 | `needs_toolchain` | a build system was found that a stock Ubuntu runner cannot drive: `windows_msbuild` (`.sln`/`.vcxproj`), `windows_script` (`build.bat`, `build.ps1` or `.cmd` only), `xcode`, `premake_or_scons`, `zig_not_installed`, `android_gradle` (an Android project without a Gradle wrapper), `gradle_wrapper_missing` |
 | `clone_failed` | the repository could not be cloned: `repo_gone` (HTTP 404, 410 or 451), `clone_timeout`, or `git_exit_N` |
-| `harness_error` | the harness itself failed to produce a result; treat as unknown |
+| `harness_error` | the harness itself failed to produce a result; treat as unknown. `reason` is `runner_lost` when the job ended without writing a result, which happens when a build takes the runner down, or `script_exit_N_no_json` |
 
 For `build_failed`, `reason` is mined from the whole build log with the harness's own lines removed, using the regexes in `scripts/reason-patterns.json` in this priority order. The matched phrase is kept in `reason_detail` (at most 160 characters) and the apparent missing things in `missing_names` (at most six).
 

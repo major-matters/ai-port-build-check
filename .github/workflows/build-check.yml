@@ -80,6 +80,9 @@ jobs:
     needs: plan
     runs-on: ubuntu-24.04
     timeout-minutes: 120
+    # A build that takes the runner down fails its job before "Write result" can run. That must not fail
+    # the whole run: the collect job records the missing id as harness_error / runner_lost instead.
+    continue-on-error: true
     strategy:
       fail-fast: false
       max-parallel: 20
@@ -324,6 +327,34 @@ jobs:
                       rows.append(json.load(fh))
               except Exception as exc:
                   print(f"skipping {path}: {exc}")
+          # A planned id with no artifact means its job died before it could write a result
+          # (the runner was shut down mid-build, usually out of memory or disk). Record it, do not drop it.
+          have = {r.get("id") for r in rows}
+          try:
+              with open(os.path.join("batches", os.path.basename(os.environ.get("BATCH", "")))) as fh:
+                  planned_rows = json.load(fh)
+          except Exception as exc:
+              print(f"could not read the batch file: {exc}")
+              planned_rows = []
+          for p in planned_rows:
+              if not isinstance(p, dict) or not p.get("id") or p["id"] in have:
+                  continue
+              rows.append({
+                  "schema_version": 2,
+                  "id": p["id"],
+                  "repo": p.get("repo", ""),
+                  "title": p.get("title", ""),
+                  "platform": p.get("platform", ""),
+                  "outcome_reported": p.get("outcome", ""),
+                  "result": "harness_error",
+                  "reason": "runner_lost",
+                  "reason_detail": "the job ended without writing a result; the runner was lost during the clone or the build",
+                  "missing_names": [],
+                  "retries": [],
+                  "run_id": os.environ.get("RUN_ID"),
+                  "checked_at": datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat(),
+              })
+              print(f"no result for {p['id']}: recorded as harness_error / runner_lost")
           rows.sort(key=lambda r: r.get("id", ""))
 
           with open("results/results.json", "w") as fh:
